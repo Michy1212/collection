@@ -1,0 +1,520 @@
+
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Statistiques de la Collection</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f5f5f5;
+            }
+            h1, h2 {
+                color: #333;
+                text-align: center;
+            }
+            .chart-container {
+                background-color: white;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 30px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .chart-wrapper {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .chart-canvas-container {
+                flex: 1;
+                position: relative;
+                height: 400px;
+            }
+            .chart-legend-container {
+                width: 250px;
+                max-height: 400px;
+                overflow-y: auto;
+                padding: 10px;
+                background: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .tab-buttons {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                gap: 10px;
+            }
+            .tab-button {
+                padding: 8px 16px;
+                background-color: #ddd;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+            .tab-button.active {
+                background-color: #0066cc;
+                color: white;
+            }
+            .back-link {
+                display: inline-block;
+                margin-bottom: 20px;
+                color: #0066cc;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .stats-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            @media (max-width: 768px) {
+                .stats-grid {
+                    grid-template-columns: 1fr;
+                }
+                .chart-wrapper {
+                    flex-direction: column;
+                }
+                .chart-legend-container {
+                    width: 100%;
+                }
+            }
+            /* Styles pour les légendes */
+            .legend-item {
+                display: flex;
+                align-items: center;
+                margin: 8px 0;
+                font-size: 0.9em;
+                cursor: pointer;
+            }
+            .legend-item.hidden span {
+                text-decoration: line-through;
+                opacity: 0.6;
+            }
+            .legend-color-box {
+                width: 12px;
+                height: 12px;
+                margin-right: 8px;
+                border: 1px solid #ddd;
+                flex-shrink: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        <h1>Statistiques de la Collection</h1>
+
+        <div class="stats-grid">
+            <div class="chart-container">
+                <h2>Répartition par Marque</h2>
+                <div class="chart-wrapper">
+                    <div class="chart-canvas-container">
+                        <canvas id="brandsChart"></canvas>
+                    </div>
+                    <div class="chart-legend-container" id="brandsLegend"></div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Répartition par Console</h2>
+                <div class="chart-wrapper">
+                    <div class="chart-canvas-container">
+                        <canvas id="consolesChart"></canvas>
+                    </div>
+                    <div class="chart-legend-container" id="consolesLegend"></div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Jeux par Année de Sortie</h2>
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="changeYearChart('EU')">Europe</button>
+                    <button class="tab-button" onclick="changeYearChart('US')">Amérique</button>
+                    <button class="tab-button" onclick="changeYearChart('JP')">Japon</button>
+                </div>
+                <div class="chart-wrapper">
+                    <div class="chart-canvas-container">
+                        <canvas id="yearsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>Répartition par Région</h2>
+                <div class="chart-wrapper">
+                    <div class="chart-canvas-container">
+                        <canvas id="regionsChart"></canvas>
+                    </div>
+                    <div class="chart-legend-container" id="regionsLegend"></div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>État des Jeux</h2>
+                <div class="chart-wrapper">
+                    <div class="chart-canvas-container">
+                        <canvas id="conditionsChart"></canvas>
+                    </div>
+                    <div class="chart-legend-container" id="conditionsLegend"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Données pour les graphiques
+            const statsData = {
+                brands: {
+                    labels: ['Nintendo', 'Sony', 'Autres', 'Sega', 'Atari', 'Microsoft'],
+                    counts: [649, 226, 170, 57, 33, 5],
+                    colors: ['rgb(236, 26, 34)', 'rgb(0, 0, 0)', '#f5f5f5', 'rgb(15, 122, 188)', 'rgb(253, 0, 11)', 'rgb(15, 125, 15)']
+                },
+                consoles: {
+                    labels: ['Atari 2600', 'Atari 800XL', 'Autre', 'ColecoVision', 'PC', 'Xbox', 'Xbox 360', '3DS', 'DS', 'Game & Watch', 'Game Boy', 'Game Boy Advance', 'Game Boy Color', 'GameCube', 'N64', 'NES', 'Pokémon Mini', 'Super Nintendo', 'Switch', 'Switch 2', 'Virtual Boy', 'Wii', 'Wii U', '32X', 'Dreamcast', 'Game Gear', 'Master System', 'Megadrive', 'Saturn', 'PS Vita', 'PS1', 'PS2', 'PS3', 'PS4', 'PS5', 'PSP'],
+                    counts: [32, 1, 2, 3, 165, 3, 2, 58, 57, 14, 26, 71, 33, 46, 12, 62, 2, 71, 114, 2, 9, 45, 27, 2, 11, 5, 10, 25, 4, 5, 32, 79, 28, 42, 19, 21],
+                    colors: ['rgb(253, 76, 84)', 'rgb(254, 153, 157)', 'rgb(247, 247, 247)', 'rgb(249, 249, 249)', 'rgb(251, 251, 251)', 'rgb(87, 164, 87)', 'rgb(159, 203, 159)', 'rgb(236, 34, 42)', 'rgb(237, 43, 50)', 'rgb(238, 51, 58)', 'rgb(238, 60, 67)', 'rgb(239, 68, 75)', 'rgb(240, 77, 83)', 'rgb(240, 86, 92)', 'rgb(241, 94, 100)', 'rgb(242, 103, 108)', 'rgb(243, 111, 116)', 'rgb(243, 120, 125)', 'rgb(244, 129, 133)', 'rgb(245, 137, 141)', 'rgb(245, 146, 150)', 'rgb(246, 154, 158)', 'rgb(247, 163, 166)', 'rgb(39, 135, 194)', 'rgb(62, 148, 201)', 'rgb(87, 161, 208)', 'rgb(110, 175, 214)', 'rgb(135, 188, 221)', 'rgb(159, 201, 228)', 'rgb(21, 21, 21)', 'rgb(43, 43, 43)', 'rgb(65, 65, 65)', 'rgb(87, 87, 87)', 'rgb(109, 109, 109)', 'rgb(131, 131, 131)', 'rgb(153, 153, 153)'],
+                    brandColors: ['rgb(253, 0, 11)', 'rgb(253, 0, 11)', '#f5f5f5', '#f5f5f5', '#f5f5f5', 'rgb(15, 125, 15)', 'rgb(15, 125, 15)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(236, 26, 34)', 'rgb(15, 122, 188)', 'rgb(15, 122, 188)', 'rgb(15, 122, 188)', 'rgb(15, 122, 188)', 'rgb(15, 122, 188)', 'rgb(15, 122, 188)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)', 'rgb(0, 0, 0)'],
+                    brandNames: ['Atari', 'Atari', 'Autres', 'Autres', 'Autres', 'Microsoft', 'Microsoft', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Nintendo', 'Sega', 'Sega', 'Sega', 'Sega', 'Sega', 'Sega', 'Sony', 'Sony', 'Sony', 'Sony', 'Sony', 'Sony', 'Sony']
+                },
+                years: {
+                    eu: {'1977': 0, '1978': 0, '1979': 0, '1980': 0, '1981': 3, '1982': 3, '1983': 3, '1984': 0, '1985': 0, '1986': 4, '1987': 11, '1988': 3, '1989': 4, '1990': 6, '1991': 8, '1992': 22, '1993': 18, '1994': 10, '1995': 6, '1996': 8, '1997': 9, '1998': 4, '1999': 17, '2000': 25, '2001': 36, '2002': 33, '2003': 37, '2004': 38, '2005': 45, '2006': 38, '2007': 42, '2008': 33, '2009': 25, '2010': 16, '2011': 22, '2012': 34, '2013': 31, '2014': 28, '2015': 36, '2016': 41, '2017': 53, '2018': 28, '2019': 32, '2020': 40, '2021': 31, '2022': 33, '2023': 22, '2024': 9, '2025': 3},
+                    us: {'1977': 1, '1978': 2, '1979': 0, '1980': 2, '1981': 3, '1982': 6, '1983': 6, '1984': 2, '1985': 8, '1986': 2, '1987': 4, '1988': 5, '1989': 4, '1990': 5, '1991': 14, '1992': 10, '1993': 7, '1994': 9, '1995': 12, '1996': 10, '1997': 9, '1998': 12, '1999': 21, '2000': 17, '2001': 33, '2002': 37, '2003': 32, '2004': 33, '2005': 41, '2006': 36, '2007': 43, '2008': 26, '2009': 21, '2010': 18, '2011': 24, '2012': 32, '2013': 30, '2014': 31, '2015': 35, '2016': 42, '2017': 51, '2018': 27, '2019': 33, '2020': 39, '2021': 31, '2022': 32, '2023': 21, '2024': 9, '2025': 4},
+                    jp: {'1977': 0, '1978': 0, '1979': 0, '1980': 0, '1981': 3, '1982': 3, '1983': 4, '1984': 3, '1985': 11, '1986': 4, '1987': 3, '1988': 8, '1989': 5, '1990': 13, '1991': 16, '1992': 19, '1993': 19, '1994': 22, '1995': 26, '1996': 21, '1997': 8, '1998': 11, '1999': 18, '2000': 14, '2001': 27, '2002': 29, '2003': 25, '2004': 28, '2005': 29, '2006': 25, '2007': 35, '2008': 19, '2009': 19, '2010': 12, '2011': 23, '2012': 24, '2013': 37, '2014': 26, '2015': 38, '2016': 38, '2017': 53, '2018': 27, '2019': 32, '2020': 38, '2021': 31, '2022': 32, '2023': 21, '2024': 9, '2025': 3}
+                },
+                regions: {
+                    labels: ['PAL', 'Autre', 'NTSC-J', 'NTSC-U'],
+                    counts: [797, 182, 135, 26],
+                    colors: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)'
+                    ]
+                },
+                conditions: {
+                    labels: ['Complet', 'Jeu seul', 'Dématérialisé', 'Jeu + Boîte', 'Jeu + Notice'],
+                    counts: [592, 268, 194, 51, 35],
+                    colors: [
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(255, 159, 64, 0.7)',
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(201, 203, 207, 0.7)'
+                    ]
+                }
+            };
+
+            // Variables globales pour les graphiques
+            let brandsChart, consolesChart, yearsChart, regionsChart, conditionsChart;
+
+            // Fonction pour créer un élément de légende avec pourcentage
+            function createLegendItem(chart, index, containerId, colors) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                const legendItem = document.createElement('div');
+                legendItem.className = 'legend-item';
+                if (chart.getDatasetMeta(0).data[index].hidden) {
+                    legendItem.classList.add('hidden');
+                }
+
+                legendItem.onclick = function() {
+                    const meta = chart.getDatasetMeta(0);
+                    meta.data[index].hidden = !meta.data[index].hidden;
+                    chart.update();
+                    updateLegend(chart, containerId, colors);
+
+                    // Si c'est le graphique des marques, mettre à jour les consoles
+                    if (chart === brandsChart) {
+                        updateConsolesFromBrands();
+                    }
+                };
+
+                const colorBox = document.createElement('div');
+                colorBox.className = 'legend-color-box';
+                colorBox.style.backgroundColor = colors[index];
+
+                const value = chart.data.datasets[0].data[index];
+                const total = chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                const percentage = ((value / total) * 100).toFixed(1);
+
+                const labelText = document.createElement('span');
+                labelText.textContent = `${chart.data.labels[index]} (${value} - ${percentage}%)`;
+
+                legendItem.appendChild(colorBox);
+                legendItem.appendChild(labelText);
+                container.appendChild(legendItem);
+            }
+
+            // Fonction pour mettre à jour une légende
+            function updateLegend(chart, containerId, colors) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                container.innerHTML = '';
+                chart.data.labels.forEach((label, index) => {
+                    createLegendItem(chart, index, containerId, colors);
+                });
+            }
+
+            // Fonction pour mettre à jour les consoles en fonction des marques sélectionnées
+            function updateConsolesFromBrands() {
+                if (!brandsChart || !consolesChart) return;
+
+                // Récupérer les marques cachées
+                const hiddenBrands = brandsChart.getDatasetMeta(0).data
+                    .map((item, index) => item.hidden ? brandsChart.data.labels[index] : null)
+                    .filter(item => item !== null);
+
+                // Mettre à jour les consoles
+                consolesChart.getDatasetMeta(0).data.forEach((item, index) => {
+                    const consoleBrand = statsData.consoles.brandNames[index];
+                    item.hidden = hiddenBrands.includes(consoleBrand);
+                });
+
+                consolesChart.update();
+                updateLegend(consolesChart, 'consolesLegend', statsData.consoles.colors);
+            }
+
+            // Graphique des marques
+            const brandsCtx = document.getElementById('brandsChart').getContext('2d');
+            brandsChart = new Chart(brandsCtx, {
+                type: 'pie',
+                data: {
+                    labels: statsData.brands.labels,
+                    datasets: [{
+                        data: statsData.brands.counts,
+                        backgroundColor: statsData.brands.colors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1) + '%';
+                                    return `${label}: ${value} jeux (${percentage})`;
+                                }
+                            }
+                        }
+                    },
+                    onClick: function(evt, elements) {
+                        if (elements.length > 0) {
+                            updateLegend(this, 'brandsLegend', statsData.brands.colors);
+                        }
+                    }
+                }
+            });
+
+            // Graphique des consoles
+            const consolesCtx = document.getElementById('consolesChart').getContext('2d');
+            consolesChart = new Chart(consolesCtx, {
+                type: 'pie',
+                data: {
+                    labels: statsData.consoles.labels,
+                    datasets: [{
+                        data: statsData.consoles.counts,
+                        backgroundColor: statsData.consoles.colors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1) + '%';
+                                    return `${label}: ${value} jeux (${percentage})`;
+                                }
+                            }
+                        }
+                    },
+                    onClick: function(evt, elements) {
+                        if (elements.length > 0) {
+                            updateLegend(this, 'consolesLegend', statsData.consoles.colors);
+                        }
+                    }
+                }
+            });
+
+            // Graphique des années
+            const yearsCtx = document.getElementById('yearsChart').getContext('2d');
+            yearsChart = new Chart(yearsCtx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(statsData.years.eu),
+                    datasets: [{
+                        label: 'Europe',
+                        data: Object.values(statsData.years.eu),
+                        backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            min: '1977',
+                            max: '2025'
+                        },
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                precision: 0
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.raw} jeux`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Graphique des régions
+            const regionsCtx = document.getElementById('regionsChart').getContext('2d');
+            regionsChart = new Chart(regionsCtx, {
+                type: 'pie',
+                data: {
+                    labels: statsData.regions.labels,
+                    datasets: [{
+                        data: statsData.regions.counts,
+                        backgroundColor: statsData.regions.colors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1) + '%';
+                                    return `${label}: ${value} jeux (${percentage})`;
+                                }
+                            }
+                        }
+                    },
+                    onClick: function(evt, elements) {
+                        if (elements.length > 0) {
+                            updateLegend(this, 'regionsLegend', statsData.regions.colors);
+                        }
+                    }
+                }
+            });
+
+            // Graphique des états
+            const conditionsCtx = document.getElementById('conditionsChart').getContext('2d');
+            conditionsChart = new Chart(conditionsCtx, {
+                type: 'pie',
+                data: {
+                    labels: statsData.conditions.labels,
+                    datasets: [{
+                        data: statsData.conditions.counts,
+                        backgroundColor: statsData.conditions.colors,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1) + '%';
+                                    return `${label}: ${value} jeux (${percentage})`;
+                                }
+                            }
+                        }
+                    },
+                    onClick: function(evt, elements) {
+                        if (elements.length > 0) {
+                            updateLegend(this, 'conditionsLegend', statsData.conditions.colors);
+                        }
+                    }
+                }
+            });
+
+            // Fonction pour changer le graphique des années
+            function changeYearChart(region) {
+                // Mettre à jour les boutons actifs
+                document.querySelectorAll('.tab-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                event.target.classList.add('active');
+
+                // Mettre à jour les données
+                const data = region === 'EU' ? statsData.years.eu : 
+                             region === 'US' ? statsData.years.us : statsData.years.jp;
+
+                yearsChart.data.labels = Object.keys(data);
+                yearsChart.data.datasets[0].data = Object.values(data);
+                yearsChart.data.datasets[0].label = region === 'EU' ? 'Europe' : 
+                                                   region === 'US' ? 'Amérique' : 'Japon';
+                yearsChart.data.datasets[0].backgroundColor = region === 'EU' ? 'rgba(54, 162, 235, 0.7)' : 
+                                                             region === 'US' ? 'rgba(255, 99, 132, 0.7)' : 'rgba(255, 206, 86, 0.7)';
+                yearsChart.data.datasets[0].borderColor = region === 'EU' ? 'rgba(54, 162, 235, 1)' : 
+                                                         region === 'US' ? 'rgba(255, 99, 132, 1)' : 'rgba(255, 206, 86, 1)';
+                yearsChart.update();
+            }
+
+            // Initialiser les légendes au chargement
+            document.addEventListener('DOMContentLoaded', function() {
+                // Désactiver les légendes intégrées
+                Chart.defaults.plugins.legend.display = false;
+
+                // Créer les légendes personnalisées
+                updateLegend(brandsChart, 'brandsLegend', statsData.brands.colors);
+                updateLegend(consolesChart, 'consolesLegend', statsData.consoles.colors);
+                updateLegend(regionsChart, 'regionsLegend', statsData.regions.colors);
+                updateLegend(conditionsChart, 'conditionsLegend', statsData.conditions.colors);
+            });
+        </script>
+    </body>
+    </html>
+        

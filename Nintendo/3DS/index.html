@@ -1,0 +1,603 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>3DS - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(15, 10, 15);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Nintendo</a>
+                <h1>Jeux pour 3DS</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Dragon Ball Fusions.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Dragon Ball Fusions.png" alt="Dragon Ball Fusions" class="game-img">
+            </div>
+            <div class="game-title">
+                Dragon Ball Fusions
+            </div>
+        </a>
+        
+        <a href="Dragon Quest VII  La Quête des Vestiges du Monde.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Dragon Quest VII  La Quête des Vestiges du Monde.png" alt="Dragon Quest VII : La Quête des Vestiges du Monde" class="game-img">
+            </div>
+            <div class="game-title">
+                Dragon Quest VII : La Quête des Vestiges du Monde
+            </div>
+        </a>
+        
+        <a href="Détective Pikachu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Détective Pikachu.png" alt="Détective Pikachu" class="game-img">
+            </div>
+            <div class="game-title">
+                Détective Pikachu
+            </div>
+        </a>
+        
+        <a href="Ever Oasis.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ever Oasis.png" alt="Ever Oasis" class="game-img">
+            </div>
+            <div class="game-title">
+                Ever Oasis
+            </div>
+        </a>
+        
+        <a href="Fantasy Life.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fantasy Life.png" alt="Fantasy Life" class="game-img">
+            </div>
+            <div class="game-title">
+                Fantasy Life
+            </div>
+        </a>
+        
+        <a href="Fire Emblem Echoes Shadows of Valentia.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fire Emblem Echoes Shadows of Valentia.png" alt="Fire Emblem Echoes: Shadows of Valentia" class="game-img">
+            </div>
+            <div class="game-title">
+                Fire Emblem Echoes: Shadows of Valentia
+            </div>
+        </a>
+        
+        <a href="Fire Emblem Fates  Conquête.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fire Emblem Fates  Conquête.png" alt="Fire Emblem Fates : Conquête" class="game-img">
+            </div>
+            <div class="game-title">
+                Fire Emblem Fates : Conquête
+            </div>
+        </a>
+        
+        <a href="Fire Emblem Fates  Héritage.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fire Emblem Fates  Héritage.png" alt="Fire Emblem Fates : Héritage" class="game-img">
+            </div>
+            <div class="game-title">
+                Fire Emblem Fates : Héritage
+            </div>
+        </a>
+        
+        <a href="Hyrule Warriors Legends (Collector).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Hyrule Warriors Legends (Collector).png" alt="Hyrule Warriors Legends (Collector)" class="game-img">
+            </div>
+            <div class="game-title">
+                Hyrule Warriors Legends (Collector)
+            </div>
+        </a>
+        
+        <a href="Kid Icarus Uprising.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kid Icarus Uprising.png" alt="Kid Icarus: Uprising" class="game-img">
+            </div>
+            <div class="game-title">
+                Kid Icarus: Uprising
+            </div>
+        </a>
+        
+        <a href="Kirby Planet Robobot.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kirby Planet Robobot.png" alt="Kirby: Planet Robobot" class="game-img">
+            </div>
+            <div class="game-title">
+                Kirby: Planet Robobot
+            </div>
+        </a>
+        
+        <a href="Kirby Triple Deluxe.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kirby Triple Deluxe.png" alt="Kirby: Triple Deluxe" class="game-img">
+            </div>
+            <div class="game-title">
+                Kirby: Triple Deluxe
+            </div>
+        </a>
+        
+        <a href="L'Aventure Layton  Katrielle et la Conspiration des Millionnaires.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/L'Aventure Layton  Katrielle et la Conspiration des Millionnaires.png" alt="L'Aventure Layton : Katrielle et la Conspiration des Millionnaires" class="game-img">
+            </div>
+            <div class="game-title">
+                L'Aventure Layton : Katrielle et la Conspiration des Millionnaires
+            </div>
+        </a>
+        
+        <a href="Luigi's Mansion 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Luigi's Mansion 2.png" alt="Luigi's Mansion 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Luigi's Mansion 2
+            </div>
+        </a>
+        
+        <a href="Mario & Luigi Dream Team Bros..html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Luigi Dream Team Bros..png" alt="Mario & Luigi: Dream Team Bros." class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Luigi: Dream Team Bros.
+            </div>
+        </a>
+        
+        <a href="Mario & Luigi Paper Jam Bros..html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Luigi Paper Jam Bros..png" alt="Mario & Luigi: Paper Jam Bros." class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Luigi: Paper Jam Bros.
+            </div>
+        </a>
+        
+        <a href="Mario & Luigi Superstar Saga + Les Sbires de Bowser.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Luigi Superstar Saga + Les Sbires de Bowser.png" alt="Mario & Luigi: Superstar Saga + Les Sbires de Bowser" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Luigi: Superstar Saga + Les Sbires de Bowser
+            </div>
+        </a>
+        
+        <a href="Mario Kart 7.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Kart 7.png" alt="Mario Kart 7" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Kart 7
+            </div>
+        </a>
+        
+        <a href="Mario Tennis Open.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Tennis Open.png" alt="Mario Tennis Open" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Tennis Open
+            </div>
+        </a>
+        
+        <a href="New Super Mario Bros. 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/New Super Mario Bros. 2.png" alt="New Super Mario Bros. 2" class="game-img">
+            </div>
+            <div class="game-title">
+                New Super Mario Bros. 2
+            </div>
+        </a>
+        
+        <a href="Nintendogs + Cats Bouledogue Français & ses Nouveaux Amis (Nintendo Selects).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Nintendogs + Cats Bouledogue Français & ses Nouveaux Amis (Nintendo Selects).png" alt="Nintendogs + Cats Bouledogue Français & ses Nouveaux Amis (Nintendo Selects)" class="game-img">
+            </div>
+            <div class="game-title">
+                Nintendogs + Cats Bouledogue Français & ses Nouveaux Amis (Nintendo Selects)
+            </div>
+        </a>
+        
+        <a href="Paper Mario Sticker Star.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Paper Mario Sticker Star.png" alt="Paper Mario: Sticker Star" class="game-img">
+            </div>
+            <div class="game-title">
+                Paper Mario: Sticker Star
+            </div>
+        </a>
+        
+        <a href="Phoenix Wright Ace Attorney 5 - Dual Destinies.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Phoenix Wright Ace Attorney 5 - Dual Destinies (Jap).png" alt="Phoenix Wright: Ace Attorney 5 - Dual Destinies (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Phoenix Wright: Ace Attorney 5 - Dual Destinies
+            </div>
+        </a>
+        
+        <a href="Phoenix Wright Ace Attorney 6 - Spirit of Justice.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Phoenix Wright Ace Attorney 6 - Spirit of Justice (Jap).png" alt="Phoenix Wright: Ace Attorney 6 - Spirit of Justice (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Phoenix Wright: Ace Attorney 6 - Spirit of Justice
+            </div>
+        </a>
+        
+        <a href="Pokémon Art Academy.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Art Academy.png" alt="Pokémon Art Academy" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Art Academy
+            </div>
+        </a>
+        
+        <a href="Pokémon Donjon Mystère  Les Portes de l'Infini.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Donjon Mystère  Les Portes de l'Infini.png" alt="Pokémon Donjon Mystère : Les Portes de l'Infini" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Donjon Mystère : Les Portes de l'Infini
+            </div>
+        </a>
+        
+        <a href="Pokémon Lune.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Lune.png" alt="Pokémon Lune" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Lune
+            </div>
+        </a>
+        
+        <a href="Pokémon Méga Donjon Mystère.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Méga Donjon Mystère.png" alt="Pokémon Méga Donjon Mystère" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Méga Donjon Mystère
+            </div>
+        </a>
+        
+        <a href="Pokémon Rubis Oméga.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Rubis Oméga.png" alt="Pokémon Rubis Oméga" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Rubis Oméga
+            </div>
+        </a>
+        
+        <a href="Pokémon Saphir Alpha (Edition Steelbook).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Saphir Alpha (Edition Steelbook).png" alt="Pokémon Saphir Alpha (Edition Steelbook)" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Saphir Alpha (Edition Steelbook)
+            </div>
+        </a>
+        
+        <a href="Pokémon Soleil.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Soleil.png" alt="Pokémon Soleil" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Soleil
+            </div>
+        </a>
+        
+        <a href="Pokémon Ultra-Lune.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Ultra-Lune.png" alt="Pokémon Ultra-Lune" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Ultra-Lune
+            </div>
+        </a>
+        
+        <a href="Pokémon Ultra-Soleil.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Ultra-Soleil.png" alt="Pokémon Ultra-Soleil" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Ultra-Soleil
+            </div>
+        </a>
+        
+        <a href="Pokémon X.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon X.png" alt="Pokémon X" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon X
+            </div>
+        </a>
+        
+        <a href="Pokémon Y.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Y.png" alt="Pokémon Y" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Y
+            </div>
+        </a>
+        
+        <a href="Professeur Layton et l'Héritage des Aslantes.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Professeur Layton et l'Héritage des Aslantes.png" alt="Professeur Layton et l'Héritage des Aslantes" class="game-img">
+            </div>
+            <div class="game-title">
+                Professeur Layton et l'Héritage des Aslantes
+            </div>
+        </a>
+        
+        <a href="Professeur Layton et le Masque des miracles.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Professeur Layton et le Masque des miracles.png" alt="Professeur Layton et le Masque des miracles" class="game-img">
+            </div>
+            <div class="game-title">
+                Professeur Layton et le Masque des miracles
+            </div>
+        </a>
+        
+        <a href="Professeur Layton vs. Phoenix Wright Ace Attorney.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Professeur Layton vs. Phoenix Wright Ace Attorney.png" alt="Professeur Layton vs. Phoenix Wright: Ace Attorney" class="game-img">
+            </div>
+            <div class="game-title">
+                Professeur Layton vs. Phoenix Wright: Ace Attorney
+            </div>
+        </a>
+        
+        <a href="Skylanders Spyro's Adventure.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Skylanders Spyro's Adventure.png" alt="Skylanders: Spyro's Adventure" class="game-img">
+            </div>
+            <div class="game-title">
+                Skylanders: Spyro's Adventure
+            </div>
+        </a>
+        
+        <a href="Sonic Generations.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Generations.png" alt="Sonic Generations" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Generations
+            </div>
+        </a>
+        
+        <a href="Sonic Lost World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Lost World.png" alt="Sonic Lost World" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Lost World
+            </div>
+        </a>
+        
+        <a href="Star Fox 64 3D.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Fox 64 3D.png" alt="Star Fox 64 3D" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Fox 64 3D
+            </div>
+        </a>
+        
+        <a href="Super Mario 3D Land.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario 3D Land.png" alt="Super Mario 3D Land" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario 3D Land
+            </div>
+        </a>
+        
+        <a href="Super Smash Bros. for Nintendo 3DS.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Smash Bros. for Nintendo 3DS.png" alt="Super Smash Bros. for Nintendo 3DS" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Smash Bros. for Nintendo 3DS
+            </div>
+        </a>
+        
+        <a href="Super Street Fighter IV 3D Edition.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Street Fighter IV 3D Edition.png" alt="Super Street Fighter IV 3D Edition" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Street Fighter IV 3D Edition
+            </div>
+        </a>
+        
+        <a href="The Great Ace Attorney 2 Resolve.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Great Ace Attorney 2 Resolve (Jap).png" alt="The Great Ace Attorney 2: Resolve (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Great Ace Attorney 2: Resolve
+            </div>
+        </a>
+        
+        <a href="The Great Ace Attorney Adventures.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Great Ace Attorney Adventures (Jap).png" alt="The Great Ace Attorney: Adventures (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Great Ace Attorney: Adventures
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda A Link Between Worlds.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda A Link Between Worlds.png" alt="The Legend of Zelda: A Link Between Worlds" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: A Link Between Worlds
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Four Swords Anniversary Edition.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Four Swords Anniversary Edition.png" alt="The Legend of Zelda: Four Swords Anniversary Edition" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Four Swords Anniversary Edition
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Majora's Mask 3D (Collector).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Majora's Mask 3D (Collector).png" alt="The Legend of Zelda: Majora's Mask 3D (Collector)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Majora's Mask 3D (Collector)
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Ocarina of Time 3D (version avec Console 3DS Collector).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Ocarina of Time 3D (version avec Console 3DS Collector).png" alt="The Legend of Zelda: Ocarina of Time 3D (version avec Console 3DS Collector)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Ocarina of Time 3D (version avec Console 3DS Collector)
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Tri Force Heroes.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Tri Force Heroes.png" alt="The Legend of Zelda: Tri Force Heroes" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Tri Force Heroes
+            </div>
+        </a>
+        
+        <a href="Yo-kai Watch.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yo-kai Watch.png" alt="Yo-kai Watch" class="game-img">
+            </div>
+            <div class="game-title">
+                Yo-kai Watch
+            </div>
+        </a>
+        
+        <a href="Yo-kai Watch 2  Fantômes Bouffis.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yo-kai Watch 2  Fantômes Bouffis.png" alt="Yo-kai Watch 2 : Fantômes Bouffis" class="game-img">
+            </div>
+            <div class="game-title">
+                Yo-kai Watch 2 : Fantômes Bouffis
+            </div>
+        </a>
+        
+        <a href="Yo-kai Watch 3.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yo-kai Watch 3.png" alt="Yo-kai Watch 3" class="game-img">
+            </div>
+            <div class="game-title">
+                Yo-kai Watch 3
+            </div>
+        </a>
+        
+        <a href="Yoshi's New Island (Nintendo Selects).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yoshi's New Island (Nintendo Selects).png" alt="Yoshi's New Island (Nintendo Selects)" class="game-img">
+            </div>
+            <div class="game-title">
+                Yoshi's New Island (Nintendo Selects)
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

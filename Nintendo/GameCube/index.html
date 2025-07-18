@@ -1,0 +1,513 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>GameCube - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(75, 67, 125);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Nintendo</a>
+                <h1>Jeux pour GameCube</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Batman Dark Tomorrow.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Batman Dark Tomorrow.png" alt="Batman: Dark Tomorrow" class="game-img">
+            </div>
+            <div class="game-title">
+                Batman: Dark Tomorrow
+            </div>
+        </a>
+        
+        <a href="Beyblade VForce Super Tournament Battle.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Beyblade VForce Super Tournament Battle.png" alt="Beyblade VForce: Super Tournament Battle" class="game-img">
+            </div>
+            <div class="game-title">
+                Beyblade VForce: Super Tournament Battle
+            </div>
+        </a>
+        
+        <a href="Billy Hatcher and the Giant Egg.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Billy Hatcher and the Giant Egg.png" alt="Billy Hatcher and the Giant Egg" class="game-img">
+            </div>
+            <div class="game-title">
+                Billy Hatcher and the Giant Egg
+            </div>
+        </a>
+        
+        <a href="Bomberman Generation.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Bomberman Generation.png" alt="Bomberman Generation" class="game-img">
+            </div>
+            <div class="game-title">
+                Bomberman Generation
+            </div>
+        </a>
+        
+        <a href="Cocoto Platform Jumper.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Cocoto Platform Jumper.png" alt="Cocoto Platform Jumper" class="game-img">
+            </div>
+            <div class="game-title">
+                Cocoto Platform Jumper
+            </div>
+        </a>
+        
+        <a href="Dancing Stage Mario Mix.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Dancing Stage Mario Mix.png" alt="Dancing Stage Mario Mix" class="game-img">
+            </div>
+            <div class="game-title">
+                Dancing Stage Mario Mix
+            </div>
+        </a>
+        
+        <a href="Donkey Konga.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Donkey Konga.png" alt="Donkey Konga" class="game-img">
+            </div>
+            <div class="game-title">
+                Donkey Konga
+            </div>
+        </a>
+        
+        <a href="Donkey Konga 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Donkey Konga 2.png" alt="Donkey Konga 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Donkey Konga 2
+            </div>
+        </a>
+        
+        <a href="James Bond 007 Nightfire.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/James Bond 007 Nightfire.png" alt="James Bond 007: Nightfire" class="game-img">
+            </div>
+            <div class="game-title">
+                James Bond 007: Nightfire
+            </div>
+        </a>
+        
+        <a href="Kirby Air Ride.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kirby Air Ride (Jap).png" alt="Kirby Air Ride (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Kirby Air Ride
+            </div>
+        </a>
+        
+        <a href="Le Règne du Feu - Reign of Fire.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Le Règne du Feu - Reign of Fire.png" alt="Le Règne du Feu - Reign of Fire" class="game-img">
+            </div>
+            <div class="game-title">
+                Le Règne du Feu - Reign of Fire
+            </div>
+        </a>
+        
+        <a href="Les Sims 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Les Sims 2.png" alt="Les Sims 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Les Sims 2
+            </div>
+        </a>
+        
+        <a href="Les Sims 2  Animaux et Cie.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Les Sims 2  Animaux et Cie.png" alt="Les Sims 2 : Animaux et Cie" class="game-img">
+            </div>
+            <div class="game-title">
+                Les Sims 2 : Animaux et Cie
+            </div>
+        </a>
+        
+        <a href="Les Sims  Permis de sortir.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Les Sims  Permis de sortir.png" alt="Les Sims : Permis de sortir" class="game-img">
+            </div>
+            <div class="game-title">
+                Les Sims : Permis de sortir
+            </div>
+        </a>
+        
+        <a href="Luigi's Mansion (Le Choix des Joueurs).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Luigi's Mansion (Le Choix des Joueurs).png" alt="Luigi's Mansion (Le Choix des Joueurs)" class="game-img">
+            </div>
+            <div class="game-title">
+                Luigi's Mansion (Le Choix des Joueurs)
+            </div>
+        </a>
+        
+        <a href="Mario Golf Toadstool Tour.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Golf Toadstool Tour.png" alt="Mario Golf: Toadstool Tour" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Golf: Toadstool Tour
+            </div>
+        </a>
+        
+        <a href="Mario Kart Double Dash!!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Kart Double Dash!!.png" alt="Mario Kart: Double Dash!!" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Kart: Double Dash!!
+            </div>
+        </a>
+        
+        <a href="Mario Party 4.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Party 4.png" alt="Mario Party 4" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Party 4
+            </div>
+        </a>
+        
+        <a href="Mario Party 5 (Le Choix des Joueurs).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Party 5 (Le Choix des Joueurs).png" alt="Mario Party 5 (Le Choix des Joueurs)" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Party 5 (Le Choix des Joueurs)
+            </div>
+        </a>
+        
+        <a href="Mario Party 6.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Party 6.png" alt="Mario Party 6" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Party 6
+            </div>
+        </a>
+        
+        <a href="Mario Party 7.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Party 7.png" alt="Mario Party 7" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Party 7
+            </div>
+        </a>
+        
+        <a href="Mario Smash Football.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Smash Football.png" alt="Mario Smash Football" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Smash Football
+            </div>
+        </a>
+        
+        <a href="Mario Superstar Baseball.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Superstar Baseball.png" alt="Mario Superstar Baseball" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Superstar Baseball
+            </div>
+        </a>
+        
+        <a href="Metroid Prime 2 Echoes.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Metroid Prime 2 Echoes.png" alt="Metroid Prime 2: Echoes" class="game-img">
+            </div>
+            <div class="game-title">
+                Metroid Prime 2: Echoes
+            </div>
+        </a>
+        
+        <a href="Micro Machines.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Micro Machines.png" alt="Micro Machines" class="game-img">
+            </div>
+            <div class="game-title">
+                Micro Machines
+            </div>
+        </a>
+        
+        <a href="Paper Mario  La Porte millénaire.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Paper Mario  La Porte millénaire.png" alt="Paper Mario : La Porte millénaire" class="game-img">
+            </div>
+            <div class="game-title">
+                Paper Mario : La Porte millénaire
+            </div>
+        </a>
+        
+        <a href="Peter Jackson's King Kong The Official Game of the Movie.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Peter Jackson's King Kong The Official Game of the Movie.png" alt="Peter Jackson's King Kong The Official Game of the Movie" class="game-img">
+            </div>
+            <div class="game-title">
+                Peter Jackson's King Kong The Official Game of the Movie
+            </div>
+        </a>
+        
+        <a href="Pikmin.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pikmin.png" alt="Pikmin" class="game-img">
+            </div>
+            <div class="game-title">
+                Pikmin
+            </div>
+        </a>
+        
+        <a href="Pokémon Colosseum.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Colosseum.png" alt="Pokémon Colosseum" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Colosseum
+            </div>
+        </a>
+        
+        <a href="Pokémon XD  Le Souffle des ténèbres.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon XD  Le Souffle des ténèbres.png" alt="Pokémon XD : Le Souffle des ténèbres" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon XD : Le Souffle des ténèbres
+            </div>
+        </a>
+        
+        <a href="Rayman 3 Hoodlum Havoc (Le Choix des Joueurs).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Rayman 3 Hoodlum Havoc (Le Choix des Joueurs).png" alt="Rayman 3: Hoodlum Havoc (Le Choix des Joueurs)" class="game-img">
+            </div>
+            <div class="game-title">
+                Rayman 3: Hoodlum Havoc (Le Choix des Joueurs)
+            </div>
+        </a>
+        
+        <a href="Sega Soccer Slam.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sega Soccer Slam.png" alt="Sega Soccer Slam" class="game-img">
+            </div>
+            <div class="game-title">
+                Sega Soccer Slam
+            </div>
+        </a>
+        
+        <a href="Shadow the Hedgehog.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Shadow the Hedgehog.png" alt="Shadow the Hedgehog" class="game-img">
+            </div>
+            <div class="game-title">
+                Shadow the Hedgehog
+            </div>
+        </a>
+        
+        <a href="Sonic Adventure DX Director's Cut (Le Choix des Joueurs).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Adventure DX Director's Cut (Le Choix des Joueurs).png" alt="Sonic Adventure DX: Director's Cut (Le Choix des Joueurs)" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Adventure DX: Director's Cut (Le Choix des Joueurs)
+            </div>
+        </a>
+        
+        <a href="Sonic Heroes (Le Choix des Joueurs).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Heroes (Le Choix des Joueurs).png" alt="Sonic Heroes (Le Choix des Joueurs)" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Heroes (Le Choix des Joueurs)
+            </div>
+        </a>
+        
+        <a href="Sonic Riders.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Riders.png" alt="Sonic Riders" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Riders
+            </div>
+        </a>
+        
+        <a href="Soulcalibur II.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Soulcalibur II.png" alt="Soulcalibur II" class="game-img">
+            </div>
+            <div class="game-title">
+                Soulcalibur II
+            </div>
+        </a>
+        
+        <a href="Star Fox Adventures.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Fox Adventures.png" alt="Star Fox Adventures" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Fox Adventures
+            </div>
+        </a>
+        
+        <a href="Star Fox Assault.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Fox Assault.png" alt="Star Fox: Assault" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Fox: Assault
+            </div>
+        </a>
+        
+        <a href="Super Mario Sunshine (Le Choix des Joueurs).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Sunshine (Le Choix des Joueurs).png" alt="Super Mario Sunshine (Le Choix des Joueurs)" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Sunshine (Le Choix des Joueurs)
+            </div>
+        </a>
+        
+        <a href="Super Monkey Ball.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Monkey Ball.png" alt="Super Monkey Ball" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Monkey Ball
+            </div>
+        </a>
+        
+        <a href="Super Monkey Ball 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Monkey Ball 2.png" alt="Super Monkey Ball 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Monkey Ball 2
+            </div>
+        </a>
+        
+        <a href="Super Smash Bros. Melee (Le Choix des Joueurs).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Smash Bros. Melee (Le Choix des Joueurs).png" alt="Super Smash Bros. Melee (Le Choix des Joueurs)" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Smash Bros. Melee (Le Choix des Joueurs)
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Four Swords Adventures.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Four Swords Adventures.png" alt="The Legend of Zelda: Four Swords Adventures" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Four Swords Adventures
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda The Wind Waker (Edition limitée).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda The Wind Waker (Edition limitée).png" alt="The Legend of Zelda: The Wind Waker (Edition limitée)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: The Wind Waker (Edition limitée)
+            </div>
+        </a>
+        
+        <a href="WarioWare, Inc. Mega Party Game$!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/WarioWare, Inc. Mega Party Game$!.png" alt="WarioWare, Inc.: Mega Party Game$!" class="game-img">
+            </div>
+            <div class="game-title">
+                WarioWare, Inc.: Mega Party Game$!
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

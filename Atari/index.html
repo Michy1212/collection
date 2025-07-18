@@ -1,0 +1,101 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Atari - Consoles</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(253, 0, 11);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .console-list {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .console-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 15px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                }
+                .console-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .console-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 60px;
+                }
+                .console-img {
+                    max-width: 100%;
+                    max-height: 60px;
+                    object-fit: contain;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à l'accueil</a>
+                <h1>Consoles Atari</h1>
+
+                <div class="console-list">
+                    
+    <a href="Atari 2600/index.html" class="console-card">
+        <div class="console-img-container">
+            <img src="Atari 2600/Atari 2600.png" alt="Atari 2600" class="console-img">
+        </div>
+        <div class="console-name">
+            Atari 2600
+        </div>
+    </a>
+    
+    <a href="Atari 800XL/index.html" class="console-card">
+        <div class="console-img-container">
+            <img src="Atari 800XL/Atari 800XL.png" alt="Atari 800XL" class="console-img">
+        </div>
+        <div class="console-name">
+            Atari 800XL
+        </div>
+    </a>
+    
+                </div>
+            </div>
+        </body>
+        </html>
+                

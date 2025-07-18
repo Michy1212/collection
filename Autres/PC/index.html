@@ -1,0 +1,1584 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>PC - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #f5f5f5;
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Autres</a>
+                <h1>Jeux pour PC</h1>
+
+                <div class="game-grid">
+                    
+        <a href="20XX.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/20XX.png" alt="20XX" class="game-img">
+            </div>
+            <div class="game-title">
+                20XX
+            </div>
+        </a>
+        
+        <a href="A Blind Legend.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/A Blind Legend.png" alt="A Blind Legend" class="game-img">
+            </div>
+            <div class="game-title">
+                A Blind Legend
+            </div>
+        </a>
+        
+        <a href="A Hat in Time.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/A Hat in Time.png" alt="A Hat in Time" class="game-img">
+            </div>
+            <div class="game-title">
+                A Hat in Time
+            </div>
+        </a>
+        
+        <a href="Adios.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Adios
+            </div>
+        </a>
+        
+        <a href="Agatha Christie - The ABC Murders.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Agatha Christie - The ABC Murders.png" alt="Agatha Christie - The ABC Murders" class="game-img">
+            </div>
+            <div class="game-title">
+                Agatha Christie - The ABC Murders
+            </div>
+        </a>
+        
+        <a href="Age of Empire III - Edition Complète.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Age of Empire III - Edition Complète.png" alt="Age of Empire III - Edition Complète" class="game-img">
+            </div>
+            <div class="game-title">
+                Age of Empire III - Edition Complète
+            </div>
+        </a>
+        
+        <a href="Age of Empires II HD.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Age of Empires II HD.png" alt="Age of Empires II HD" class="game-img">
+            </div>
+            <div class="game-title">
+                Age of Empires II HD
+            </div>
+        </a>
+        
+        <a href="Age of Empires IV Anniversary Edition.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Age of Empires IV Anniversary Edition.png" alt="Age of Empires IV: Anniversary Edition" class="game-img">
+            </div>
+            <div class="game-title">
+                Age of Empires IV: Anniversary Edition
+            </div>
+        </a>
+        
+        <a href="Ale & Tale Tavern.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ale & Tale Tavern.png" alt="Ale & Tale Tavern" class="game-img">
+            </div>
+            <div class="game-title">
+                Ale & Tale Tavern
+            </div>
+        </a>
+        
+        <a href="Amnesia A Machine for Pigs.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Amnesia: A Machine for Pigs
+            </div>
+        </a>
+        
+        <a href="Among Us.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Among Us.png" alt="Among Us" class="game-img">
+            </div>
+            <div class="game-title">
+                Among Us
+            </div>
+        </a>
+        
+        <a href="Bendy and the Ink Machine.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Bendy and the Ink Machine.png" alt="Bendy and the Ink Machine" class="game-img">
+            </div>
+            <div class="game-title">
+                Bendy and the Ink Machine
+            </div>
+        </a>
+        
+        <a href="Blur.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Blur.png" alt="Blur" class="game-img">
+            </div>
+            <div class="game-title">
+                Blur
+            </div>
+        </a>
+        
+        <a href="Bread & Fred.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Bread & Fred.png" alt="Bread & Fred" class="game-img">
+            </div>
+            <div class="game-title">
+                Bread & Fred
+            </div>
+        </a>
+        
+        <a href="Call of the Sea.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Call of the Sea
+            </div>
+        </a>
+        
+        <a href="Castle in the Darkness.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Castle in the Darkness.png" alt="Castle in the Darkness" class="game-img">
+            </div>
+            <div class="game-title">
+                Castle in the Darkness
+            </div>
+        </a>
+        
+        <a href="Cook, Serve, Delicious!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Cook, Serve, Delicious!.png" alt="Cook, Serve, Delicious!" class="game-img">
+            </div>
+            <div class="game-title">
+                Cook, Serve, Delicious!
+            </div>
+        </a>
+        
+        <a href="Coromon.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Coromon.png" alt="Coromon" class="game-img">
+            </div>
+            <div class="game-title">
+                Coromon
+            </div>
+        </a>
+        
+        <a href="Counter-Strike Global Offensive.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Counter-Strike: Global Offensive
+            </div>
+        </a>
+        
+        <a href="Crash Bandicoot 4 It’s About Time.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Crash Bandicoot 4 It’s About Time.png" alt="Crash Bandicoot 4: It’s About Time" class="game-img">
+            </div>
+            <div class="game-title">
+                Crash Bandicoot 4: It’s About Time
+            </div>
+        </a>
+        
+        <a href="Cuphead.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Cuphead.png" alt="Cuphead" class="game-img">
+            </div>
+            <div class="game-title">
+                Cuphead
+            </div>
+        </a>
+        
+        <a href="DOOM (2016).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/DOOM (2016).png" alt="DOOM (2016)" class="game-img">
+            </div>
+            <div class="game-title">
+                DOOM (2016)
+            </div>
+        </a>
+        
+        <a href="Death Stranding.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Death Stranding
+            </div>
+        </a>
+        
+        <a href="Demonologist.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Demonologist.png" alt="Demonologist" class="game-img">
+            </div>
+            <div class="game-title">
+                Demonologist
+            </div>
+        </a>
+        
+        <a href="Dev Guy.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Dev Guy.png" alt="Dev Guy" class="game-img">
+            </div>
+            <div class="game-title">
+                Dev Guy
+            </div>
+        </a>
+        
+        <a href="Devil Daggers.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Devil Daggers.png" alt="Devil Daggers" class="game-img">
+            </div>
+            <div class="game-title">
+                Devil Daggers
+            </div>
+        </a>
+        
+        <a href="DiRT 3.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/DiRT 3.png" alt="DiRT 3" class="game-img">
+            </div>
+            <div class="game-title">
+                DiRT 3
+            </div>
+        </a>
+        
+        <a href="DiRT Rally.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/DiRT Rally.png" alt="DiRT Rally" class="game-img">
+            </div>
+            <div class="game-title">
+                DiRT Rally
+            </div>
+        </a>
+        
+        <a href="Disgaea 2 PC.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Disgaea 2 PC.png" alt="Disgaea 2 PC" class="game-img">
+            </div>
+            <div class="game-title">
+                Disgaea 2 PC
+            </div>
+        </a>
+        
+        <a href="Divine Knockout.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Divine Knockout
+            </div>
+        </a>
+        
+        <a href="Double Action Boogaloo.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Double Action Boogaloo.png" alt="Double Action: Boogaloo" class="game-img">
+            </div>
+            <div class="game-title">
+                Double Action: Boogaloo
+            </div>
+        </a>
+        
+        <a href="DuckTales Remastered.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/DuckTales Remastered.png" alt="DuckTales: Remastered" class="game-img">
+            </div>
+            <div class="game-title">
+                DuckTales: Remastered
+            </div>
+        </a>
+        
+        <a href="Duelyst.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Duelyst.png" alt="Duelyst" class="game-img">
+            </div>
+            <div class="game-title">
+                Duelyst
+            </div>
+        </a>
+        
+        <a href="ElecHead.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/ElecHead.png" alt="ElecHead" class="game-img">
+            </div>
+            <div class="game-title">
+                ElecHead
+            </div>
+        </a>
+        
+        <a href="Elegy for a Dead World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Elegy for a Dead World.png" alt="Elegy for a Dead World" class="game-img">
+            </div>
+            <div class="game-title">
+                Elegy for a Dead World
+            </div>
+        </a>
+        
+        <a href="Emily is Away.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Emily is Away.png" alt="Emily is Away" class="game-img">
+            </div>
+            <div class="game-title">
+                Emily is Away
+            </div>
+        </a>
+        
+        <a href="F1 2015.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/F1 2015.png" alt="F1 2015" class="game-img">
+            </div>
+            <div class="game-title">
+                F1 2015
+            </div>
+        </a>
+        
+        <a href="FEZ.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/FEZ.png" alt="FEZ" class="game-img">
+            </div>
+            <div class="game-title">
+                FEZ
+            </div>
+        </a>
+        
+        <a href="Fall Guys.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Fall Guys
+            </div>
+        </a>
+        
+        <a href="Fallout 4.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fallout 4.png" alt="Fallout 4" class="game-img">
+            </div>
+            <div class="game-title">
+                Fallout 4
+            </div>
+        </a>
+        
+        <a href="Fallout New Vegas.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Fallout: New Vegas
+            </div>
+        </a>
+        
+        <a href="Final Fantasy VII.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Final Fantasy VII.png" alt="Final Fantasy VII" class="game-img">
+            </div>
+            <div class="game-title">
+                Final Fantasy VII
+            </div>
+        </a>
+        
+        <a href="First Class Trouble.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/First Class Trouble.png" alt="First Class Trouble" class="game-img">
+            </div>
+            <div class="game-title">
+                First Class Trouble
+            </div>
+        </a>
+        
+        <a href="Flinthook.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Flinthook.png" alt="Flinthook" class="game-img">
+            </div>
+            <div class="game-title">
+                Flinthook
+            </div>
+        </a>
+        
+        <a href="Freedom Planet.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Freedom Planet.png" alt="Freedom Planet" class="game-img">
+            </div>
+            <div class="game-title">
+                Freedom Planet
+            </div>
+        </a>
+        
+        <a href="Game Dev Tycoon.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Game Dev Tycoon.png" alt="Game Dev Tycoon" class="game-img">
+            </div>
+            <div class="game-title">
+                Game Dev Tycoon
+            </div>
+        </a>
+        
+        <a href="Gamedec - Definitive Edition.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Gamedec - Definitive Edition
+            </div>
+        </a>
+        
+        <a href="Gang Beasts.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Gang Beasts.png" alt="Gang Beasts" class="game-img">
+            </div>
+            <div class="game-title">
+                Gang Beasts
+            </div>
+        </a>
+        
+        <a href="Genshin Impact.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Genshin Impact
+            </div>
+        </a>
+        
+        <a href="Golf Gang.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Golf Gang.png" alt="Golf Gang" class="game-img">
+            </div>
+            <div class="game-title">
+                Golf Gang
+            </div>
+        </a>
+        
+        <a href="Goose Goose Duck.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Goose Goose Duck.png" alt="Goose Goose Duck" class="game-img">
+            </div>
+            <div class="game-title">
+                Goose Goose Duck
+            </div>
+        </a>
+        
+        <a href="Gum Ball Run.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Gum Ball Run.png" alt="Gum Ball Run" class="game-img">
+            </div>
+            <div class="game-title">
+                Gum Ball Run
+            </div>
+        </a>
+        
+        <a href="Guns'n'Stories Preface VR.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Guns'n'Stories Preface VR.png" alt="Guns'n'Stories: Preface VR" class="game-img">
+            </div>
+            <div class="game-title">
+                Guns'n'Stories: Preface VR
+            </div>
+        </a>
+        
+        <a href="Have a Nice Death.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Have a Nice Death.png" alt="Have a Nice Death" class="game-img">
+            </div>
+            <div class="game-title">
+                Have a Nice Death
+            </div>
+        </a>
+        
+        <a href="Hell is Others.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Hell is Others
+            </div>
+        </a>
+        
+        <a href="Hollow Knight.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Hollow Knight.png" alt="Hollow Knight" class="game-img">
+            </div>
+            <div class="game-title">
+                Hollow Knight
+            </div>
+        </a>
+        
+        <a href="Home.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Home.png" alt="Home" class="game-img">
+            </div>
+            <div class="game-title">
+                Home
+            </div>
+        </a>
+        
+        <a href="Horizon Chase Turbo.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Horizon Chase Turbo
+            </div>
+        </a>
+        
+        <a href="Hotline Miami.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Hotline Miami.png" alt="Hotline Miami" class="game-img">
+            </div>
+            <div class="game-title">
+                Hotline Miami
+            </div>
+        </a>
+        
+        <a href="Hotline Miami 2 Wrong Number.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Hotline Miami 2 Wrong Number.png" alt="Hotline Miami 2: Wrong Number" class="game-img">
+            </div>
+            <div class="game-title">
+                Hotline Miami 2: Wrong Number
+            </div>
+        </a>
+        
+        <a href="Hyperdimension Neptunia Re;Birth1.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Hyperdimension Neptunia Re;Birth1.png" alt="Hyperdimension Neptunia Re;Birth1" class="game-img">
+            </div>
+            <div class="game-title">
+                Hyperdimension Neptunia Re;Birth1
+            </div>
+        </a>
+        
+        <a href="I Am Fish.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/I Am Fish.png" alt="I Am Fish" class="game-img">
+            </div>
+            <div class="game-title">
+                I Am Fish
+            </div>
+        </a>
+        
+        <a href="INK.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/INK.png" alt="INK" class="game-img">
+            </div>
+            <div class="game-title">
+                INK
+            </div>
+        </a>
+        
+        <a href="In Silence.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/In Silence.png" alt="In Silence" class="game-img">
+            </div>
+            <div class="game-title">
+                In Silence
+            </div>
+        </a>
+        
+        <a href="Inside.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Inside.png" alt="Inside" class="game-img">
+            </div>
+            <div class="game-title">
+                Inside
+            </div>
+        </a>
+        
+        <a href="Keep Talking and Nobody Explodes.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Keep Talking and Nobody Explodes.png" alt="Keep Talking and Nobody Explodes" class="game-img">
+            </div>
+            <div class="game-title">
+                Keep Talking and Nobody Explodes
+            </div>
+        </a>
+        
+        <a href="Kingdom New Lands.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Kingdom New Lands
+            </div>
+        </a>
+        
+        <a href="LEGO Bricktales.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                LEGO Bricktales
+            </div>
+        </a>
+        
+        <a href="Larcin Lazer.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Larcin Lazer.png" alt="Larcin Lazer" class="game-img">
+            </div>
+            <div class="game-title">
+                Larcin Lazer
+            </div>
+        </a>
+        
+        <a href="Lethal Company.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Lethal Company.png" alt="Lethal Company" class="game-img">
+            </div>
+            <div class="game-title">
+                Lethal Company
+            </div>
+        </a>
+        
+        <a href="Lethal League.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Lethal League.png" alt="Lethal League" class="game-img">
+            </div>
+            <div class="game-title">
+                Lethal League
+            </div>
+        </a>
+        
+        <a href="Loco Motive.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Loco Motive.png" alt="Loco Motive" class="game-img">
+            </div>
+            <div class="game-title">
+                Loco Motive
+            </div>
+        </a>
+        
+        <a href="Mafia.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mafia.png" alt="Mafia" class="game-img">
+            </div>
+            <div class="game-title">
+                Mafia
+            </div>
+        </a>
+        
+        <a href="Mafia II.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mafia II.png" alt="Mafia II" class="game-img">
+            </div>
+            <div class="game-title">
+                Mafia II
+            </div>
+        </a>
+        
+        <a href="Mafia II Definitive Edition.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mafia II Definitive Edition.png" alt="Mafia II: Definitive Edition" class="game-img">
+            </div>
+            <div class="game-title">
+                Mafia II: Definitive Edition
+            </div>
+        </a>
+        
+        <a href="Mafia III Definitive Edition.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mafia III Definitive Edition.png" alt="Mafia III: Definitive Edition" class="game-img">
+            </div>
+            <div class="game-title">
+                Mafia III: Definitive Edition
+            </div>
+        </a>
+        
+        <a href="Mafia Definitive Edition.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mafia Definitive Edition.png" alt="Mafia: Definitive Edition" class="game-img">
+            </div>
+            <div class="game-title">
+                Mafia: Definitive Edition
+            </div>
+        </a>
+        
+        <a href="Magicka.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Magicka.png" alt="Magicka" class="game-img">
+            </div>
+            <div class="game-title">
+                Magicka
+            </div>
+        </a>
+        
+        <a href="Mago.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Mago
+            </div>
+        </a>
+        
+        <a href="Mega Man Legacy Collection.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mega Man Legacy Collection.png" alt="Mega Man Legacy Collection" class="game-img">
+            </div>
+            <div class="game-title">
+                Mega Man Legacy Collection
+            </div>
+        </a>
+        
+        <a href="MicroWorks.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/MicroWorks.png" alt="MicroWorks" class="game-img">
+            </div>
+            <div class="game-title">
+                MicroWorks
+            </div>
+        </a>
+        
+        <a href="Mordhau.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Mordhau
+            </div>
+        </a>
+        
+        <a href="MultiVersus.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/MultiVersus.png" alt="MultiVersus" class="game-img">
+            </div>
+            <div class="game-title">
+                MultiVersus
+            </div>
+        </a>
+        
+        <a href="One Piece Burning Blood.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/One Piece Burning Blood.png" alt="One Piece Burning Blood" class="game-img">
+            </div>
+            <div class="game-title">
+                One Piece Burning Blood
+            </div>
+        </a>
+        
+        <a href="Operation Tango.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Operation Tango.png" alt="Operation: Tango" class="game-img">
+            </div>
+            <div class="game-title">
+                Operation: Tango
+            </div>
+        </a>
+        
+        <a href="Overcooked!.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Overcooked!
+            </div>
+        </a>
+        
+        <a href="Payday 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Payday 2.png" alt="Payday 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Payday 2
+            </div>
+        </a>
+        
+        <a href="Phasmophobia.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Phasmophobia.png" alt="Phasmophobia" class="game-img">
+            </div>
+            <div class="game-title">
+                Phasmophobia
+            </div>
+        </a>
+        
+        <a href="Phoenix Wright Ace Attorney Trilogy.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Phoenix Wright Ace Attorney Trilogy.png" alt="Phoenix Wright: Ace Attorney Trilogy" class="game-img">
+            </div>
+            <div class="game-title">
+                Phoenix Wright: Ace Attorney Trilogy
+            </div>
+        </a>
+        
+        <a href="Pico Park.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pico Park.png" alt="Pico Park" class="game-img">
+            </div>
+            <div class="game-title">
+                Pico Park
+            </div>
+        </a>
+        
+        <a href="Pico Park Classic Edition.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pico Park Classic Edition.png" alt="Pico Park: Classic Edition" class="game-img">
+            </div>
+            <div class="game-title">
+                Pico Park: Classic Edition
+            </div>
+        </a>
+        
+        <a href="Pikuniku.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Pikuniku
+            </div>
+        </a>
+        
+        <a href="Portal.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Portal.png" alt="Portal" class="game-img">
+            </div>
+            <div class="game-title">
+                Portal
+            </div>
+        </a>
+        
+        <a href="Portal 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Portal 2.png" alt="Portal 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Portal 2
+            </div>
+        </a>
+        
+        <a href="Portal Knights.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Portal Knights.png" alt="Portal Knights" class="game-img">
+            </div>
+            <div class="game-title">
+                Portal Knights
+            </div>
+        </a>
+        
+        <a href="Portal with RTX.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Portal with RTX.png" alt="Portal with RTX" class="game-img">
+            </div>
+            <div class="game-title">
+                Portal with RTX
+            </div>
+        </a>
+        
+        <a href="Prison Architect.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Prison Architect.png" alt="Prison Architect" class="game-img">
+            </div>
+            <div class="game-title">
+                Prison Architect
+            </div>
+        </a>
+        
+        <a href="Project Chemistry.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Project Chemistry.png" alt="Project Chemistry" class="game-img">
+            </div>
+            <div class="game-title">
+                Project Chemistry
+            </div>
+        </a>
+        
+        <a href="Project Playtime.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Project Playtime.png" alt="Project: Playtime" class="game-img">
+            </div>
+            <div class="game-title">
+                Project: Playtime
+            </div>
+        </a>
+        
+        <a href="Propnight.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Propnight.png" alt="Propnight" class="game-img">
+            </div>
+            <div class="game-title">
+                Propnight
+            </div>
+        </a>
+        
+        <a href="Punch Club.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Punch Club.png" alt="Punch Club" class="game-img">
+            </div>
+            <div class="game-title">
+                Punch Club
+            </div>
+        </a>
+        
+        <a href="Realm of the Mad God Exalt.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Realm of the Mad God Exalt.png" alt="Realm of the Mad God Exalt" class="game-img">
+            </div>
+            <div class="game-title">
+                Realm of the Mad God Exalt
+            </div>
+        </a>
+        
+        <a href="Reventure.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Reventure.png" alt="Reventure" class="game-img">
+            </div>
+            <div class="game-title">
+                Reventure
+            </div>
+        </a>
+        
+        <a href="Road to Ballhalla.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Road to Ballhalla.png" alt="Road to Ballhalla" class="game-img">
+            </div>
+            <div class="game-title">
+                Road to Ballhalla
+            </div>
+        </a>
+        
+        <a href="Rocket League.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Rocket League.png" alt="Rocket League" class="game-img">
+            </div>
+            <div class="game-title">
+                Rocket League
+            </div>
+        </a>
+        
+        <a href="RollerCoaster Tycoon 2 Triple Thrill Pack.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/RollerCoaster Tycoon 2 Triple Thrill Pack.png" alt="RollerCoaster Tycoon 2: Triple Thrill Pack" class="game-img">
+            </div>
+            <div class="game-title">
+                RollerCoaster Tycoon 2: Triple Thrill Pack
+            </div>
+        </a>
+        
+        <a href="Runestone Keeper.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Runestone Keeper.png" alt="Runestone Keeper" class="game-img">
+            </div>
+            <div class="game-title">
+                Runestone Keeper
+            </div>
+        </a>
+        
+        <a href="Sea of Thieves.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sea of Thieves.png" alt="Sea of Thieves" class="game-img">
+            </div>
+            <div class="game-title">
+                Sea of Thieves
+            </div>
+        </a>
+        
+        <a href="Second Extinction.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Second Extinction
+            </div>
+        </a>
+        
+        <a href="Shantae Risky's Revenge - Director's Cut.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Shantae Risky's Revenge - Director's Cut.png" alt="Shantae: Risky's Revenge - Director's Cut" class="game-img">
+            </div>
+            <div class="game-title">
+                Shantae: Risky's Revenge - Director's Cut
+            </div>
+        </a>
+        
+        <a href="Shovel Knight Treasure Trove.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Shovel Knight Treasure Trove.png" alt="Shovel Knight: Treasure Trove" class="game-img">
+            </div>
+            <div class="game-title">
+                Shovel Knight: Treasure Trove
+            </div>
+        </a>
+        
+        <a href="Slay the Princess.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Slay the Princess.png" alt="Slay the Princess" class="game-img">
+            </div>
+            <div class="game-title">
+                Slay the Princess
+            </div>
+        </a>
+        
+        <a href="SmashMuck Champions.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/SmashMuck Champions.png" alt="SmashMuck Champions" class="game-img">
+            </div>
+            <div class="game-title">
+                SmashMuck Champions
+            </div>
+        </a>
+        
+        <a href="Solstice.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Solstice.png" alt="Solstice" class="game-img">
+            </div>
+            <div class="game-title">
+                Solstice
+            </div>
+        </a>
+        
+        <a href="Sonic & All-Stars Racing Transformed Collection.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic & All-Stars Racing Transformed Collection.png" alt="Sonic & All-Stars Racing Transformed Collection" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic & All-Stars Racing Transformed Collection
+            </div>
+        </a>
+        
+        <a href="Sonic & SEGA All-Stars Racing.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic & SEGA All-Stars Racing.png" alt="Sonic & SEGA All-Stars Racing" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic & SEGA All-Stars Racing
+            </div>
+        </a>
+        
+        <a href="Sonic Adventure 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Adventure 2.png" alt="Sonic Adventure 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Adventure 2
+            </div>
+        </a>
+        
+        <a href="Sonic Adventure DX.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Adventure DX.png" alt="Sonic Adventure DX" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Adventure DX
+            </div>
+        </a>
+        
+        <a href="Sonic Forces.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Forces.png" alt="Sonic Forces" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Forces
+            </div>
+        </a>
+        
+        <a href="Sonic Generations.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Generations.png" alt="Sonic Generations" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Generations
+            </div>
+        </a>
+        
+        <a href="Sonic Lost World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Lost World.png" alt="Sonic Lost World" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Lost World
+            </div>
+        </a>
+        
+        <a href="Sonic Mania.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Mania.png" alt="Sonic Mania" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Mania
+            </div>
+        </a>
+        
+        <a href="Sonic the Hedgehog 4 - Episode I.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic the Hedgehog 4 - Episode I.png" alt="Sonic the Hedgehog 4 - Episode I" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic the Hedgehog 4 - Episode I
+            </div>
+        </a>
+        
+        <a href="Sonic the Hedgehog 4 - Episode II.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic the Hedgehog 4 - Episode II.png" alt="Sonic the Hedgehog 4 - Episode II" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic the Hedgehog 4 - Episode II
+            </div>
+        </a>
+        
+        <a href="Spelunky (HD).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Spelunky (HD).png" alt="Spelunky (HD)" class="game-img">
+            </div>
+            <div class="game-title">
+                Spelunky (HD)
+            </div>
+        </a>
+        
+        <a href="Spelunky 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Spelunky 2.png" alt="Spelunky 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Spelunky 2
+            </div>
+        </a>
+        
+        <a href="Spiral Knights.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Spiral Knights.png" alt="Spiral Knights" class="game-img">
+            </div>
+            <div class="game-title">
+                Spiral Knights
+            </div>
+        </a>
+        
+        <a href="Star Wars Empire at War - Gold Pack.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Wars Empire at War - Gold Pack.png" alt="Star Wars Empire at War - Gold Pack" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Wars Empire at War - Gold Pack
+            </div>
+        </a>
+        
+        <a href="Star Wars Battlefront II.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Wars Battlefront II.png" alt="Star Wars: Battlefront II" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Wars: Battlefront II
+            </div>
+        </a>
+        
+        <a href="Street Fighter X Tekken.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Street Fighter X Tekken.png" alt="Street Fighter X Tekken" class="game-img">
+            </div>
+            <div class="game-title">
+                Street Fighter X Tekken
+            </div>
+        </a>
+        
+        <a href="Stronghold Crusader II.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Stronghold Crusader II.png" alt="Stronghold Crusader II" class="game-img">
+            </div>
+            <div class="game-title">
+                Stronghold Crusader II
+            </div>
+        </a>
+        
+        <a href="Super Meat Boy.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Meat Boy.png" alt="Super Meat Boy" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Meat Boy
+            </div>
+        </a>
+        
+        <a href="Super Meat Boy Forever.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Meat Boy Forever.png" alt="Super Meat Boy Forever" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Meat Boy Forever
+            </div>
+        </a>
+        
+        <a href="Superliminal.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Superliminal.png" alt="Superliminal" class="game-img">
+            </div>
+            <div class="game-title">
+                Superliminal
+            </div>
+        </a>
+        
+        <a href="Team Sonic Racing.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Team Sonic Racing.png" alt="Team Sonic Racing" class="game-img">
+            </div>
+            <div class="game-title">
+                Team Sonic Racing
+            </div>
+        </a>
+        
+        <a href="Teeworlds.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Teeworlds.png" alt="Teeworlds" class="game-img">
+            </div>
+            <div class="game-title">
+                Teeworlds
+            </div>
+        </a>
+        
+        <a href="The Binding of Isaac Rebirth.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Binding of Isaac Rebirth.png" alt="The Binding of Isaac: Rebirth" class="game-img">
+            </div>
+            <div class="game-title">
+                The Binding of Isaac: Rebirth
+            </div>
+        </a>
+        
+        <a href="The Escapists.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Escapists.png" alt="The Escapists" class="game-img">
+            </div>
+            <div class="game-title">
+                The Escapists
+            </div>
+        </a>
+        
+        <a href="The Escapists The Walking Dead.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Escapists The Walking Dead.png" alt="The Escapists: The Walking Dead" class="game-img">
+            </div>
+            <div class="game-title">
+                The Escapists: The Walking Dead
+            </div>
+        </a>
+        
+        <a href="The Expendabros.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Expendabros.png" alt="The Expendabros" class="game-img">
+            </div>
+            <div class="game-title">
+                The Expendabros
+            </div>
+        </a>
+        
+        <a href="The Forest.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                The Forest
+            </div>
+        </a>
+        
+        <a href="The Great Ace Attorney Chronicles.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Great Ace Attorney Chronicles.png" alt="The Great Ace Attorney Chronicles" class="game-img">
+            </div>
+            <div class="game-title">
+                The Great Ace Attorney Chronicles
+            </div>
+        </a>
+        
+        <a href="The Murder of Sonic the Hedgehog.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Murder of Sonic the Hedgehog.png" alt="The Murder of Sonic the Hedgehog" class="game-img">
+            </div>
+            <div class="game-title">
+                The Murder of Sonic the Hedgehog
+            </div>
+        </a>
+        
+        <a href="The Next Penelope.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Next Penelope.png" alt="The Next Penelope" class="game-img">
+            </div>
+            <div class="game-title">
+                The Next Penelope
+            </div>
+        </a>
+        
+        <a href="The Textorcist The Story of Ray Bibbia.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                The Textorcist: The Story of Ray Bibbia
+            </div>
+        </a>
+        
+        <a href="There Is No Game.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/There Is No Game.png" alt="There Is No Game" class="game-img">
+            </div>
+            <div class="game-title">
+                There Is No Game
+            </div>
+        </a>
+        
+        <a href="There Is No Game Wrong Dimension.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/There Is No Game Wrong Dimension.png" alt="There Is No Game: Wrong Dimension" class="game-img">
+            </div>
+            <div class="game-title">
+                There Is No Game: Wrong Dimension
+            </div>
+        </a>
+        
+        <a href="Toribash.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Toribash.png" alt="Toribash" class="game-img">
+            </div>
+            <div class="game-title">
+                Toribash
+            </div>
+        </a>
+        
+        <a href="TowerFall Ascension.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/TowerFall Ascension.png" alt="TowerFall Ascension" class="game-img">
+            </div>
+            <div class="game-title">
+                TowerFall Ascension
+            </div>
+        </a>
+        
+        <a href="Trackmania (2023).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Trackmania (2023).png" alt="Trackmania (2023)" class="game-img">
+            </div>
+            <div class="game-title">
+                Trackmania (2023)
+            </div>
+        </a>
+        
+        <a href="Trove.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Trove.png" alt="Trove" class="game-img">
+            </div>
+            <div class="game-title">
+                Trove
+            </div>
+        </a>
+        
+        <a href="Ultimate Marvel vs. Capcom 3.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ultimate Marvel vs. Capcom 3.png" alt="Ultimate Marvel vs. Capcom 3" class="game-img">
+            </div>
+            <div class="game-title">
+                Ultimate Marvel vs. Capcom 3
+            </div>
+        </a>
+        
+        <a href="Ultra Street Fighter IV.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ultra Street Fighter IV.png" alt="Ultra Street Fighter IV" class="game-img">
+            </div>
+            <div class="game-title">
+                Ultra Street Fighter IV
+            </div>
+        </a>
+        
+        <a href="Uncanny Valley.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Uncanny Valley.png" alt="Uncanny Valley" class="game-img">
+            </div>
+            <div class="game-title">
+                Uncanny Valley
+            </div>
+        </a>
+        
+        <a href="Undertale.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Undertale.png" alt="Undertale" class="game-img">
+            </div>
+            <div class="game-title">
+                Undertale
+            </div>
+        </a>
+        
+        <a href="Unrailed!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Unrailed!.png" alt="Unrailed!" class="game-img">
+            </div>
+            <div class="game-title">
+                Unrailed!
+            </div>
+        </a>
+        
+        <a href="Vade Retro  Exorcist.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Vade Retro  Exorcist.png" alt="Vade Retro : Exorcist" class="game-img">
+            </div>
+            <div class="game-title">
+                Vade Retro : Exorcist
+            </div>
+        </a>
+        
+        <a href="Void Bastards.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Void Bastards
+            </div>
+        </a>
+        
+        <a href="Where The Water Tastes Like Wine.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Where The Water Tastes Like Wine
+            </div>
+        </a>
+        
+        <a href="Will You Snail.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Will You Snail.png" alt="Will You Snail?" class="game-img">
+            </div>
+            <div class="game-title">
+                Will You Snail?
+            </div>
+        </a>
+        
+        <a href="Wonder Boy The Dragon's Trap.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Wonder Boy: The Dragon's Trap
+            </div>
+        </a>
+        
+        <a href="Yooka-Laylee.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Yooka-Laylee
+            </div>
+        </a>
+        
+        <a href="You Suck at Parking.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/You Suck at Parking.png" alt="You Suck at Parking" class="game-img">
+            </div>
+            <div class="game-title">
+                You Suck at Parking
+            </div>
+        </a>
+        
+        <a href="Yu-Gi-Oh! Duel Links.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yu-Gi-Oh! Duel Links.png" alt="Yu-Gi-Oh! Duel Links" class="game-img">
+            </div>
+            <div class="game-title">
+                Yu-Gi-Oh! Duel Links
+            </div>
+        </a>
+        
+        <a href="Yu-Gi-Oh! Master Duel.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yu-Gi-Oh! Master Duel.png" alt="Yu-Gi-Oh! Master Duel" class="game-img">
+            </div>
+            <div class="game-title">
+                Yu-Gi-Oh! Master Duel
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,603 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>DS - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(209, 209, 210);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Nintendo</a>
+                <h1>Jeux pour DS</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Ace Attorney Investigations 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ace Attorney Investigations 2 (Jap).png" alt="Ace Attorney Investigations 2 (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Ace Attorney Investigations 2
+            </div>
+        </a>
+        
+        <a href="Ace Attorney Investigations Miles Edgeworth.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ace Attorney Investigations Miles Edgeworth (US).png" alt="Ace Attorney Investigations: Miles Edgeworth (U)" class="game-img">
+            </div>
+            <div class="game-title">
+                Ace Attorney Investigations: Miles Edgeworth
+            </div>
+        </a>
+        
+        <a href="Apollo Justice Ace Attorney.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Apollo Justice Ace Attorney.png" alt="Apollo Justice: Ace Attorney" class="game-img">
+            </div>
+            <div class="game-title">
+                Apollo Justice: Ace Attorney
+            </div>
+        </a>
+        
+        <a href="Bratz Ponyz 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Bratz Ponyz 2.png" alt="Bratz Ponyz 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Bratz Ponyz 2
+            </div>
+        </a>
+        
+        <a href="FIFA 06.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/FIFA 06.png" alt="FIFA 06" class="game-img">
+            </div>
+            <div class="game-title">
+                FIFA 06
+            </div>
+        </a>
+        
+        <a href="Final Fantasy III.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Final Fantasy III.png" alt="Final Fantasy III" class="game-img">
+            </div>
+            <div class="game-title">
+                Final Fantasy III
+            </div>
+        </a>
+        
+        <a href="Game & Watch Collection.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Game & Watch Collection (Jap).png" alt="Game & Watch Collection (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Game & Watch Collection
+            </div>
+        </a>
+        
+        <a href="Game & Watch Collection 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Game & Watch Collection 2 (Jap).png" alt="Game & Watch Collection 2 (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Game & Watch Collection 2
+            </div>
+        </a>
+        
+        <a href="Guitar Hero On Tour.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Guitar Hero On Tour.png" alt="Guitar Hero: On Tour" class="game-img">
+            </div>
+            <div class="game-title">
+                Guitar Hero: On Tour
+            </div>
+        </a>
+        
+        <a href="Horse Life.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Horse Life.png" alt="Horse Life" class="game-img">
+            </div>
+            <div class="game-title">
+                Horse Life
+            </div>
+        </a>
+        
+        <a href="Les Sims 2  Animaux et Cie.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Les Sims 2  Animaux et Cie.png" alt="Les Sims 2 : Animaux et Cie" class="game-img">
+            </div>
+            <div class="game-title">
+                Les Sims 2 : Animaux et Cie
+            </div>
+        </a>
+        
+        <a href="Léa Passion  Vétérinaire 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Léa Passion  Vétérinaire 2.png" alt="Léa Passion : Vétérinaire 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Léa Passion : Vétérinaire 2
+            </div>
+        </a>
+        
+        <a href="L’Age de Glace 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/L’Age de Glace 2.png" alt="L’Age de Glace 2" class="game-img">
+            </div>
+            <div class="game-title">
+                L’Age de Glace 2
+            </div>
+        </a>
+        
+        <a href="Mario & Luigi  Les Frères du temps.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Luigi  Les Frères du temps.png" alt="Mario & Luigi : Les Frères du temps" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Luigi : Les Frères du temps
+            </div>
+        </a>
+        
+        <a href="Mario & Luigi  Voyage au centre de Bowser.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Luigi  Voyage au centre de Bowser.png" alt="Mario & Luigi : Voyage au centre de Bowser" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Luigi : Voyage au centre de Bowser
+            </div>
+        </a>
+        
+        <a href="Mario Kart DS.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Kart DS.png" alt="Mario Kart DS" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Kart DS
+            </div>
+        </a>
+        
+        <a href="Mario Slam Basketball.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Slam Basketball.png" alt="Mario Slam Basketball" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Slam Basketball
+            </div>
+        </a>
+        
+        <a href="Nathan Entraînement CM1.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Nathan Entraînement CM1.png" alt="Nathan Entraînement CM1" class="game-img">
+            </div>
+            <div class="game-title">
+                Nathan Entraînement CM1
+            </div>
+        </a>
+        
+        <a href="New Super Mario Bros..html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/New Super Mario Bros..png" alt="New Super Mario Bros." class="game-img">
+            </div>
+            <div class="game-title">
+                New Super Mario Bros.
+            </div>
+        </a>
+        
+        <a href="Nintendo présente  La Maison du Style.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Nintendo présente  La Maison du Style.png" alt="Nintendo présente : La Maison du Style" class="game-img">
+            </div>
+            <div class="game-title">
+                Nintendo présente : La Maison du Style
+            </div>
+        </a>
+        
+        <a href="Nintendogs - Labrador & Friends.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Nintendogs - Labrador & Friends.png" alt="Nintendogs - Labrador & Friends" class="game-img">
+            </div>
+            <div class="game-title">
+                Nintendogs - Labrador & Friends
+            </div>
+        </a>
+        
+        <a href="Phoenix Wright Ace Attorney.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Phoenix Wright Ace Attorney.png" alt="Phoenix Wright: Ace Attorney" class="game-img">
+            </div>
+            <div class="game-title">
+                Phoenix Wright: Ace Attorney
+            </div>
+        </a>
+        
+        <a href="Phoenix Wright Ace Attorney Justice for All.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Phoenix Wright Ace Attorney Justice for All.png" alt="Phoenix Wright: Ace Attorney Justice for All" class="game-img">
+            </div>
+            <div class="game-title">
+                Phoenix Wright: Ace Attorney Justice for All
+            </div>
+        </a>
+        
+        <a href="Phoenix Wright Ace Attorney Trials and Tribulations.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Phoenix Wright Ace Attorney Trials and Tribulations.png" alt="Phoenix Wright: Ace Attorney Trials and Tribulations" class="game-img">
+            </div>
+            <div class="game-title">
+                Phoenix Wright: Ace Attorney Trials and Tribulations
+            </div>
+        </a>
+        
+        <a href="Pokémon Conquest.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Conquest.png" alt="Pokémon Conquest" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Conquest
+            </div>
+        </a>
+        
+        <a href="Pokémon Dash.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Dash.png" alt="Pokémon Dash" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Dash
+            </div>
+        </a>
+        
+        <a href="Pokémon Donjon Mystère  Explorateurs du ciel.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Donjon Mystère  Explorateurs du ciel.png" alt="Pokémon Donjon Mystère : Explorateurs du ciel" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Donjon Mystère : Explorateurs du ciel
+            </div>
+        </a>
+        
+        <a href="Pokémon Donjon Mystère  Explorateurs du temps.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Donjon Mystère  Explorateurs du temps.png" alt="Pokémon Donjon Mystère : Explorateurs du temps" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Donjon Mystère : Explorateurs du temps
+            </div>
+        </a>
+        
+        <a href="Pokémon Donjon Mystère  Équipe de Secours Bleue.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Donjon Mystère  Équipe de Secours Bleue.png" alt="Pokémon Donjon Mystère : Équipe de Secours Bleue" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Donjon Mystère : Équipe de Secours Bleue
+            </div>
+        </a>
+        
+        <a href="Pokémon Ranger  Sillages de lumière.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Ranger  Sillages de lumière.png" alt="Pokémon Ranger : Sillages de lumière" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Ranger : Sillages de lumière
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Argent SoulSilver (Pack avec PokéWalker).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Argent SoulSilver (Pack avec PokéWalker).png" alt="Pokémon Version Argent SoulSilver (Pack avec PokéWalker)" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Argent SoulSilver (Pack avec PokéWalker)
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Blanche.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Blanche.png" alt="Pokémon Version Blanche" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Blanche
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Blanche 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Blanche 2.png" alt="Pokémon Version Blanche 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Blanche 2
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Diamant.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Diamant.png" alt="Pokémon Version Diamant" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Diamant
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Noire.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Noire.png" alt="Pokémon Version Noire" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Noire
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Noire 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Noire 2.png" alt="Pokémon Version Noire 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Noire 2
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Or HeartGold (Pack avec PokéWalker).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Or HeartGold (Pack avec PokéWalker).png" alt="Pokémon Version Or HeartGold (Pack avec PokéWalker)" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Or HeartGold (Pack avec PokéWalker)
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Perle.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Perle.png" alt="Pokémon Version Perle" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Perle
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Platine.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Platine.png" alt="Pokémon Version Platine" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Platine
+            </div>
+        </a>
+        
+        <a href="Professeur Layton et l'Appel du Spectre.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Professeur Layton et l'Appel du Spectre.png" alt="Professeur Layton et l'Appel du Spectre" class="game-img">
+            </div>
+            <div class="game-title">
+                Professeur Layton et l'Appel du Spectre
+            </div>
+        </a>
+        
+        <a href="Professeur Layton et l'Étrange Village.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Professeur Layton et l'Étrange Village.png" alt="Professeur Layton et l'Étrange Village" class="game-img">
+            </div>
+            <div class="game-title">
+                Professeur Layton et l'Étrange Village
+            </div>
+        </a>
+        
+        <a href="Professeur Layton et la Boîte de Pandore.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Professeur Layton et la Boîte de Pandore.png" alt="Professeur Layton et la Boîte de Pandore" class="game-img">
+            </div>
+            <div class="game-title">
+                Professeur Layton et la Boîte de Pandore
+            </div>
+        </a>
+        
+        <a href="Professeur Layton et le Destin perdu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Professeur Layton et le Destin perdu.png" alt="Professeur Layton et le Destin perdu" class="game-img">
+            </div>
+            <div class="game-title">
+                Professeur Layton et le Destin perdu
+            </div>
+        </a>
+        
+        <a href="Programme d'entraînement cérébral avancé du Dr Kawashima  Quel âge a votre cerveau.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Programme d'entraînement cérébral avancé du Dr Kawashima : Quel âge a votre cerveau ?
+            </div>
+        </a>
+        
+        <a href="Programme d'entraînement cérébral du Dr Kawashima  Quel âge a votre cerveau.html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Programme d'entraînement cérébral du Dr Kawashima : Quel âge a votre cerveau ?
+            </div>
+        </a>
+        
+        <a href="Ratatouille.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ratatouille.png" alt="Ratatouille" class="game-img">
+            </div>
+            <div class="game-title">
+                Ratatouille
+            </div>
+        </a>
+        
+        <a href="Scribblenauts.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Scribblenauts.png" alt="Scribblenauts" class="game-img">
+            </div>
+            <div class="game-title">
+                Scribblenauts
+            </div>
+        </a>
+        
+        <a href="Super Mario 64 DS.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario 64 DS.png" alt="Super Mario 64 DS" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario 64 DS
+            </div>
+        </a>
+        
+        <a href="Super Princess Peach.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Princess Peach.png" alt="Super Princess Peach" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Princess Peach
+            </div>
+        </a>
+        
+        <a href="Tetris DS.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tetris DS.png" alt="Tetris DS" class="game-img">
+            </div>
+            <div class="game-title">
+                Tetris DS
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Phantom Hourglass.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Phantom Hourglass.png" alt="The Legend of Zelda: Phantom Hourglass" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Phantom Hourglass
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Spirit Tracks.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Spirit Tracks.png" alt="The Legend of Zelda: Spirit Tracks" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Spirit Tracks
+            </div>
+        </a>
+        
+        <a href="Tingle's Balloon Fight DS.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tingle's Balloon Fight DS (Jap).png" alt="Tingle's Balloon Fight DS (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Tingle's Balloon Fight DS
+            </div>
+        </a>
+        
+        <a href="WarioWare Touched!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/WarioWare Touched!.png" alt="WarioWare: Touched!" class="game-img">
+            </div>
+            <div class="game-title">
+                WarioWare: Touched!
+            </div>
+        </a>
+        
+        <a href="Yoshi's Island DS.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yoshi's Island DS.png" alt="Yoshi's Island DS" class="game-img">
+            </div>
+            <div class="game-title">
+                Yoshi's Island DS
+            </div>
+        </a>
+        
+        <a href="Zekkyo Senshi Sakeburein.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Zekkyo Senshi Sakeburein (Jap).png" alt="Zekkyo Senshi Sakeburein (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Zekkyo Senshi Sakeburein
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

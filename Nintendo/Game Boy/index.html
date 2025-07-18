@@ -1,0 +1,315 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Game Boy - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(195, 189, 188);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Nintendo</a>
+                <h1>Jeux pour Game Boy</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Batman The Video Game.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Batman The Video Game.png" alt="Batman: The Video Game" class="game-img">
+            </div>
+            <div class="game-title">
+                Batman: The Video Game
+            </div>
+        </a>
+        
+        <a href="Blaster Master Boy.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Blaster Master Boy (US).png" alt="Blaster Master Boy (U)" class="game-img">
+            </div>
+            <div class="game-title">
+                Blaster Master Boy
+            </div>
+        </a>
+        
+        <a href="Final Fantasy Adventure.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Final Fantasy Adventure (US).png" alt="Final Fantasy Adventure (U)" class="game-img">
+            </div>
+            <div class="game-title">
+                Final Fantasy Adventure
+            </div>
+        </a>
+        
+        <a href="Kaeru no Tame ni Kane wa Naru.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kaeru no Tame ni Kane wa Naru (Jap).png" alt="Kaeru no Tame ni Kane wa Naru (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Kaeru no Tame ni Kane wa Naru
+            </div>
+        </a>
+        
+        <a href="Kid Icarus Of Myths and Monsters.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kid Icarus Of Myths and Monsters.png" alt="Kid Icarus: Of Myths and Monsters" class="game-img">
+            </div>
+            <div class="game-title">
+                Kid Icarus: Of Myths and Monsters
+            </div>
+        </a>
+        
+        <a href="Kirby's Dream Land.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kirby's Dream Land.png" alt="Kirby's Dream Land" class="game-img">
+            </div>
+            <div class="game-title">
+                Kirby's Dream Land
+            </div>
+        </a>
+        
+        <a href="Kirby's Dream Land 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kirby's Dream Land 2.png" alt="Kirby's Dream Land 2 (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Kirby's Dream Land 2
+            </div>
+        </a>
+        
+        <a href="Mega Man Dr. Wily's Revenge.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mega Man Dr. Wily's Revenge.png" alt="Mega Man: Dr. Wily's Revenge" class="game-img">
+            </div>
+            <div class="game-title">
+                Mega Man: Dr. Wily's Revenge
+            </div>
+        </a>
+        
+        <a href="Metroid II Return of Samus.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Metroid II Return of Samus.png" alt="Metroid II: Return of Samus" class="game-img">
+            </div>
+            <div class="game-title">
+                Metroid II: Return of Samus
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Bleue.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Bleue.png" alt="Pokémon Version Bleue" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Bleue
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Jaune Edition Spéciale Pikachu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Jaune Edition Spéciale Pikachu.png" alt="Pokémon Version Jaune Edition Spéciale Pikachu" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Jaune Edition Spéciale Pikachu
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Rouge.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Rouge.png" alt="Pokémon Version Rouge" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Rouge
+            </div>
+        </a>
+        
+        <a href="Pokémon Version Verte.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Version Verte (Jap).png" alt="Pokémon Version Verte (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Version Verte
+            </div>
+        </a>
+        
+        <a href="SaGa 2 Hihou Densetsu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/SaGa 2 Hihou Densetsu (Jap).png" alt="SaGa 2: Hihou Densetsu (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                SaGa 2: Hihou Densetsu
+            </div>
+        </a>
+        
+        <a href="Super Mario Land.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Land.png" alt="Super Mario Land" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Land
+            </div>
+        </a>
+        
+        <a href="Super Mario Land 2 6 Golden Coins.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Land 2 6 Golden Coins.png" alt="Super Mario Land 2: 6 Golden Coins" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Land 2: 6 Golden Coins
+            </div>
+        </a>
+        
+        <a href="Tamagotchi.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tamagotchi.png" alt="Tamagotchi" class="game-img">
+            </div>
+            <div class="game-title">
+                Tamagotchi
+            </div>
+        </a>
+        
+        <a href="Tetris.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tetris.png" alt="Tetris" class="game-img">
+            </div>
+            <div class="game-title">
+                Tetris
+            </div>
+        </a>
+        
+        <a href="Tetris 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tetris 2.png" alt="Tetris 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Tetris 2
+            </div>
+        </a>
+        
+        <a href="The Addams Family.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Addams Family.png" alt="The Addams Family" class="game-img">
+            </div>
+            <div class="game-title">
+                The Addams Family
+            </div>
+        </a>
+        
+        <a href="The Amazing Spider-Man.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Amazing Spider-Man (US).png" alt="The Amazing Spider-Man (U)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Amazing Spider-Man
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Link's Awakening.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Link's Awakening (Jap).png" alt="The Legend of Zelda: Link's Awakening (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Link's Awakening
+            </div>
+        </a>
+        
+        <a href="The New Chessmaster.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The New Chessmaster (Jap).png" alt="The New Chessmaster (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                The New Chessmaster
+            </div>
+        </a>
+        
+        <a href="Tiny Toon Adventures Wacky Sports.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tiny Toon Adventures Wacky Sports (US).png" alt="Tiny Toon Adventures: Wacky Sports (U)" class="game-img">
+            </div>
+            <div class="game-title">
+                Tiny Toon Adventures: Wacky Sports
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

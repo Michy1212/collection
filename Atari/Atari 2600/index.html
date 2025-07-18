@@ -1,0 +1,387 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Atari 2600 - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(34, 34, 34);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Atari</a>
+                <h1>Jeux pour Atari 2600</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Astérix.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Astérix.png" alt="Astérix" class="game-img">
+            </div>
+            <div class="game-title">
+                Astérix
+            </div>
+        </a>
+        
+        <a href="Bowling.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Bowling.png" alt="Bowling" class="game-img">
+            </div>
+            <div class="game-title">
+                Bowling
+            </div>
+        </a>
+        
+        <a href="Carnival.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Carnival.png" alt="Carnival" class="game-img">
+            </div>
+            <div class="game-title">
+                Carnival
+            </div>
+        </a>
+        
+        <a href="Centipede.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Centipede.png" alt="Centipede" class="game-img">
+            </div>
+            <div class="game-title">
+                Centipede
+            </div>
+        </a>
+        
+        <a href="Combat.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Combat.png" alt="Combat" class="game-img">
+            </div>
+            <div class="game-title">
+                Combat
+            </div>
+        </a>
+        
+        <a href="Cosmic Ark.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Cosmic Ark.png" alt="Cosmic Ark" class="game-img">
+            </div>
+            <div class="game-title">
+                Cosmic Ark
+            </div>
+        </a>
+        
+        <a href="Donkey Kong.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Donkey Kong.png" alt="Donkey Kong" class="game-img">
+            </div>
+            <div class="game-title">
+                Donkey Kong
+            </div>
+        </a>
+        
+        <a href="Enduro.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Enduro.png" alt="Enduro" class="game-img">
+            </div>
+            <div class="game-title">
+                Enduro
+            </div>
+        </a>
+        
+        <a href="Fire Fighter.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fire Fighter.png" alt="Fire Fighter" class="game-img">
+            </div>
+            <div class="game-title">
+                Fire Fighter
+            </div>
+        </a>
+        
+        <a href="Golf.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Golf.png" alt="Golf" class="game-img">
+            </div>
+            <div class="game-title">
+                Golf
+            </div>
+        </a>
+        
+        <a href="H.E.R.O..html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/H.E.R.O..png" alt="H.E.R.O." class="game-img">
+            </div>
+            <div class="game-title">
+                H.E.R.O.
+            </div>
+        </a>
+        
+        <a href="Ikari Warriors.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ikari Warriors.png" alt="Ikari Warriors" class="game-img">
+            </div>
+            <div class="game-title">
+                Ikari Warriors
+            </div>
+        </a>
+        
+        <a href="Joust.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Joust.png" alt="Joust" class="game-img">
+            </div>
+            <div class="game-title">
+                Joust
+            </div>
+        </a>
+        
+        <a href="Kaboom!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kaboom!.png" alt="Kaboom!" class="game-img">
+            </div>
+            <div class="game-title">
+                Kaboom!
+            </div>
+        </a>
+        
+        <a href="Mario Bros..html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Bros..png" alt="Mario Bros." class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Bros.
+            </div>
+        </a>
+        
+        <a href="Missile Command.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Missile Command.png" alt="Missile Command" class="game-img">
+            </div>
+            <div class="game-title">
+                Missile Command
+            </div>
+        </a>
+        
+        <a href="Ms. Pac-Man.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ms. Pac-Man.png" alt="Ms. Pac-Man" class="game-img">
+            </div>
+            <div class="game-title">
+                Ms. Pac-Man
+            </div>
+        </a>
+        
+        <a href="Night Driver.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Night Driver.png" alt="Night Driver" class="game-img">
+            </div>
+            <div class="game-title">
+                Night Driver
+            </div>
+        </a>
+        
+        <a href="Oink!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Oink!.png" alt="Oink!" class="game-img">
+            </div>
+            <div class="game-title">
+                Oink!
+            </div>
+        </a>
+        
+        <a href="Outlaw.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Outlaw.png" alt="Outlaw" class="game-img">
+            </div>
+            <div class="game-title">
+                Outlaw
+            </div>
+        </a>
+        
+        <a href="Pitfall II Lost Caverns.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pitfall II Lost Caverns.png" alt="Pitfall II: Lost Caverns" class="game-img">
+            </div>
+            <div class="game-title">
+                Pitfall II: Lost Caverns
+            </div>
+        </a>
+        
+        <a href="Plaque Attack.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Plaque Attack.png" alt="Plaque Attack" class="game-img">
+            </div>
+            <div class="game-title">
+                Plaque Attack
+            </div>
+        </a>
+        
+        <a href="Pole Position.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pole Position.png" alt="Pole Position" class="game-img">
+            </div>
+            <div class="game-title">
+                Pole Position
+            </div>
+        </a>
+        
+        <a href="RealSports Tennis.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/RealSports Tennis.png" alt="RealSports Tennis" class="game-img">
+            </div>
+            <div class="game-title">
+                RealSports Tennis
+            </div>
+        </a>
+        
+        <a href="RealSports Volleyball.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/RealSports Volleyball.png" alt="RealSports Volleyball" class="game-img">
+            </div>
+            <div class="game-title">
+                RealSports Volleyball
+            </div>
+        </a>
+        
+        <a href="Space Invaders.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Space Invaders.png" alt="Space Invaders" class="game-img">
+            </div>
+            <div class="game-title">
+                Space Invaders
+            </div>
+        </a>
+        
+        <a href="Space Shuttle A Journey into Space.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Space Shuttle A Journey into Space.png" alt="Space Shuttle: A Journey into Space" class="game-img">
+            </div>
+            <div class="game-title">
+                Space Shuttle: A Journey into Space
+            </div>
+        </a>
+        
+        <a href="Stampede.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Stampede.png" alt="Stampede" class="game-img">
+            </div>
+            <div class="game-title">
+                Stampede
+            </div>
+        </a>
+        
+        <a href="Street Racer.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Street Racer.png" alt="Street Racer" class="game-img">
+            </div>
+            <div class="game-title">
+                Street Racer
+            </div>
+        </a>
+        
+        <a href="Super Breakout.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Breakout.png" alt="Super Breakout" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Breakout
+            </div>
+        </a>
+        
+        <a href="Superman.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Superman.png" alt="Superman" class="game-img">
+            </div>
+            <div class="game-title">
+                Superman
+            </div>
+        </a>
+        
+        <a href="Video Checkers.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Video Checkers.png" alt="Video Checkers" class="game-img">
+            </div>
+            <div class="game-title">
+                Video Checkers
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection de Jeux Vidéo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .brand-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+                .brand-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .logo-container {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+        .brand-logo {
+            max-width: 100%;
+            max-height: 60px;
+            object-fit: contain;
+        }
+        .brand-name {
+            margin-top: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #0066cc;
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ma Collection de Jeux Vidéo</h1>
+    
+    <div style="text-align: center; margin-bottom: 20px;">
+        <a href="statistiques.html" style="display: inline-block; padding: 10px 20px; 
+           background-color: #4CAF50; color: white; text-decoration: none; 
+           border-radius: 5px; font-weight: bold;">
+            Voir les Statistiques
+        </a>
+    </div>
+
+    <div class="brand-list">
+        
+    <a href="Atari/index.html" class="brand-card">
+        <div class="logo-container">
+            <img src="Atari/Atari.png" alt="Atari" class="brand-logo">
+        </div>
+        <div class="brand-name">
+            Atari
+        </div>
+    </a>
+    
+    <a href="Autres/index.html" class="brand-card">
+        <div class="logo-container">
+            <div class="brand-logo" style="height: 60px;"></div>
+        </div>
+        <div class="brand-name">
+            Autres
+        </div>
+    </a>
+    
+    <a href="Microsoft/index.html" class="brand-card">
+        <div class="logo-container">
+            <img src="Microsoft/Microsoft.png" alt="Microsoft" class="brand-logo">
+        </div>
+        <div class="brand-name">
+            Microsoft
+        </div>
+    </a>
+    
+    <a href="Nintendo/index.html" class="brand-card">
+        <div class="logo-container">
+            <img src="Nintendo/Nintendo.png" alt="Nintendo" class="brand-logo">
+        </div>
+        <div class="brand-name">
+            Nintendo
+        </div>
+    </a>
+    
+    <a href="Sega/index.html" class="brand-card">
+        <div class="logo-container">
+            <img src="Sega/Sega.png" alt="Sega" class="brand-logo">
+        </div>
+        <div class="brand-name">
+            Sega
+        </div>
+    </a>
+    
+    <a href="Sony/index.html" class="brand-card">
+        <div class="logo-container">
+            <img src="Sony/Sony.png" alt="Sony" class="brand-logo">
+        </div>
+        <div class="brand-name">
+            Sony
+        </div>
+    </a>
+    
+    </div>
+
+    <footer>
+        Généré automatiquement à partir d'un fichier Excel
+    </footer>
+</body>
+</html>
+    

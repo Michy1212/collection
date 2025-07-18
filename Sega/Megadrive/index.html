@@ -1,0 +1,324 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Megadrive - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(48, 49, 49);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Sega</a>
+                <h1>Jeux pour Megadrive</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Aladdin.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Aladdin.png" alt="Aladdin" class="game-img">
+            </div>
+            <div class="game-title">
+                Aladdin
+            </div>
+        </a>
+        
+        <a href="Altered Beast.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Altered Beast.png" alt="Altered Beast" class="game-img">
+            </div>
+            <div class="game-title">
+                Altered Beast
+            </div>
+        </a>
+        
+        <a href="Another World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Another World.png" alt="Another World" class="game-img">
+            </div>
+            <div class="game-title">
+                Another World
+            </div>
+        </a>
+        
+        <a href="EA Hockey.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/EA Hockey.png" alt="EA Hockey" class="game-img">
+            </div>
+            <div class="game-title">
+                EA Hockey
+            </div>
+        </a>
+        
+        <a href="Ecco the Dolphin.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ecco the Dolphin.png" alt="Ecco the Dolphin" class="game-img">
+            </div>
+            <div class="game-title">
+                Ecco the Dolphin
+            </div>
+        </a>
+        
+        <a href="Fantasia.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fantasia.png" alt="Fantasia" class="game-img">
+            </div>
+            <div class="game-title">
+                Fantasia
+            </div>
+        </a>
+        
+        <a href="Gunstar Heroes.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Gunstar Heroes (Jap).png" alt="Gunstar Heroes (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Gunstar Heroes
+            </div>
+        </a>
+        
+        <a href="James Bond 007 The Duel.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/James Bond 007 The Duel.png" alt="James Bond 007: The Duel" class="game-img">
+            </div>
+            <div class="game-title">
+                James Bond 007: The Duel
+            </div>
+        </a>
+        
+        <a href="Le Roi Lion.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Le Roi Lion.png" alt="Le Roi Lion" class="game-img">
+            </div>
+            <div class="game-title">
+                Le Roi Lion
+            </div>
+        </a>
+        
+        <a href="Les Schtroumpfs.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Les Schtroumpfs.png" alt="Les Schtroumpfs" class="game-img">
+            </div>
+            <div class="game-title">
+                Les Schtroumpfs
+            </div>
+        </a>
+        
+        <a href="Magical Taruruto-kun.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Magical Taruruto-kun (Jap).png" alt="Magical Taruruto-kun (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Magical Taruruto-kun
+            </div>
+        </a>
+        
+        <a href="Mega 6 Vol. 3 - SEGA Soccer + Columns + Super Monaco GP + Revenge of Shinobi + Sonic 1 + Streets of .html" class="game-card">
+            <div class="game-img-container">
+                <div class="game-img-placeholder"></div>
+            </div>
+            <div class="game-title">
+                Mega 6 Vol. 3 - SEGA Soccer + Columns + Super Monaco GP + Revenge of Shinobi + Sonic 1 + Streets of Rage
+            </div>
+        </a>
+        
+        <a href="Mickey Mania.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mickey Mania.png" alt="Mickey Mania" class="game-img">
+            </div>
+            <div class="game-title">
+                Mickey Mania
+            </div>
+        </a>
+        
+        <a href="Mortal Kombat II.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mortal Kombat II.png" alt="Mortal Kombat II" class="game-img">
+            </div>
+            <div class="game-title">
+                Mortal Kombat II
+            </div>
+        </a>
+        
+        <a href="Pac-Mania.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pac-Mania.png" alt="Pac-Mania" class="game-img">
+            </div>
+            <div class="game-title">
+                Pac-Mania
+            </div>
+        </a>
+        
+        <a href="Pulseman.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pulseman (Jap).png" alt="Pulseman (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Pulseman
+            </div>
+        </a>
+        
+        <a href="Shaq-Fu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Shaq-Fu.png" alt="Shaq-Fu" class="game-img">
+            </div>
+            <div class="game-title">
+                Shaq-Fu
+            </div>
+        </a>
+        
+        <a href="Sonic & Knuckles.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic & Knuckles.png" alt="Sonic & Knuckles" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic & Knuckles
+            </div>
+        </a>
+        
+        <a href="Sonic 3.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic 3.png" alt="Sonic 3" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic 3
+            </div>
+        </a>
+        
+        <a href="Sonic 3D Flickies' Island.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic 3D Flickies' Island.png" alt="Sonic 3D: Flickies' Island" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic 3D: Flickies' Island
+            </div>
+        </a>
+        
+        <a href="Sonic the Hedgehog.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic the Hedgehog.png" alt="Sonic the Hedgehog" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic the Hedgehog
+            </div>
+        </a>
+        
+        <a href="Sonic the Hedgehog 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic the Hedgehog 2.png" alt="Sonic the Hedgehog 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic the Hedgehog 2
+            </div>
+        </a>
+        
+        <a href="Sonic the Hedgehog Spinball.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic the Hedgehog Spinball.png" alt="Sonic the Hedgehog Spinball" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic the Hedgehog Spinball
+            </div>
+        </a>
+        
+        <a href="Sunset Riders.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sunset Riders.png" alt="Sunset Riders" class="game-img">
+            </div>
+            <div class="game-title">
+                Sunset Riders
+            </div>
+        </a>
+        
+        <a href="Tiny Toon Adventures Buster's Hidden Treasure.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tiny Toon Adventures Buster's Hidden Treasure.png" alt="Tiny Toon Adventures: Buster's Hidden Treasure" class="game-img">
+            </div>
+            <div class="game-title">
+                Tiny Toon Adventures: Buster's Hidden Treasure
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

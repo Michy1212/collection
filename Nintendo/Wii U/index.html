@@ -1,0 +1,342 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Wii U - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(4, 6, 7);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Nintendo</a>
+                <h1>Jeux pour Wii U</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Assassin's Creed III.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Assassin's Creed III.png" alt="Assassin's Creed III" class="game-img">
+            </div>
+            <div class="game-title">
+                Assassin's Creed III
+            </div>
+        </a>
+        
+        <a href="Captain Toad Treasure Tracker.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Captain Toad Treasure Tracker.png" alt="Captain Toad: Treasure Tracker" class="game-img">
+            </div>
+            <div class="game-title">
+                Captain Toad: Treasure Tracker
+            </div>
+        </a>
+        
+        <a href="Hyrule Warriors.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Hyrule Warriors.png" alt="Hyrule Warriors" class="game-img">
+            </div>
+            <div class="game-title">
+                Hyrule Warriors
+            </div>
+        </a>
+        
+        <a href="Mario & Sonic aux Jeux olympiques d'hiver de Sotchi 2014.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Sonic aux Jeux olympiques d'hiver de Sotchi 2014.png" alt="Mario & Sonic aux Jeux olympiques d'hiver de Sotchi 2014" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Sonic aux Jeux olympiques d'hiver de Sotchi 2014
+            </div>
+        </a>
+        
+        <a href="Mario Kart 8 (Collector).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Kart 8 (Collector).png" alt="Mario Kart 8 (Collector)" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Kart 8 (Collector)
+            </div>
+        </a>
+        
+        <a href="Mario Tennis Ultra Smash.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Tennis Ultra Smash.png" alt="Mario Tennis: Ultra Smash" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Tennis: Ultra Smash
+            </div>
+        </a>
+        
+        <a href="NES Remix.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/NES Remix.png" alt="NES Remix" class="game-img">
+            </div>
+            <div class="game-title">
+                NES Remix
+            </div>
+        </a>
+        
+        <a href="New Super Luigi U.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/New Super Luigi U.png" alt="New Super Luigi U" class="game-img">
+            </div>
+            <div class="game-title">
+                New Super Luigi U
+            </div>
+        </a>
+        
+        <a href="New Super Mario Bros. U.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/New Super Mario Bros. U.png" alt="New Super Mario Bros. U" class="game-img">
+            </div>
+            <div class="game-title">
+                New Super Mario Bros. U
+            </div>
+        </a>
+        
+        <a href="Nintendo Land.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Nintendo Land.png" alt="Nintendo Land" class="game-img">
+            </div>
+            <div class="game-title">
+                Nintendo Land
+            </div>
+        </a>
+        
+        <a href="Paper Mario Color Splash.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Paper Mario Color Splash.png" alt="Paper Mario: Color Splash" class="game-img">
+            </div>
+            <div class="game-title">
+                Paper Mario: Color Splash
+            </div>
+        </a>
+        
+        <a href="Pikmin 3.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pikmin 3.png" alt="Pikmin 3" class="game-img">
+            </div>
+            <div class="game-title">
+                Pikmin 3
+            </div>
+        </a>
+        
+        <a href="Pokkén Tournament.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokkén Tournament.png" alt="Pokkén Tournament" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokkén Tournament
+            </div>
+        </a>
+        
+        <a href="Pokémon Rumble U.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Rumble U.png" alt="Pokémon Rumble U" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Rumble U
+            </div>
+        </a>
+        
+        <a href="Shovel Knight.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Shovel Knight.png" alt="Shovel Knight" class="game-img">
+            </div>
+            <div class="game-title">
+                Shovel Knight
+            </div>
+        </a>
+        
+        <a href="Skylanders SuperChargers.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Skylanders SuperChargers.png" alt="Skylanders: SuperChargers" class="game-img">
+            </div>
+            <div class="game-title">
+                Skylanders: SuperChargers
+            </div>
+        </a>
+        
+        <a href="Skylanders Swap Force.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Skylanders Swap Force.png" alt="Skylanders: Swap Force" class="game-img">
+            </div>
+            <div class="game-title">
+                Skylanders: Swap Force
+            </div>
+        </a>
+        
+        <a href="Skylanders Trap Team.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Skylanders Trap Team.png" alt="Skylanders: Trap Team" class="game-img">
+            </div>
+            <div class="game-title">
+                Skylanders: Trap Team
+            </div>
+        </a>
+        
+        <a href="Sonic Lost World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Lost World.png" alt="Sonic Lost World" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Lost World
+            </div>
+        </a>
+        
+        <a href="Splatoon.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Splatoon.png" alt="Splatoon" class="game-img">
+            </div>
+            <div class="game-title">
+                Splatoon
+            </div>
+        </a>
+        
+        <a href="Star Fox Guard.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Fox Guard.png" alt="Star Fox Guard" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Fox Guard
+            </div>
+        </a>
+        
+        <a href="Star Fox Zero (Première édition).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Fox Zero (Première édition).png" alt="Star Fox Zero (Première édition)" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Fox Zero (Première édition)
+            </div>
+        </a>
+        
+        <a href="Super Mario 3D World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario 3D World.png" alt="Super Mario 3D World" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario 3D World
+            </div>
+        </a>
+        
+        <a href="Super Mario Maker.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Maker.png" alt="Super Mario Maker" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Maker
+            </div>
+        </a>
+        
+        <a href="Super Smash Bros. for Wii U.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Smash Bros. for Wii U.png" alt="Super Smash Bros. for Wii U" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Smash Bros. for Wii U
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda The Wind Waker HD.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda The Wind Waker HD.png" alt="The Legend of Zelda: The Wind Waker HD" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: The Wind Waker HD
+            </div>
+        </a>
+        
+        <a href="Yoshi's Woolly World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yoshi's Woolly World.png" alt="Yoshi's Woolly World" class="game-img">
+            </div>
+            <div class="game-title">
+                Yoshi's Woolly World
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

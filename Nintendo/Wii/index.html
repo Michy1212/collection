@@ -1,0 +1,504 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Wii - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(229, 229, 229);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Nintendo</a>
+                <h1>Jeux pour Wii</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Billy the Wizard.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Billy the Wizard.png" alt="Billy the Wizard" class="game-img">
+            </div>
+            <div class="game-title">
+                Billy the Wizard
+            </div>
+        </a>
+        
+        <a href="Brunswick Pro Bowling.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Brunswick Pro Bowling.png" alt="Brunswick Pro Bowling" class="game-img">
+            </div>
+            <div class="game-title">
+                Brunswick Pro Bowling
+            </div>
+        </a>
+        
+        <a href="Code Lyoko  Plongez vers l'infini.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Code Lyoko  Plongez vers l'infini.png" alt="Code Lyoko : Plongez vers l'infini" class="game-img">
+            </div>
+            <div class="game-title">
+                Code Lyoko : Plongez vers l'infini
+            </div>
+        </a>
+        
+        <a href="Détective Conan  Enquête à Mirapolis.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Détective Conan  Enquête à Mirapolis.png" alt="Détective Conan : Enquête à Mirapolis" class="game-img">
+            </div>
+            <div class="game-title">
+                Détective Conan : Enquête à Mirapolis
+            </div>
+        </a>
+        
+        <a href="Fort Boyard  Le Jeu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fort Boyard  Le Jeu.png" alt="Fort Boyard : Le Jeu" class="game-img">
+            </div>
+            <div class="game-title">
+                Fort Boyard : Le Jeu
+            </div>
+        </a>
+        
+        <a href="Ghost Squad.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ghost Squad.png" alt="Ghost Squad" class="game-img">
+            </div>
+            <div class="game-title">
+                Ghost Squad
+            </div>
+        </a>
+        
+        <a href="Les Simpson  Le Jeu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Les Simpson  Le Jeu.png" alt="Les Simpson : Le Jeu" class="game-img">
+            </div>
+            <div class="game-title">
+                Les Simpson : Le Jeu
+            </div>
+        </a>
+        
+        <a href="Link's Crossbow Training.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Link's Crossbow Training.png" alt="Link's Crossbow Training" class="game-img">
+            </div>
+            <div class="game-title">
+                Link's Crossbow Training
+            </div>
+        </a>
+        
+        <a href="Looney Tunes Acme Arsenal.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Looney Tunes Acme Arsenal.png" alt="Looney Tunes: Acme Arsenal" class="game-img">
+            </div>
+            <div class="game-title">
+                Looney Tunes: Acme Arsenal
+            </div>
+        </a>
+        
+        <a href="Mario & Sonic aux Jeux Olympiques.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Sonic aux Jeux Olympiques.png" alt="Mario & Sonic aux Jeux Olympiques" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Sonic aux Jeux Olympiques
+            </div>
+        </a>
+        
+        <a href="Mario & Sonic aux Jeux Olympiques d'Hiver.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario & Sonic aux Jeux Olympiques d'Hiver.png" alt="Mario & Sonic aux Jeux Olympiques d'Hiver" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario & Sonic aux Jeux Olympiques d'Hiver
+            </div>
+        </a>
+        
+        <a href="Mario Kart Wii.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Kart Wii.png" alt="Mario Kart Wii" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Kart Wii
+            </div>
+        </a>
+        
+        <a href="Mario Strikers Charged Football.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Strikers Charged Football.png" alt="Mario Strikers Charged Football" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Strikers Charged Football
+            </div>
+        </a>
+        
+        <a href="Metroid Prime 3 Corruption.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Metroid Prime 3 Corruption.png" alt="Metroid Prime 3: Corruption" class="game-img">
+            </div>
+            <div class="game-title">
+                Metroid Prime 3: Corruption
+            </div>
+        </a>
+        
+        <a href="Mon Coach Personnel  J'enrichis mon Vocabulaire.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mon Coach Personnel  J'enrichis mon Vocabulaire.png" alt="Mon Coach Personnel : J'enrichis mon Vocabulaire" class="game-img">
+            </div>
+            <div class="game-title">
+                Mon Coach Personnel : J'enrichis mon Vocabulaire
+            </div>
+        </a>
+        
+        <a href="Monopoly  Editions Classique et Monde.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Monopoly  Editions Classique et Monde.png" alt="Monopoly : Editions Classique et Monde" class="game-img">
+            </div>
+            <div class="game-title">
+                Monopoly : Editions Classique et Monde
+            </div>
+        </a>
+        
+        <a href="MySims Agents.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/MySims Agents.png" alt="MySims Agents" class="game-img">
+            </div>
+            <div class="game-title">
+                MySims Agents
+            </div>
+        </a>
+        
+        <a href="Namco Museum Remix.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Namco Museum Remix.png" alt="Namco Museum Remix" class="game-img">
+            </div>
+            <div class="game-title">
+                Namco Museum Remix
+            </div>
+        </a>
+        
+        <a href="New Super Mario Bros. Wii.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/New Super Mario Bros. Wii.png" alt="New Super Mario Bros. Wii" class="game-img">
+            </div>
+            <div class="game-title">
+                New Super Mario Bros. Wii
+            </div>
+        </a>
+        
+        <a href="Nights Journey of Dreams.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Nights Journey of Dreams.png" alt="Nights: Journey of Dreams" class="game-img">
+            </div>
+            <div class="game-title">
+                Nights: Journey of Dreams
+            </div>
+        </a>
+        
+        <a href="Nouvelle façon de jouer !  Mario Power Tennis.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Nouvelle façon de jouer !  Mario Power Tennis.png" alt="Nouvelle façon de jouer ! : Mario Power Tennis" class="game-img">
+            </div>
+            <div class="game-title">
+                Nouvelle façon de jouer ! : Mario Power Tennis
+            </div>
+        </a>
+        
+        <a href="One Piece Unlimited Cruise 1 - Le Trésor sous les flots.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/One Piece Unlimited Cruise 1 - Le Trésor sous les flots.png" alt="One Piece: Unlimited Cruise 1 - Le Trésor sous les flots" class="game-img">
+            </div>
+            <div class="game-title">
+                One Piece: Unlimited Cruise 1 - Le Trésor sous les flots
+            </div>
+        </a>
+        
+        <a href="Pokémon Battle Revolution.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Pokémon Battle Revolution.png" alt="Pokémon Battle Revolution" class="game-img">
+            </div>
+            <div class="game-title">
+                Pokémon Battle Revolution
+            </div>
+        </a>
+        
+        <a href="Punch-Out!!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Punch-Out!!.png" alt="Punch-Out!!" class="game-img">
+            </div>
+            <div class="game-title">
+                Punch-Out!!
+            </div>
+        </a>
+        
+        <a href="Rayman Prod' présente  The Lapins Crétins Show.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Rayman Prod' présente  The Lapins Crétins Show.png" alt="Rayman Prod' présente : The Lapins Crétins Show" class="game-img">
+            </div>
+            <div class="game-title">
+                Rayman Prod' présente : The Lapins Crétins Show
+            </div>
+        </a>
+        
+        <a href="SSX Blur.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/SSX Blur.png" alt="SSX Blur" class="game-img">
+            </div>
+            <div class="game-title">
+                SSX Blur
+            </div>
+        </a>
+        
+        <a href="Sonic Colours.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Colours.png" alt="Sonic Colours" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Colours
+            </div>
+        </a>
+        
+        <a href="Sonic Unleashed  La Malédiction du Hérisson.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic Unleashed  La Malédiction du Hérisson.png" alt="Sonic Unleashed : La Malédiction du Hérisson" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic Unleashed : La Malédiction du Hérisson
+            </div>
+        </a>
+        
+        <a href="Sonic and the Secret Rings.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic and the Secret Rings.png" alt="Sonic and the Secret Rings" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic and the Secret Rings
+            </div>
+        </a>
+        
+        <a href="Sonic et le Chevalier noir.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Sonic et le Chevalier noir.png" alt="Sonic et le Chevalier noir" class="game-img">
+            </div>
+            <div class="game-title">
+                Sonic et le Chevalier noir
+            </div>
+        </a>
+        
+        <a href="Star Wars The Clone Wars - Duels au sabre laser.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Wars The Clone Wars - Duels au sabre laser.png" alt="Star Wars: The Clone Wars - Duels au sabre laser" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Wars: The Clone Wars - Duels au sabre laser
+            </div>
+        </a>
+        
+        <a href="Super Mario Galaxy.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Galaxy.png" alt="Super Mario Galaxy" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Galaxy
+            </div>
+        </a>
+        
+        <a href="Super Mario Galaxy 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Galaxy 2.png" alt="Super Mario Galaxy 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Galaxy 2
+            </div>
+        </a>
+        
+        <a href="Super Paper Mario.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Paper Mario.png" alt="Super Paper Mario" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Paper Mario
+            </div>
+        </a>
+        
+        <a href="Super Smash Bros. Brawl.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Smash Bros. Brawl.png" alt="Super Smash Bros. Brawl" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Smash Bros. Brawl
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Skyward Sword (CD Orchestral Spécial - Edition limitée).html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Skyward Sword (CD Orchestral Spécial - Edition limitée).png" alt="The Legend of Zelda: Skyward Sword (CD Orchestral Spécial - Edition limitée)" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Skyward Sword (CD Orchestral Spécial - Edition limitée)
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda Twilight Princess.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda Twilight Princess.png" alt="The Legend of Zelda: Twilight Princess" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda: Twilight Princess
+            </div>
+        </a>
+        
+        <a href="UDraw Studio.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/UDraw Studio.png" alt="UDraw Studio" class="game-img">
+            </div>
+            <div class="game-title">
+                UDraw Studio
+            </div>
+        </a>
+        
+        <a href="WWE SmackDown vs. Raw 2009.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/WWE SmackDown vs. Raw 2009.png" alt="WWE SmackDown vs. Raw 2009" class="game-img">
+            </div>
+            <div class="game-title">
+                WWE SmackDown vs. Raw 2009
+            </div>
+        </a>
+        
+        <a href="Wario Land The Shake Dimension.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Wario Land The Shake Dimension.png" alt="Wario Land: The Shake Dimension" class="game-img">
+            </div>
+            <div class="game-title">
+                Wario Land: The Shake Dimension
+            </div>
+        </a>
+        
+        <a href="WarioWare Smooth Moves.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/WarioWare Smooth Moves.png" alt="WarioWare: Smooth Moves" class="game-img">
+            </div>
+            <div class="game-title">
+                WarioWare: Smooth Moves
+            </div>
+        </a>
+        
+        <a href="Wii Play.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Wii Play.png" alt="Wii Play" class="game-img">
+            </div>
+            <div class="game-title">
+                Wii Play
+            </div>
+        </a>
+        
+        <a href="Wii Sports.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Wii Sports.png" alt="Wii Sports" class="game-img">
+            </div>
+            <div class="game-title">
+                Wii Sports
+            </div>
+        </a>
+        
+        <a href="Wii Sports Resort.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Wii Sports Resort.png" alt="Wii Sports Resort" class="game-img">
+            </div>
+            <div class="game-title">
+                Wii Sports Resort
+            </div>
+        </a>
+        
+        <a href="Zack & Wiki  Le Trésor de Barbaros.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Zack & Wiki  Le Trésor de Barbaros.png" alt="Zack & Wiki : Le Trésor de Barbaros" class="game-img">
+            </div>
+            <div class="game-title">
+                Zack & Wiki : Le Trésor de Barbaros
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        

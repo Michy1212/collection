@@ -1,0 +1,621 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>NES - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(214, 212, 210);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 15px;
+                    margin-top: 20px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Nintendo</a>
+                <h1>Jeux pour NES</h1>
+
+                <div class="game-grid">
+                    
+        <a href="Adventures of Lolo 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Adventures of Lolo 2.png" alt="Adventures of Lolo 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Adventures of Lolo 2
+            </div>
+        </a>
+        
+        <a href="Astérix.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Astérix.png" alt="Astérix" class="game-img">
+            </div>
+            <div class="game-title">
+                Astérix
+            </div>
+        </a>
+        
+        <a href="Balloon Fight.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Balloon Fight (Jap).png" alt="Balloon Fight (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Balloon Fight
+            </div>
+        </a>
+        
+        <a href="Castlevania.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Castlevania.png" alt="Castlevania" class="game-img">
+            </div>
+            <div class="game-title">
+                Castlevania
+            </div>
+        </a>
+        
+        <a href="Clu Clu Land.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Clu Clu Land (Jap).png" alt="Clu Clu Land (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Clu Clu Land
+            </div>
+        </a>
+        
+        <a href="Days of Thunder.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Days of Thunder.png" alt="Days of Thunder" class="game-img">
+            </div>
+            <div class="game-title">
+                Days of Thunder
+            </div>
+        </a>
+        
+        <a href="Devil World.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Devil World (Jap).png" alt="Devil World (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Devil World
+            </div>
+        </a>
+        
+        <a href="Donkey Kong Classics.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Donkey Kong Classics.png" alt="Donkey Kong Classics" class="game-img">
+            </div>
+            <div class="game-title">
+                Donkey Kong Classics
+            </div>
+        </a>
+        
+        <a href="Dr. Mario.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Dr. Mario.png" alt="Dr. Mario" class="game-img">
+            </div>
+            <div class="game-title">
+                Dr. Mario
+            </div>
+        </a>
+        
+        <a href="Dragon Ball  Le Secret du Dragon.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Dragon Ball  Le Secret du Dragon.png" alt="Dragon Ball : Le Secret du Dragon" class="game-img">
+            </div>
+            <div class="game-title">
+                Dragon Ball : Le Secret du Dragon
+            </div>
+        </a>
+        
+        <a href="Duck Tales.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Duck Tales.png" alt="Duck Tales" class="game-img">
+            </div>
+            <div class="game-title">
+                Duck Tales
+            </div>
+        </a>
+        
+        <a href="Duck Tales 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Duck Tales 2.png" alt="Duck Tales 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Duck Tales 2
+            </div>
+        </a>
+        
+        <a href="Déjà Vu.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Déjà Vu (US).png" alt="Déjà Vu (U)" class="game-img">
+            </div>
+            <div class="game-title">
+                Déjà Vu
+            </div>
+        </a>
+        
+        <a href="Excitebike.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Excitebike.png" alt="Excitebike" class="game-img">
+            </div>
+            <div class="game-title">
+                Excitebike
+            </div>
+        </a>
+        
+        <a href="Fire Emblem Gaiden.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Fire Emblem Gaiden (Jap).png" alt="Fire Emblem Gaiden (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Fire Emblem Gaiden
+            </div>
+        </a>
+        
+        <a href="Ice Climber.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Ice Climber.png" alt="Ice Climber" class="game-img">
+            </div>
+            <div class="game-title">
+                Ice Climber
+            </div>
+        </a>
+        
+        <a href="Jurassic Park.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Jurassic Park.png" alt="Jurassic Park" class="game-img">
+            </div>
+            <div class="game-title">
+                Jurassic Park
+            </div>
+        </a>
+        
+        <a href="Kickle Cubicle.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kickle Cubicle.png" alt="Kickle Cubicle" class="game-img">
+            </div>
+            <div class="game-title">
+                Kickle Cubicle
+            </div>
+        </a>
+        
+        <a href="Kid Dracula.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kid Dracula (Jap).png" alt="Kid Dracula (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Kid Dracula
+            </div>
+        </a>
+        
+        <a href="Kid Icarus.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kid Icarus.png" alt="Kid Icarus" class="game-img">
+            </div>
+            <div class="game-title">
+                Kid Icarus
+            </div>
+        </a>
+        
+        <a href="Kirby's Adventure.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Kirby's Adventure.png" alt="Kirby's Adventure" class="game-img">
+            </div>
+            <div class="game-title">
+                Kirby's Adventure
+            </div>
+        </a>
+        
+        <a href="Mach Rider.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mach Rider.png" alt="Mach Rider" class="game-img">
+            </div>
+            <div class="game-title">
+                Mach Rider
+            </div>
+        </a>
+        
+        <a href="Mario Bros..html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Bros. (Jap).png" alt="Mario Bros. (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Bros.
+            </div>
+        </a>
+        
+        <a href="Mario Open Golf.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mario Open Golf (Jap).png" alt="Mario Open Golf (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Mario Open Golf
+            </div>
+        </a>
+        
+        <a href="McDonaldland.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/McDonaldland.png" alt="McDonaldland" class="game-img">
+            </div>
+            <div class="game-title">
+                McDonaldland
+            </div>
+        </a>
+        
+        <a href="Mega Man 3.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mega Man 3.png" alt="Mega Man 3" class="game-img">
+            </div>
+            <div class="game-title">
+                Mega Man 3
+            </div>
+        </a>
+        
+        <a href="Mike Tyson's Punch-Out!!.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Mike Tyson's Punch-Out!!.png" alt="Mike Tyson's Punch-Out!!" class="game-img">
+            </div>
+            <div class="game-title">
+                Mike Tyson's Punch-Out!!
+            </div>
+        </a>
+        
+        <a href="Paperboy.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Paperboy.png" alt="Paperboy" class="game-img">
+            </div>
+            <div class="game-title">
+                Paperboy
+            </div>
+        </a>
+        
+        <a href="Penguin-kun Wars.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Penguin-kun Wars (Jap).png" alt="Penguin-kun Wars (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Penguin-kun Wars
+            </div>
+        </a>
+        
+        <a href="Quinty.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Quinty (Jap).png" alt="Quinty (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Quinty
+            </div>
+        </a>
+        
+        <a href="Robot Block.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Robot Block (Jap).png" alt="Robot Block (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Robot Block
+            </div>
+        </a>
+        
+        <a href="Robot Gyro.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Robot Gyro (Jap).png" alt="Robot Gyro (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Robot Gyro
+            </div>
+        </a>
+        
+        <a href="Rockman 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Rockman 2 (Jap).png" alt="Rockman 2 (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Rockman 2
+            </div>
+        </a>
+        
+        <a href="Rockman 4.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Rockman 4 (Jap).png" alt="Rockman 4 (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Rockman 4
+            </div>
+        </a>
+        
+        <a href="Rockman 5.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Rockman 5 (Jap).png" alt="Rockman 5 (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Rockman 5
+            </div>
+        </a>
+        
+        <a href="Soccer.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Soccer.png" alt="Soccer" class="game-img">
+            </div>
+            <div class="game-title">
+                Soccer
+            </div>
+        </a>
+        
+        <a href="Solomon's Key.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Solomon's Key (Jap).png" alt="Solomon's Key (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Solomon's Key
+            </div>
+        </a>
+        
+        <a href="Spartan X.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Spartan X (Jap).png" alt="Spartan X (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Spartan X
+            </div>
+        </a>
+        
+        <a href="Spider-Man Return of the Sinister Six.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Spider-Man Return of the Sinister Six.png" alt="Spider-Man: Return of the Sinister Six" class="game-img">
+            </div>
+            <div class="game-title">
+                Spider-Man: Return of the Sinister Six
+            </div>
+        </a>
+        
+        <a href="Star Wars.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Star Wars.png" alt="Star Wars" class="game-img">
+            </div>
+            <div class="game-title">
+                Star Wars
+            </div>
+        </a>
+        
+        <a href="Super Mario Bros..html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Bros..png" alt="Super Mario Bros. (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Bros.
+            </div>
+        </a>
+        
+        <a href="Super Mario Bros. + Duck Hunt.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Bros. + Duck Hunt.png" alt="Super Mario Bros. + Duck Hunt" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Bros. + Duck Hunt
+            </div>
+        </a>
+        
+        <a href="Super Mario Bros. 2.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Bros. 2.png" alt="Super Mario Bros. 2" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Bros. 2
+            </div>
+        </a>
+        
+                <a href="Super Mario Bros. 2 (The Lost Levels).html" class="game-card">
+                    <div class="game-img-container">
+                        <img src="game_images/Super Mario Bros. 2 (Jap).png" alt="Super Mario Bros. 2 (J)" class="game-img">
+                    </div>
+                    <div class="game-title">
+                        Super Mario Bros. 2 (The Lost Levels)
+                    </div>
+                </a>
+                
+        <a href="Super Mario Bros. 3.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Super Mario Bros. 3.png" alt="Super Mario Bros. 3" class="game-img">
+            </div>
+            <div class="game-title">
+                Super Mario Bros. 3
+            </div>
+        </a>
+        
+        <a href="Takeshi's Challenge.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Takeshi's Challenge (Jap).png" alt="Takeshi's Challenge (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Takeshi's Challenge
+            </div>
+        </a>
+        
+        <a href="Tetris.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tetris.png" alt="Tetris" class="game-img">
+            </div>
+            <div class="game-title">
+                Tetris
+            </div>
+        </a>
+        
+        <a href="The Bugs Bunny Blowout.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Bugs Bunny Blowout.png" alt="The Bugs Bunny Blowout" class="game-img">
+            </div>
+            <div class="game-title">
+                The Bugs Bunny Blowout
+            </div>
+        </a>
+        
+        <a href="The Legend of Zelda.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/The Legend of Zelda.png" alt="The Legend of Zelda" class="game-img">
+            </div>
+            <div class="game-title">
+                The Legend of Zelda
+            </div>
+        </a>
+        
+        <a href="Tiny Toon Adventures.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Tiny Toon Adventures (Jap).png" alt="Tiny Toon Adventures (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Tiny Toon Adventures
+            </div>
+        </a>
+        
+        <a href="Top Gun - The Second Mission.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Top Gun - The Second Mission.png" alt="Top Gun - The Second Mission" class="game-img">
+            </div>
+            <div class="game-title">
+                Top Gun - The Second Mission
+            </div>
+        </a>
+        
+        <a href="TwinBee.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/TwinBee (Jap).png" alt="TwinBee (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                TwinBee
+            </div>
+        </a>
+        
+        <a href="TwinBee 3 Poko Poko Daimao.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/TwinBee 3 Poko Poko Daimao (Jap).png" alt="TwinBee 3: Poko Poko Daimao (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                TwinBee 3: Poko Poko Daimao
+            </div>
+        </a>
+        
+        <a href="Wrecking Crew.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Wrecking Crew (Jap).png" alt="Wrecking Crew (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Wrecking Crew
+            </div>
+        </a>
+        
+        <a href="Yoshi.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yoshi (Jap).png" alt="Yoshi (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Yoshi
+            </div>
+        </a>
+        
+        <a href="Yoshi's Cookie.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yoshi's Cookie (Jap).png" alt="Yoshi's Cookie (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Yoshi's Cookie
+            </div>
+        </a>
+        
+        <a href="Yume Kojo Doki Doki Panic.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Yume Kojo Doki Doki Panic (Jap).png" alt="Yume Kojo: Doki Doki Panic (J)" class="game-img">
+            </div>
+            <div class="game-title">
+                Yume Kojo: Doki Doki Panic
+            </div>
+        </a>
+        
+        <a href="Zelda II The Adventure of Link.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Zelda II The Adventure of Link.png" alt="Zelda II: The Adventure of Link" class="game-img">
+            </div>
+            <div class="game-title">
+                Zelda II: The Adventure of Link
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        
