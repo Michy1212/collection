@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Astro Bot Rescue Mission.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Astro Bot Rescue Mission.png" alt="Astro Bot Rescue Mission" class="game-img">
@@ -101,6 +132,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Batman Arkham Knight.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Batman Arkham Knight.png" alt="Batman: Arkham Knight" class="game-img">
@@ -119,6 +154,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="Crash Bandicoot N. Sane Trilogy.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Crash Bandicoot N. Sane Trilogy.png" alt="Crash Bandicoot: N. Sane Trilogy" class="game-img">
@@ -128,6 +167,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Dissidia Final Fantasy NT.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Dissidia Final Fantasy NT.png" alt="Dissidia Final Fantasy NT" class="game-img">
@@ -173,6 +216,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="FIFA 16.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/FIFA 16.png" alt="FIFA 16" class="game-img">
@@ -209,6 +256,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="GalGun Double Peace.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/GalGun Double Peace.png" alt="Gal*Gun: Double Peace" class="game-img">
@@ -218,6 +269,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>H</span>
+                </div>
+                
         <a href="Horizon Zero Dawn Complete Edition (Playstation Hits).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Horizon Zero Dawn Complete Edition (Playstation Hits).png" alt="Horizon Zero Dawn Complete Edition (Playstation Hits)" class="game-img">
@@ -227,6 +282,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>K</span>
+                </div>
+                
         <a href="Kingdom Hearts III.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Kingdom Hearts III.png" alt="Kingdom Hearts III" class="game-img">
@@ -236,6 +295,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Lego Dimensions.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Lego Dimensions.png" alt="Lego Dimensions" class="game-img">
@@ -254,6 +317,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mega Man 11.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mega Man 11.png" alt="Mega Man 11" class="game-img">
@@ -281,6 +348,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>N</span>
+                </div>
+                
         <a href="Ni no kuni II  L'Avènement d'un nouveau royaume.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Ni no kuni II  L'Avènement d'un nouveau royaume.png" alt="Ni no kuni II : L'Avènement d'un nouveau royaume" class="game-img">
@@ -290,6 +361,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>O</span>
+                </div>
+                
         <a href="One Piece World Seeker.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/One Piece World Seeker.png" alt="One Piece: World Seeker" class="game-img">
@@ -308,6 +383,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="PlayStation VR Worlds.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/PlayStation VR Worlds.png" alt="PlayStation VR Worlds" class="game-img">
@@ -317,6 +396,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>R</span>
+                </div>
+                
         <a href="RIGS Mechanized Combat League.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/RIGS Mechanized Combat League.png" alt="RIGS: Mechanized Combat League" class="game-img">
@@ -362,6 +445,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Senran Kagura Estival Versus.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Senran Kagura Estival Versus.png" alt="Senran Kagura: Estival Versus" class="game-img">
@@ -398,6 +485,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Tekken 7.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Tekken 7.png" alt="Tekken 7" class="game-img">
@@ -425,6 +516,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>U</span>
+                </div>
+                
         <a href="Uncharted 4 A Thief's End (Collector).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Uncharted 4 A Thief's End (Collector).png" alt="Uncharted 4: A Thief's End (Collector)" class="game-img">
@@ -443,6 +538,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>V</span>
+                </div>
+                
         <a href="VR Karts.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/VR Karts.png" alt="VR Karts" class="game-img">
@@ -461,6 +560,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>W</span>
+                </div>
+                
         <a href="World of Final Fantasy (Édition Limitée).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/World of Final Fantasy (Édition Limitée).png" alt="World of Final Fantasy (Édition Limitée)" class="game-img">

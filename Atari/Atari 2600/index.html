@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Astérix.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Astérix.png" alt="Astérix" class="game-img">
@@ -101,6 +132,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Bowling.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Bowling.png" alt="Bowling" class="game-img">
@@ -110,6 +145,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="Carnival.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Carnival.png" alt="Carnival" class="game-img">
@@ -146,6 +185,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Donkey Kong.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Donkey Kong.png" alt="Donkey Kong" class="game-img">
@@ -155,6 +198,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>E</span>
+                </div>
+                
         <a href="Enduro.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Enduro.png" alt="Enduro" class="game-img">
@@ -164,6 +211,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="Fire Fighter.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Fire Fighter.png" alt="Fire Fighter" class="game-img">
@@ -173,6 +224,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Golf.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Golf.png" alt="Golf" class="game-img">
@@ -182,6 +237,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>H</span>
+                </div>
+                
         <a href="H.E.R.O..html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/H.E.R.O..png" alt="H.E.R.O." class="game-img">
@@ -191,6 +250,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>I</span>
+                </div>
+                
         <a href="Ikari Warriors.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Ikari Warriors.png" alt="Ikari Warriors" class="game-img">
@@ -200,6 +263,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>J</span>
+                </div>
+                
         <a href="Joust.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Joust.png" alt="Joust" class="game-img">
@@ -209,6 +276,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>K</span>
+                </div>
+                
         <a href="Kaboom!.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Kaboom!.png" alt="Kaboom!" class="game-img">
@@ -218,6 +289,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mario Bros..html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mario Bros..png" alt="Mario Bros." class="game-img">
@@ -245,6 +320,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>N</span>
+                </div>
+                
         <a href="Night Driver.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Night Driver.png" alt="Night Driver" class="game-img">
@@ -254,6 +333,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>O</span>
+                </div>
+                
         <a href="Oink!.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Oink!.png" alt="Oink!" class="game-img">
@@ -272,6 +355,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Pitfall II Lost Caverns.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Pitfall II Lost Caverns.png" alt="Pitfall II: Lost Caverns" class="game-img">
@@ -299,6 +386,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>R</span>
+                </div>
+                
         <a href="RealSports Tennis.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/RealSports Tennis.png" alt="RealSports Tennis" class="game-img">
@@ -317,6 +408,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Space Invaders.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Space Invaders.png" alt="Space Invaders" class="game-img">
@@ -371,6 +466,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>V</span>
+                </div>
+                
         <a href="Video Checkers.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Video Checkers.png" alt="Video Checkers" class="game-img">

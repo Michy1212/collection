@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Billy the Wizard.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Billy the Wizard.png" alt="Billy the Wizard" class="game-img">
@@ -110,6 +141,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="Code Lyoko  Plongez vers l'infini.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Code Lyoko  Plongez vers l'infini.png" alt="Code Lyoko : Plongez vers l'infini" class="game-img">
@@ -119,6 +154,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Détective Conan  Enquête à Mirapolis.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Détective Conan  Enquête à Mirapolis.png" alt="Détective Conan : Enquête à Mirapolis" class="game-img">
@@ -128,6 +167,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="Fort Boyard  Le Jeu.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Fort Boyard  Le Jeu.png" alt="Fort Boyard : Le Jeu" class="game-img">
@@ -137,6 +180,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Ghost Squad.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Ghost Squad.png" alt="Ghost Squad" class="game-img">
@@ -146,6 +193,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Les Simpson  Le Jeu.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Les Simpson  Le Jeu.png" alt="Les Simpson : Le Jeu" class="game-img">
@@ -173,6 +224,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mario & Sonic aux Jeux Olympiques.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mario & Sonic aux Jeux Olympiques.png" alt="Mario & Sonic aux Jeux Olympiques" class="game-img">
@@ -245,6 +300,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>N</span>
+                </div>
+                
         <a href="Namco Museum Remix.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Namco Museum Remix.png" alt="Namco Museum Remix" class="game-img">
@@ -281,6 +340,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>O</span>
+                </div>
+                
         <a href="One Piece Unlimited Cruise 1 - Le Trésor sous les flots.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/One Piece Unlimited Cruise 1 - Le Trésor sous les flots.png" alt="One Piece: Unlimited Cruise 1 - Le Trésor sous les flots" class="game-img">
@@ -290,6 +353,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Pokémon Battle Revolution.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Pokémon Battle Revolution.png" alt="Pokémon Battle Revolution" class="game-img">
@@ -308,6 +375,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>R</span>
+                </div>
+                
         <a href="Rayman Prod' présente  The Lapins Crétins Show.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Rayman Prod' présente  The Lapins Crétins Show.png" alt="Rayman Prod' présente : The Lapins Crétins Show" class="game-img">
@@ -317,6 +388,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="SSX Blur.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/SSX Blur.png" alt="SSX Blur" class="game-img">
@@ -407,6 +482,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="The Legend of Zelda Skyward Sword (CD Orchestral Spécial - Edition limitée).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/The Legend of Zelda Skyward Sword (CD Orchestral Spécial - Edition limitée).png" alt="The Legend of Zelda: Skyward Sword (CD Orchestral Spécial - Edition limitée)" class="game-img">
@@ -425,6 +504,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>U</span>
+                </div>
+                
         <a href="UDraw Studio.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/UDraw Studio.png" alt="UDraw Studio" class="game-img">
@@ -434,6 +517,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>W</span>
+                </div>
+                
         <a href="WWE SmackDown vs. Raw 2009.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/WWE SmackDown vs. Raw 2009.png" alt="WWE SmackDown vs. Raw 2009" class="game-img">
@@ -488,6 +575,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>Z</span>
+                </div>
+                
         <a href="Zack & Wiki  Le Trésor de Barbaros.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Zack & Wiki  Le Trésor de Barbaros.png" alt="Zack & Wiki : Le Trésor de Barbaros" class="game-img">

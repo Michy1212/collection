@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Aladdin.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Aladdin.png" alt="Aladdin" class="game-img">
@@ -119,6 +150,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>E</span>
+                </div>
+                
         <a href="EA Hockey.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/EA Hockey.png" alt="EA Hockey" class="game-img">
@@ -137,6 +172,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="Fantasia.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Fantasia.png" alt="Fantasia" class="game-img">
@@ -146,6 +185,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Gunstar Heroes.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Gunstar Heroes (Jap).png" alt="Gunstar Heroes (J)" class="game-img">
@@ -155,6 +198,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>J</span>
+                </div>
+                
         <a href="James Bond 007 The Duel.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/James Bond 007 The Duel.png" alt="James Bond 007: The Duel" class="game-img">
@@ -164,6 +211,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Le Roi Lion.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Le Roi Lion.png" alt="Le Roi Lion" class="game-img">
@@ -182,6 +233,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Magical Taruruto-kun.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Magical Taruruto-kun (Jap).png" alt="Magical Taruruto-kun (J)" class="game-img">
@@ -218,6 +273,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Pac-Mania.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Pac-Mania.png" alt="Pac-Mania" class="game-img">
@@ -236,6 +295,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Shaq-Fu.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Shaq-Fu.png" alt="Shaq-Fu" class="game-img">
@@ -308,6 +371,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Tiny Toon Adventures Buster's Hidden Treasure.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Tiny Toon Adventures Buster's Hidden Treasure.png" alt="Tiny Toon Adventures: Buster's Hidden Treasure" class="game-img">

@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Assassin's Creed Bloodlines.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Assassin's Creed Bloodlines.png" alt="Assassin's Creed: Bloodlines" class="game-img">
@@ -101,6 +132,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Bomberman Land.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Bomberman Land.png" alt="Bomberman Land" class="game-img">
@@ -110,6 +145,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="Crisis Core Final Fantasy VII.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Crisis Core Final Fantasy VII.png" alt="Crisis Core: Final Fantasy VII" class="game-img">
@@ -119,6 +158,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Dissidia Final Fantasy.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Dissidia Final Fantasy.png" alt="Dissidia: Final Fantasy" class="game-img">
@@ -128,6 +171,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="Fat Princess Fistful of Cake.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Fat Princess Fistful of Cake.png" alt="Fat Princess: Fistful of Cake" class="game-img">
@@ -155,6 +202,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Grand Theft Auto Liberty City Stories (Platinium).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Grand Theft Auto Liberty City Stories (Platinium).png" alt="Grand Theft Auto: Liberty City Stories (Platinium)" class="game-img">
@@ -164,6 +215,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>I</span>
+                </div>
+                
         <a href="Invizimals (Pack avec Go!Cam).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Invizimals (Pack avec Go!Cam).png" alt="Invizimals (Pack avec Go!Cam)" class="game-img">
@@ -182,6 +237,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Lemmings (PSP Essentials).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Lemmings (PSP Essentials).png" alt="Lemmings (PSP Essentials)" class="game-img">
@@ -200,6 +259,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="ModNation Racers.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/ModNation Racers.png" alt="ModNation Racers" class="game-img">
@@ -209,6 +272,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Prinny 2 Dawn of Operation Panties, Dood!.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Prinny 2 Dawn of Operation Panties, Dood! (Jap).png" alt="Prinny 2: Dawn of Operation Panties, Dood! (J)" class="game-img">
@@ -227,6 +294,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Sonic Rivals.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Sonic Rivals.png" alt="Sonic Rivals" class="game-img">
@@ -245,6 +316,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Tekken 6.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Tekken 6.png" alt="Tekken 6" class="game-img">
@@ -254,6 +329,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>W</span>
+                </div>
+                
         <a href="Wipeout Pulse.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Wipeout Pulse.png" alt="Wipeout Pulse" class="game-img">

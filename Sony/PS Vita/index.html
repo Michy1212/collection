@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Demon Gaze.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Demon Gaze.png" alt="Demon Gaze" class="game-img">
@@ -101,6 +132,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="ModNation Racers Road Trip.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/ModNation Racers Road Trip.png" alt="ModNation Racers: Road Trip" class="game-img">
@@ -110,6 +145,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Superdimension Neptune VS Sega Hard Girls.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Superdimension Neptune VS Sega Hard Girls.png" alt="Superdimension Neptune VS Sega Hard Girls" class="game-img">
@@ -119,6 +158,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="The Sly Trilogy.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/The Sly Trilogy.png" alt="The Sly Trilogy" class="game-img">
@@ -128,6 +171,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>U</span>
+                </div>
+                
         <a href="Uncharted Golden Abyss.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Uncharted Golden Abyss.png" alt="Uncharted: Golden Abyss" class="game-img">

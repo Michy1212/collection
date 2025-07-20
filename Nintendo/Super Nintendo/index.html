@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Arkanoid Doh It Again.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Arkanoid Doh It Again.png" alt="Arkanoid: Doh It Again" class="game-img">
@@ -110,6 +141,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Bomberman B-Daman.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Bomberman B-Daman (Jap).png" alt="Bomberman B-Daman (J)" class="game-img">
@@ -119,6 +154,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Dai 3 Ji Super Robot Taisen.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Dai 3 Ji Super Robot Taisen (Jap).png" alt="Dai 3 Ji Super Robot Taisen (J)" class="game-img">
@@ -209,6 +248,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>E</span>
+                </div>
+                
         <a href="Earth Defense Force.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Earth Defense Force.png" alt="Earth Defense Force" class="game-img">
@@ -218,6 +261,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="F-Zero.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/F-Zero (US).png" alt="F-Zero (U)" class="game-img">
@@ -254,6 +301,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>I</span>
+                </div>
+                
         <a href="International Superstar Soccer Deluxe.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/International Superstar Soccer Deluxe (Jap).png" alt="International Superstar Soccer Deluxe (J)" class="game-img">
@@ -263,6 +314,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>J</span>
+                </div>
+                
         <a href="J.League Excite Stage '94.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/J.League Excite Stage '94 (Jap).png" alt="J.League Excite Stage '94 (J)" class="game-img">
@@ -290,6 +345,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>K</span>
+                </div>
+                
         <a href="Kawa no Nushi Tsuri 2.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Kawa no Nushi Tsuri 2 (Jap).png" alt="Kawa no Nushi Tsuri 2 (J)" class="game-img">
@@ -335,6 +394,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="La Grande Aventure de Torneko  Donjon Mystère.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/La Grande Aventure de Torneko  Donjon Mystère (Jap).png" alt="La Grande Aventure de Torneko : Donjon Mystère (J)" class="game-img">
@@ -344,6 +407,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mega Man X.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mega Man X (US).png" alt="Mega Man X (U)" class="game-img">
@@ -362,6 +429,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>N</span>
+                </div>
+                
         <a href="Nintendo Scope 6.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Nintendo Scope 6.png" alt="Nintendo Scope 6" class="game-img">
@@ -380,6 +451,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Panel de Pon.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Panel de Pon (Jap).png" alt="Panel de Pon (J)" class="game-img">
@@ -434,6 +509,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Sensible Soccer European Champions.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Sensible Soccer European Champions.png" alt="Sensible Soccer: European Champions" class="game-img">
@@ -650,6 +729,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Terminator 2 Judgment Day.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Terminator 2 Judgment Day.png" alt="Terminator 2: Judgment Day" class="game-img">
@@ -668,6 +751,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>W</span>
+                </div>
+                
         <a href="WWF Super WrestleMania.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/WWF Super WrestleMania.png" alt="WWF Super WrestleMania" class="game-img">
@@ -695,6 +782,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>Y</span>
+                </div>
+                
         <a href="Yu Yu Hakusho.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Yu Yu Hakusho (Jap).png" alt="Yu Yu Hakusho (J)" class="game-img">
@@ -704,6 +795,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>Z</span>
+                </div>
+                
         <a href="Zero 4 Champ RR.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Zero 4 Champ RR (Jap).png" alt="Zero 4 Champ RR (J)" class="game-img">

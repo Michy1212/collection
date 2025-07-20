@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Astérix  Sur la trace d'Idéfix.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Astérix  Sur la trace d'Idéfix.png" alt="Astérix : Sur la trace d'Idéfix" class="game-img">
@@ -101,6 +132,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Bugs Bunny et le Château des Catastrophes.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Bugs Bunny et le Château des Catastrophes.png" alt="Bugs Bunny et le Château des Catastrophes" class="game-img">
@@ -110,6 +145,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Game & Watch Gallery 3.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Game & Watch Gallery 3.png" alt="Game & Watch Gallery 3" class="game-img">
@@ -119,6 +158,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="La Mission des Schtroumpfs.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/La Mission des Schtroumpfs.png" alt="La Mission des Schtroumpfs" class="game-img">
@@ -164,6 +207,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mario Tennis.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mario Tennis.png" alt="Mario Tennis" class="game-img">
@@ -182,6 +229,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Pokémon Pinball.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Pokémon Pinball.png" alt="Pokémon Pinball" class="game-img">
@@ -254,6 +305,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>R</span>
+                </div>
+                
         <a href="Rayman.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Rayman.png" alt="Rayman" class="game-img">
@@ -263,6 +318,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Shrek Fairy Tale Freakdown.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Shrek Fairy Tale Freakdown.png" alt="Shrek: Fairy Tale Freakdown" class="game-img">
@@ -299,6 +358,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="The Legend of Zelda Link's Awakening DX.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/The Legend of Zelda Link's Awakening DX.png" alt="The Legend of Zelda: Link's Awakening DX" class="game-img">
@@ -353,6 +416,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>Y</span>
+                </div>
+                
         <a href="Yu-Gi-Oh! Duel des ténèbres.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Yu-Gi-Oh! Duel des ténèbres (Jap).png" alt="Yu-Gi-Oh! Duel des ténèbres (J)" class="game-img">
