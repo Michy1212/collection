@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Alex Kidd in Miracle World.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Alex Kidd in Miracle World.png" alt="Alex Kidd in Miracle World" class="game-img">
@@ -110,6 +141,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="California Games.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/California Games.png" alt="California Games" class="game-img">
@@ -119,6 +154,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Ghostbusters.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Ghostbusters.png" alt="Ghostbusters" class="game-img">
@@ -128,6 +167,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Prince of Persia.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Prince of Persia.png" alt="Prince of Persia" class="game-img">
@@ -137,6 +180,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Shinobi.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Shinobi.png" alt="Shinobi" class="game-img">
@@ -164,6 +211,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="The Lucky Dime Caper Starring Donald Duck.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/The Lucky Dime Caper Starring Donald Duck.png" alt="The Lucky Dime Caper Starring Donald Duck" class="game-img">

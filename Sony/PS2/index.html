@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Activision Anthology.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Activision Anthology.png" alt="Activision Anthology" class="game-img">
@@ -110,6 +141,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Britney's Dance Beat.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Britney's Dance Beat.png" alt="Britney's Dance Beat" class="game-img">
@@ -146,6 +181,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="CD Démo 11.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/CD Démo 11.png" alt="CD Démo 11" class="game-img">
@@ -200,6 +239,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Devil May Cry.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Devil May Cry.png" alt="Devil May Cry" class="game-img">
@@ -263,6 +306,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>E</span>
+                </div>
+                
         <a href="Eggo Mania.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Eggo Mania.png" alt="Eggo Mania" class="game-img">
@@ -299,6 +346,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="FIFA 13.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/FIFA 13.png" alt="FIFA 13" class="game-img">
@@ -326,6 +377,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="God of War.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/God of War.png" alt="God of War" class="game-img">
@@ -353,6 +408,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>H</span>
+                </div>
+                
         <a href="Hitman 2 Silent Assassin (Platinium).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Hitman 2 Silent Assassin (Platinium).png" alt="Hitman 2: Silent Assassin (Platinium)" class="game-img">
@@ -362,6 +421,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>I</span>
+                </div>
+                
         <a href="Inspecteur Gadget  L'Invasion des Robots Mad.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Inspecteur Gadget  L'Invasion des Robots Mad.png" alt="Inspecteur Gadget : L'Invasion des Robots Mad" class="game-img">
@@ -371,6 +434,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>J</span>
+                </div>
+                
         <a href="Jak II  Hors-la-loi (Platinium).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Jak II  Hors-la-loi (Platinium).png" alt="Jak II : Hors-la-loi (Platinium)" class="game-img">
@@ -380,6 +447,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>K</span>
+                </div>
+                
         <a href="Kingdom Hearts.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Kingdom Hearts.png" alt="Kingdom Hearts" class="game-img">
@@ -407,6 +478,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Le Mans 24 Heures.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Le Mans 24 Heures.png" alt="Le Mans 24 Heures" class="game-img">
@@ -452,6 +527,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mafia.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mafia.png" alt="Mafia" class="game-img">
@@ -461,6 +540,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>N</span>
+                </div>
+                
         <a href="Naruto Ultimate Ninja 2.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Naruto Ultimate Ninja 2.png" alt="Naruto: Ultimate Ninja 2" class="game-img">
@@ -470,6 +553,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>O</span>
+                </div>
+                
         <a href="One Piece Grand Adventure.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/One Piece Grand Adventure.png" alt="One Piece: Grand Adventure" class="game-img">
@@ -488,6 +575,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Pac-Man World 2.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Pac-Man World 2.png" alt="Pac-Man World 2" class="game-img">
@@ -524,6 +615,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>R</span>
+                </div>
+                
         <a href="Ratatouille (Platinium).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Ratatouille (Platinium).png" alt="Ratatouille (Platinium)" class="game-img">
@@ -578,6 +673,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="SSX (Platinium).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/SSX (Platinium).png" alt="SSX (Platinium)" class="game-img">
@@ -749,6 +848,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Taz Wanted.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Taz Wanted.png" alt="Taz: Wanted" class="game-img">
@@ -767,6 +870,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>V</span>
+                </div>
+                
         <a href="Viewtiful Joe.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Viewtiful Joe.png" alt="Viewtiful Joe" class="game-img">
@@ -776,6 +883,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>W</span>
+                </div>
+                
         <a href="WWE SmackDown vs. Raw 2008 (Platinium).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/WWE SmackDown vs. Raw 2008 (Platinium).png" alt="WWE SmackDown vs. Raw 2008 (Platinium)" class="game-img">
@@ -794,6 +905,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>Y</span>
+                </div>
+                
         <a href="Yu-Gi-Oh! GX Tag Force Evolution.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Yu-Gi-Oh! GX Tag Force Evolution.png" alt="Yu-Gi-Oh! GX Tag Force Evolution" class="game-img">

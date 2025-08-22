@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>1</span>
+                </div>
+                
         <a href="1-2-Switch.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/1-2-Switch.png" alt="1-2-Switch" class="game-img">
@@ -101,6 +132,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Among Us.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Among Us.png" alt="Among Us" class="game-img">
@@ -128,6 +163,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Blossom Tales The Sleeping King.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Blossom Tales The Sleeping King.png" alt="Blossom Tales: The Sleeping King" class="game-img">
@@ -146,6 +185,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="Cadence of Hyrule Crypt of the NecroDancer featuring The Legend of Zelda.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Cadence of Hyrule Crypt of the NecroDancer featuring The Legend of Zelda.png" alt="Cadence of Hyrule: Crypt of the NecroDancer featuring The Legend of Zelda" class="game-img">
@@ -218,6 +261,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Dark Witch Music Episode Rudymical.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Dark Witch Music Episode Rudymical.png" alt="Dark Witch Music Episode: Rudymical" class="game-img">
@@ -263,6 +310,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="Fairy Tail.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Fairy Tail.png" alt="Fairy Tail" class="game-img">
@@ -317,6 +368,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="GalGun 2.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/GalGun 2.png" alt="Gal*Gun 2" class="game-img">
@@ -326,6 +381,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>H</span>
+                </div>
+                
         <a href="Hyrule Warriors  L'Ère du Fléau.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Hyrule Warriors  L'Ère du Fléau.png" alt="Hyrule Warriors : L'Ère du Fléau" class="game-img">
@@ -335,6 +394,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>I</span>
+                </div>
+                
         <a href="I Am Setsuna.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/I Am Setsuna (Jap).png" alt="I Am Setsuna (J)" class="game-img">
@@ -344,6 +407,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>J</span>
+                </div>
+                
         <a href="Jump Force Deluxe Edition.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Jump Force Deluxe Edition.png" alt="Jump Force Deluxe Edition" class="game-img">
@@ -353,6 +420,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>K</span>
+                </div>
+                
         <a href="Kitten Squad.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Kitten Squad.png" alt="Kitten Squad" class="game-img">
@@ -371,6 +442,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Le Donjon de Naheulbeuk  L'Amulette du Désordre.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Le Donjon de Naheulbeuk  L'Amulette du Désordre.png" alt="Le Donjon de Naheulbeuk : L'Amulette du Désordre" class="game-img">
@@ -416,6 +491,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mario & Luigi  L'Épopée Fraternelle.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mario & Luigi  L'Épopée Fraternelle.png" alt="Mario & Luigi : L'Épopée Fraternelle" class="game-img">
@@ -524,6 +603,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>N</span>
+                </div>
+                
         <a href="Namco Museum (PAC-MAN VS. Version multijoueur gratuite).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Namco Museum (PAC-MAN VS. Version multijoueur gratuite).png" alt="Namco Museum (PAC-MAN VS. Version multijoueur gratuite)" class="game-img">
@@ -569,6 +652,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>O</span>
+                </div>
+                
         <a href="Octopath Traveler.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Octopath Traveler.png" alt="Octopath Traveler" class="game-img">
@@ -623,6 +710,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Pac-Man 99.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Pac-Man 99.png" alt="Pac-Man 99" class="game-img">
@@ -758,6 +849,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Senran Kagura Reflexions.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Senran Kagura Reflexions.png" alt="Senran Kagura Reflexions" class="game-img">
@@ -956,6 +1051,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Taiko no Tatsujin Drum ‘n’ Fun!.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Taiko no Tatsujin Drum ‘n’ Fun!.png" alt="Taiko no Tatsujin: Drum ‘n’ Fun!" class="game-img">
@@ -1055,6 +1154,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>U</span>
+                </div>
+                
         <a href="Ultra Street Fighter II The Final Challengers.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Ultra Street Fighter II The Final Challengers.png" alt="Ultra Street Fighter II: The Final Challengers" class="game-img">
@@ -1073,6 +1176,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>W</span>
+                </div>
+                
         <a href="Wonder Boy - Asha in Monster World.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Wonder Boy - Asha in Monster World.png" alt="Wonder Boy - Asha in Monster World" class="game-img">
@@ -1082,6 +1189,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>X</span>
+                </div>
+                
         <a href="Xenoblade Chronicles 2.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Xenoblade Chronicles 2.png" alt="Xenoblade Chronicles 2" class="game-img">
@@ -1091,6 +1202,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>Y</span>
+                </div>
+                
         <a href="Yooka-Laylee.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Yooka-Laylee (US).png" alt="Yooka-Laylee (U)" class="game-img">

@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Adibou et l'ombre verte.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Adibou et l'ombre verte.png" alt="Adibou et l'ombre verte" class="game-img">
@@ -110,6 +141,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>B</span>
+                </div>
+                
         <a href="Baby Felix Tennis.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Baby Felix Tennis.png" alt="Baby Felix Tennis" class="game-img">
@@ -137,6 +172,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>C</span>
+                </div>
+                
         <a href="Chocobo Racing.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Chocobo Racing (Jap).png" alt="Chocobo Racing (J)" class="game-img">
@@ -164,6 +203,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
         <a href="Digimon Rumble Arena.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Digimon Rumble Arena.png" alt="Digimon Rumble Arena" class="game-img">
@@ -173,6 +216,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="Final Fantasy VI.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Final Fantasy VI.png" alt="Final Fantasy VI" class="game-img">
@@ -200,6 +247,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Gran Turismo.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Gran Turismo.png" alt="Gran Turismo" class="game-img">
@@ -209,6 +260,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>H</span>
+                </div>
+                
         <a href="Harry Potter et la Chambre des secrets.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Harry Potter et la Chambre des secrets.png" alt="Harry Potter et la Chambre des secrets" class="game-img">
@@ -227,6 +282,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>J</span>
+                </div>
+                
         <a href="James Bond 007 Demain ne meurt jamais.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/James Bond 007 Demain ne meurt jamais.png" alt="James Bond 007: Demain ne meurt jamais" class="game-img">
@@ -236,6 +295,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Les Schtroumpfs.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Les Schtroumpfs.png" alt="Les Schtroumpfs" class="game-img">
@@ -254,6 +317,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Mickey's Wild Adventure (Platinium).html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Mickey's Wild Adventure (Platinium).png" alt="Mickey's Wild Adventure (Platinium)" class="game-img">
@@ -263,6 +330,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>P</span>
+                </div>
+                
         <a href="Pac-Man World.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Pac-Man World.png" alt="Pac-Man World" class="game-img">
@@ -272,6 +343,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>R</span>
+                </div>
+                
         <a href="Rayman.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Rayman.png" alt="Rayman" class="game-img">
@@ -281,6 +356,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Sled Storm.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Sled Storm.png" alt="Sled Storm" class="game-img">
@@ -317,6 +396,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Taxi 2.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Taxi 2.png" alt="Taxi 2" class="game-img">
@@ -362,6 +445,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>Y</span>
+                </div>
+                
         <a href="Yu-Gi-Oh! Forbidden Memories.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Yu-Gi-Oh! Forbidden Memories.png" alt="Yu-Gi-Oh! Forbidden Memories" class="game-img">

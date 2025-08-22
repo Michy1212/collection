@@ -30,8 +30,8 @@
                 .game-grid {
                     display: grid;
                     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-                    gap: 15px;
-                    margin-top: 20px;
+                    gap: 30px;
+                    margin-top: 15px;
                 }
                 .game-card {
                     background-color: white;
@@ -46,6 +46,7 @@
                     text-decoration: none;
                     color: inherit;
                     height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
                 }
                 .game-card:hover {
                     transform: translateY(-5px);
@@ -83,6 +84,32 @@
                     color: #0066cc;
                     font-weight: bold;
                 }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
             </style>
         </head>
         <body>
@@ -92,6 +119,10 @@
 
                 <div class="game-grid">
                     
+                <div class="letter-separator">
+                    <span>A</span>
+                </div>
+                
         <a href="Assassin's Creed Valhalla.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Assassin's Creed Valhalla.png" alt="Assassin's Creed Valhalla" class="game-img">
@@ -110,6 +141,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>F</span>
+                </div>
+                
         <a href="Final Fantasy VII Rebirth.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Final Fantasy VII Rebirth.png" alt="Final Fantasy VII Rebirth" class="game-img">
@@ -137,6 +172,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>G</span>
+                </div>
+                
         <a href="Greak Memories of Azur.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Greak Memories of Azur.png" alt="Greak: Memories of Azur" class="game-img">
@@ -146,6 +185,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>H</span>
+                </div>
+                
         <a href="Hogwarts Legacy  L'Héritage de Poudlard.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Hogwarts Legacy  L'Héritage de Poudlard.png" alt="Hogwarts Legacy : L'Héritage de Poudlard" class="game-img">
@@ -164,6 +207,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>K</span>
+                </div>
+                
         <a href="Kao the Kangaroo.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Kao the Kangaroo.png" alt="Kao the Kangaroo" class="game-img">
@@ -173,6 +220,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>L</span>
+                </div>
+                
         <a href="Lego Star Wars  La Saga Skywalker.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Lego Star Wars  La Saga Skywalker.png" alt="Lego Star Wars : La Saga Skywalker" class="game-img">
@@ -182,6 +233,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>M</span>
+                </div>
+                
         <a href="Marvel's Spider-Man Remastered.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Marvel's Spider-Man Remastered.png" alt="Marvel's Spider-Man Remastered" class="game-img">
@@ -200,6 +255,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>O</span>
+                </div>
+                
         <a href="One Piece Odyssey.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/One Piece Odyssey.png" alt="One Piece Odyssey" class="game-img">
@@ -209,6 +268,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>R</span>
+                </div>
+                
         <a href="Ratchet & Clank Rift Apart.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Ratchet & Clank Rift Apart.png" alt="Ratchet & Clank: Rift Apart" class="game-img">
@@ -236,6 +299,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>S</span>
+                </div>
+                
         <a href="Sonic Frontiers.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Sonic Frontiers.png" alt="Sonic Frontiers" class="game-img">
@@ -254,6 +321,10 @@
             </div>
         </a>
         
+                <div class="letter-separator">
+                    <span>T</span>
+                </div>
+                
         <a href="Tales of Arise.html" class="game-card">
             <div class="game-img-container">
                 <img src="game_images/Tales of Arise.png" alt="Tales of Arise" class="game-img">
