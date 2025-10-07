@@ -133,6 +133,12 @@
                     Pokémon Version Saphir (PAL)
                 </button>
                 
+                <button class="tab-button " 
+                        onclick="openTab(event, 'tab1')" 
+                        style="background-color: rgb(31, 44, 86); color: white;">
+                    Pokémon Version Saphir (UK) (PAL)
+                </button>
+                
                 </div>
 
                 
@@ -188,12 +194,64 @@
                 </div>
             </div>
             
+            <div id="tab1" class="tab-content" style="display:none">
+                <div class="game-header">
+                    <img src="game_images/Pokémon Version Saphir (UK).png" alt="Pokémon Version Saphir (UK)" class="game-cover">
+                    <div class="game-info">
+                        <h2>Pokémon Version Saphir</h2>
+                        <table class="info-table">
+                            <tr>
+                                <th>Développeur</th>
+                                <td>Game Freak</td>
+                            </tr>
+                            <tr>
+                                <th>Éditeur</th>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <th>Dates de sortie</th>
+                                <td>
+                                    <table class="dates-table">
+                                        <tr>
+                                            <th>Europe</th>
+                                            <th>Amérique du Nord</th>
+                                            <th>Japon</th>
+                                        </tr>
+                                        <tr>
+                                            <td>25/07/2003</td>
+                                            <td>19/03/2003</td>
+                                            <td>21/11/2002</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Genre(s)</th>
+                                <td>Jeu de rôle, J-RPG</td>
+                            </tr>
+                            <tr>
+                                <th>Mode(s) de jeu</th>
+                                <td>1 joueur</td>
+                            </tr>
+                            <tr>
+                                <th>État</th>
+                                <td>Jeu seul</td>
+                            </tr>
+                            <tr>
+                                <th>Région</th>
+                                <td>PAL</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
             </div>
 
             <script>
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(49, 66, 90)'
+                    'tab0': 'rgb(49, 66, 90)', 'tab1': 'rgb(31, 44, 86)'
                 };
 
                 function openTab(evt, tabName) {

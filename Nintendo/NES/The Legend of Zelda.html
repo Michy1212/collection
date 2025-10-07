@@ -133,12 +133,6 @@
                     The Legend of Zelda (PAL)
                 </button>
                 
-                <button class="tab-button " 
-                        onclick="openTab(event, 'tab1')" 
-                        style="background-color: rgb(252, 243, 235); color: black;">
-                    The Legend of Zelda (NTSC-J)
-                </button>
-                
                 </div>
 
                 
@@ -194,64 +188,12 @@
                 </div>
             </div>
             
-            <div id="tab1" class="tab-content" style="display:none">
-                <div class="game-header">
-                    <img src="game_images/The Legend of Zelda (Jap).png" alt="The Legend of Zelda (J)" class="game-cover">
-                    <div class="game-info">
-                        <h2>The Legend of Zelda</h2>
-                        <table class="info-table">
-                            <tr>
-                                <th>Développeur</th>
-                                <td>Nintendo R&D4</td>
-                            </tr>
-                            <tr>
-                                <th>Éditeur</th>
-                                <td>Nintendo</td>
-                            </tr>
-                            <tr>
-                                <th>Dates de sortie</th>
-                                <td>
-                                    <table class="dates-table">
-                                        <tr>
-                                            <th>Europe</th>
-                                            <th>Amérique du Nord</th>
-                                            <th>Japon</th>
-                                        </tr>
-                                        <tr>
-                                            <td>-</td>
-                                            <td>-</td>
-                                            <td>21/02/1986</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Genre(s)</th>
-                                <td>Action-aventure</td>
-                            </tr>
-                            <tr>
-                                <th>Mode(s) de jeu</th>
-                                <td>1 joueur</td>
-                            </tr>
-                            <tr>
-                                <th>État</th>
-                                <td>Complet</td>
-                            </tr>
-                            <tr>
-                                <th>Région</th>
-                                <td>NTSC-J</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            
             </div>
 
             <script>
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(187, 149, 84)', 'tab1': 'rgb(252, 243, 235)'
+                    'tab0': 'rgb(187, 149, 84)'
                 };
 
                 function openTab(evt, tabName) {
