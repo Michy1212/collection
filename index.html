@@ -23,7 +23,7 @@
             gap: 15px;
             margin-top: 30px;
         }
-                .brand-card {
+        .brand-card {
             background-color: white;
             border-radius: 8px;
             padding: 15px;
@@ -65,6 +65,42 @@
             text-align: center;
             color: #666;
             font-size: 0.9em;
+            position: relative;
+        }
+        .twitch-credit {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.8em;
+            transition: color 0.2s;
+        }
+        .twitch-credit:hover {
+            color: #9146ff;
+        }
+        .twitch-logo {
+            width: 20px;
+            height: 20px;
+            background-color: #9146ff;
+            border-radius: 4px;
+            position: relative;
+            display: inline-block;
+        }
+        .twitch-logo::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-left: 4px solid white;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
         }
     </style>
 </head>
@@ -139,6 +175,10 @@
 
     <footer>
         Généré automatiquement à partir d'un fichier Excel
+        <a href="https://twitch.tv/leretroscope" target="_blank" class="twitch-credit">
+            <div class="twitch-logo"></div>
+            Le Retroscope
+        </a>
     </footer>
 </body>
 </html>
