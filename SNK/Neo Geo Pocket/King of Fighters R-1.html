@@ -11,7 +11,7 @@
                     max-width: 800px;
                     margin: 0 auto;
                     padding: 20px;
-                    background-color: #f5f5f5;
+                    background-color: rgb(3, 3, 2);
                     transition: background-color 0.5s;
                 }
                 .content-container {
@@ -129,7 +129,7 @@
                     
                 <button class="tab-button active" 
                         onclick="openTab(event, 'tab0')" 
-                        style="">
+                        style="background-color: rgb(3, 3, 2); color: white;">
                     King of Fighters R-1 (NTSC-J)
                 </button>
                 
@@ -138,7 +138,7 @@
                 
             <div id="tab0" class="tab-content" >
                 <div class="game-header">
-                    <div class="game-cover"></div>
+                    <img src="game_images/King of Fighters R-1 (Jap).png" alt="King of Fighters R-1 (J)" class="game-cover">
                     <div class="game-info">
                         <h2>King of Fighters R-1</h2>
                         <table class="info-table">
@@ -193,7 +193,7 @@
             <script>
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': '#f5f5f5'
+                    'tab0': 'rgb(3, 3, 2)'
                 };
 
                 function openTab(evt, tabName) {
