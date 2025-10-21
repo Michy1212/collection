@@ -19,13 +19,18 @@
                     border-radius: 8px;
                     padding: 20px;
                     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    overflow: hidden; /* Empêche le débordement */
                 }
                 h1 {
                     color: #333;
+                    font-size: 1.5em; /* Taille réduite pour mobile */
+                    word-wrap: break-word; /* Gestion des mots longs */
                 }
                 h2 {
                     color: #444;
                     margin-top: 0;
+                    font-size: 1.3em; /* Taille réduite pour mobile */
+                    word-wrap: break-word;
                 }
                 .back-link {
                     display: inline-block;
@@ -33,6 +38,7 @@
                     color: #0066cc;
                     text-decoration: none;
                     font-weight: bold;
+                    font-size: 0.9em;
                 }
                 .tab-buttons {
                     display: flex;
@@ -40,6 +46,7 @@
                     border-bottom: 1px solid #ddd;
                     flex-wrap: wrap;
                     gap: 5px;
+                    overflow-x: auto; /* Défilement horizontal si nécessaire */
                 }
                 .tab-button {
                     border: none;
@@ -49,6 +56,9 @@
                     border-radius: 5px 5px 0 0;
                     background-color: #f1f1f1;
                     color: #333;
+                    font-size: 0.85em; /* Taille réduite */
+                    white-space: nowrap; /* Empêche le retour à la ligne */
+                    flex-shrink: 0; /* Empêche le rétrécissement */
                 }
                 .tab-button:hover {
                     opacity: 0.8;
@@ -66,33 +76,50 @@
                     height: 6px;
                     background-color: inherit;
                 }
+                
+                /* NOUVEAU : Conteneur responsive pour le tableau */
+                .table-container {
+                    overflow-x: auto; /* Défilement horizontal sur mobile */
+                    margin: 15px -10px; /* Compensation du padding */
+                    padding: 0 10px;
+                }
+                
                 .info-table {
                     width: 100%;
                     border-collapse: collapse;
                     margin-top: 20px;
+                    min-width: 500px; /* Largeur minimale pour garder la lisibilité */
                 }
                 .info-table th, .info-table td {
-                    padding: 8px 12px;
+                    padding: 10px 8px; /* Padding réduit */
                     text-align: left;
                     border-bottom: 1px solid #ddd;
+                    font-size: 0.9em; /* Taille de police réduite */
                 }
                 .info-table th {
                     background-color: #f2f2f2;
                     width: 30%;
+                    font-weight: bold;
                 }
+                
+                /* Tableau des dates adaptatif */
                 .dates-table {
                     width: 100%;
                     border-collapse: collapse;
                     margin-top: 10px;
+                    font-size: 0.85em; /* Taille réduite */
                 }
                 .dates-table th, .dates-table td {
-                    padding: 8px 12px;
+                    padding: 6px 8px; /* Padding réduit */
                     text-align: center;
                     border: 1px solid #ddd;
+                    white-space: nowrap;
                 }
                 .dates-table th {
                     background-color: #f2f2f2;
+                    font-weight: bold;
                 }
+                
                 .game-header {
                     display: flex;
                     gap: 20px;
@@ -104,18 +131,91 @@
                     object-fit: contain;
                     border: 1px solid #ddd;
                     background-color: #f5f5f5;
+                    flex-shrink: 0; /* Empêche le rétrécissement */
                 }
                 .game-info {
                     flex: 1;
+                    min-width: 0; /* Important pour le flex-shrink */
                 }
-                @media (max-width: 600px) {
+                
+                /* MEDIA QUERIES POUR MOBILE */
+                @media (max-width: 768px) {
+                    body {
+                        padding: 10px;
+                    }
+                    .content-container {
+                        padding: 15px;
+                        border-radius: 6px;
+                    }
+                    h1 {
+                        font-size: 1.3em;
+                        margin-bottom: 15px;
+                    }
+                    h2 {
+                        font-size: 1.1em;
+                    }
                     .game-header {
                         flex-direction: column;
+                        gap: 15px;
                     }
                     .game-cover {
                         width: 100%;
                         height: auto;
                         max-height: 300px;
+                        margin: 0 auto;
+                    }
+                    .tab-buttons {
+                        margin-bottom: 10px;
+                    }
+                    .tab-button {
+                        padding: 8px 12px;
+                        font-size: 0.8em;
+                    }
+                    .info-table th, .info-table td {
+                        padding: 8px 6px;
+                        font-size: 0.85em;
+                    }
+                    .dates-table th, .dates-table td {
+                        padding: 5px 6px;
+                        font-size: 0.8em;
+                    }
+                }
+                
+                @media (max-width: 480px) {
+                    body {
+                        padding: 5px;
+                    }
+                    .content-container {
+                        padding: 10px;
+                    }
+                    h1 {
+                        font-size: 1.2em;
+                    }
+                    .tab-button {
+                        padding: 6px 10px;
+                        font-size: 0.75em;
+                    }
+                    .info-table th, .info-table td {
+                        padding: 6px 4px;
+                        font-size: 0.8em;
+                    }
+                    .dates-table {
+                        font-size: 0.75em;
+                    }
+                    .dates-table th, .dates-table td {
+                        padding: 4px 5px;
+                    }
+                }
+                
+                /* Pour les très petits écrans */
+                @media (max-width: 360px) {
+                    .tab-button {
+                        padding: 5px 8px;
+                        font-size: 0.7em;
+                    }
+                    .info-table th, .info-table td {
+                        padding: 5px 3px;
+                        font-size: 0.75em;
                     }
                 }
             </style>
@@ -141,49 +241,51 @@
                     <img src="game_images/One Piece Pirates' Carnival (US).png" alt="One Piece: Pirates' Carnival (U)" class="game-cover">
                     <div class="game-info">
                         <h2>One Piece: Pirates' Carnival</h2>
-                        <table class="info-table">
-                            <tr>
-                                <th>Développeur</th>
-                                <td>h.a.n.d.</td>
-                            </tr>
-                            <tr>
-                                <th>Éditeur</th>
-                                <td>Namco Bandai Games</td>
-                            </tr>
-                            <tr>
-                                <th>Dates de sortie</th>
-                                <td>
-                                    <table class="dates-table">
-                                        <tr>
-                                            <th>Europe</th>
-                                            <th>Amérique du Nord</th>
-                                            <th>Japon</th>
-                                        </tr>
-                                        <tr>
-                                            <td>-</td>
-                                            <td>12/09/2006</td>
-                                            <td>23/11/2005</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Genre(s)</th>
-                                <td>Party game</td>
-                            </tr>
-                            <tr>
-                                <th>Mode(s) de jeu</th>
-                                <td>1 joueur, Multijoueur (hors ligne)</td>
-                            </tr>
-                            <tr>
-                                <th>État</th>
-                                <td>Complet</td>
-                            </tr>
-                            <tr>
-                                <th>Région</th>
-                                <td>NTSC-U</td>
-                            </tr>
-                        </table>
+                        <div class="table-container">  <!-- NOUVEAU CONTENEUR -->
+                            <table class="info-table">
+                                <tr>
+                                    <th>Développeur</th>
+                                    <td>h.a.n.d.</td>
+                                </tr>
+                                <tr>
+                                    <th>Éditeur</th>
+                                    <td>Namco Bandai Games</td>
+                                </tr>
+                                <tr>
+                                    <th>Dates de sortie</th>
+                                    <td>
+                                        <table class="dates-table">
+                                            <tr>
+                                                <th>Europe</th>
+                                                <th>Amérique du Nord</th>
+                                                <th>Japon</th>
+                                            </tr>
+                                            <tr>
+                                                <td>-</td>
+                                                <td>12/09/2006</td>
+                                                <td>23/11/2005</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Genre(s)</th>
+                                    <td>Party game</td>
+                                </tr>
+                                <tr>
+                                    <th>Mode(s) de jeu</th>
+                                    <td>1 joueur, Multijoueur (hors ligne)</td>
+                                </tr>
+                                <tr>
+                                    <th>État</th>
+                                    <td>Complet</td>
+                                </tr>
+                                <tr>
+                                    <th>Région</th>
+                                    <td>NTSC-U</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
