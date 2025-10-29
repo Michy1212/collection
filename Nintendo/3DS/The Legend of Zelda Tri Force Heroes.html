@@ -232,12 +232,6 @@
                     The Legend of Zelda: Tri Force Heroes (PAL)
                 </button>
                 
-                <button class="tab-button " 
-                        onclick="openTab(event, 'tab1')" 
-                        style="background-color: rgb(230, 229, 231); color: black;">
-                    The Legend of Zelda: Tri Force Heroes (NTSC-J)
-                </button>
-                
                 </div>
 
                 
@@ -309,80 +303,12 @@
                 </div>
             </div>
             
-            <div id="tab1" class="tab-content" style="display:none">
-                <div class="game-header">
-                    <img src="game_images/The Legend of Zelda Tri Force Heroes (Kor).png" alt="The Legend of Zelda: Tri Force Heroes (K)" class="game-cover">
-                    <div class="game-info">
-                        <h2>The Legend of Zelda: Tri Force Heroes</h2>
-                        <table class="info-table">
-                            <tr>
-                                <th>Développeur</th>
-                                <td>Nintendo EPD, Grezzo</td>
-                            </tr>
-                            <tr>
-                                <th>Éditeur</th>
-                                <td>Nintendo</td>
-                            </tr>
-                            <tr>
-                                <th>Dates de sortie</th>
-                                <td>
-                                    <!-- Version PC - Tableau -->
-                                    <table class="dates-table">
-                                        <tr>
-                                            <th>Europe</th>
-                                            <th>Amérique du Nord</th>
-                                            <th>Japon</th>
-                                        </tr>
-                                        <tr>
-                                            <td>23/10/2015</td>
-                                            <td>23/10/2015</td>
-                                            <td>22/10/2015</td>
-                                        </tr>
-                                    </table>
-                                    <!-- Version Mobile - Conteneur flex -->
-                                    <div class="dates-container">
-                                        <div class="date-item">
-                                            <span class="date-label">Europe</span>
-                                            <span class="date-value">23/10/2015</span>
-                                        </div>
-                                        <div class="date-item">
-                                            <span class="date-label">Amérique</span>
-                                            <span class="date-value">23/10/2015</span>
-                                        </div>
-                                        <div class="date-item">
-                                            <span class="date-label">Japon</span>
-                                            <span class="date-value">22/10/2015</span>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Genre(s)</th>
-                                <td>Action-aventure</td>
-                            </tr>
-                            <tr>
-                                <th>Mode(s) de jeu</th>
-                                <td>1 joueur</td>
-                            </tr>
-                            <tr>
-                                <th>État</th>
-                                <td>Complet</td>
-                            </tr>
-                            <tr>
-                                <th>Région</th>
-                                <td>NTSC-J</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            
             </div>
 
             <script>
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(230, 230, 231)', 'tab1': 'rgb(230, 229, 231)'
+                    'tab0': 'rgb(230, 230, 231)'
                 };
 
                 function openTab(evt, tabName) {
