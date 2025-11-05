@@ -27,6 +27,12 @@
                     color: #444;
                     margin-top: 0;
                 }
+                h3 {
+                    color: #555;
+                    margin: 20px 0 10px 0;
+                    border-bottom: 1px solid #eee;
+                    padding-bottom: 5px;
+                }
                 .back-link {
                     display: inline-block;
                     margin-bottom: 20px;
@@ -129,10 +135,76 @@
                     border: 1px solid #ddd;
                     background-color: #f5f5f5;
                     flex-shrink: 0;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                }
+                .game-cover:hover {
+                    transform: scale(1.05);
                 }
                 .game-info {
                     flex: 1;
-                    min-width: 0; /* Important pour le responsive */
+                    min-width: 0;
+                }
+                /* Styles pour la section écran titre */
+                .title-screen-section {
+                    margin-top: 30px;
+                    padding-top: 20px;
+                    border-top: 1px solid #eee;
+                }
+                .title-screen-container {
+                    text-align: center;
+                }
+                .title-screen-image {
+                    max-width: 100%;
+                    max-height: 400px;
+                    object-fit: contain;
+                    border: 1px solid #ddd;
+                    background-color: #f5f5f5;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                }
+                .title-screen-image:hover {
+                    transform: scale(1.02);
+                }
+                /* Styles pour le popup */
+                .popup {
+                    display: none;
+                    position: fixed;
+                    z-index: 1000;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.9);
+                    animation: fadeIn 0.3s;
+                }
+                .popup-content {
+                    margin: auto;
+                    display: block;
+                    max-width: 90%;
+                    max-height: 90%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: contain;
+                }
+                .close {
+                    position: absolute;
+                    top: 20px;
+                    right: 35px;
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    z-index: 1001;
+                }
+                .close:hover {
+                    color: #ccc;
+                }
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
                 }
                 
                 /* Media Queries pour le responsive */
@@ -182,6 +254,9 @@
                     .info-table th {
                         width: 35%;
                     }
+                    .title-screen-image {
+                        max-height: 300px;
+                    }
                 }
                 
                 /* Pour les très petits écrans */
@@ -205,6 +280,9 @@
                         border-bottom: none;
                         margin-bottom: 0;
                         padding-bottom: 0;
+                    }
+                    .title-screen-image {
+                        max-height: 250px;
                     }
                 }
                 
@@ -237,7 +315,7 @@
                 
             <div id="tab0" class="tab-content" >
                 <div class="game-header">
-                    <img src="game_images/Final Fantasy XIII.png" alt="Final Fantasy XIII" class="game-cover">
+                    <img src="game_images/Final Fantasy XIII.png" alt="Final Fantasy XIII" class="game-cover" onclick="openPopup(this)">
                     <div class="game-info">
                         <h2>Final Fantasy XIII</h2>
                         <table class="info-table">
@@ -301,8 +379,15 @@
                         </table>
                     </div>
                 </div>
+                
             </div>
             
+            </div>
+
+            <!-- Popup pour les images -->
+            <div id="imagePopup" class="popup">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <img class="popup-content" id="popupImage">
             </div>
 
             <script>
@@ -331,6 +416,26 @@
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
                 }
+
+                // Fonction pour ouvrir le popup d'image
+                function openPopup(imgElement) {
+                    var popup = document.getElementById("imagePopup");
+                    var popupImg = document.getElementById("popupImage");
+                    popup.style.display = "block";
+                    popupImg.src = imgElement.src;
+                }
+
+                // Fonction pour fermer le popup
+                function closePopup() {
+                    document.getElementById("imagePopup").style.display = "none";
+                }
+
+                // Fermer le popup en cliquant en dehors de l'image
+                document.getElementById("imagePopup").addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closePopup();
+                    }
+                });
 
                 // Activer le premier onglet au chargement
                 document.addEventListener('DOMContentLoaded', function() {
