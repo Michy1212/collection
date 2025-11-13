@@ -11,7 +11,7 @@
                     max-width: 800px;
                     margin: 0 auto;
                     padding: 20px;
-                    background-color: rgb(231, 0, 17);
+                    background-color: #f5f5f5;
                     transition: background-color 0.5s;
                 }
                 .content-container {
@@ -306,7 +306,7 @@
                     
                 <button class="tab-button active" 
                         onclick="openTab(event, 'tab0')" 
-                        style="background-color: rgb(231, 0, 17); color: white;">
+                        style="">
                     Hyrule Warriors : Les Chroniques du Sceau (PAL)
                 </button>
                 
@@ -315,7 +315,7 @@
                 
             <div id="tab0" class="tab-content" >
                 <div class="game-header">
-                    <img src="game_images/Hyrule Warriors  Les Chroniques du Sceau.png" alt="Hyrule Warriors : Les Chroniques du Sceau" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <div class="game-cover" onclick="openPopup(this)"></div>
                     <div class="game-info">
                         <h2>Hyrule Warriors : Les Chroniques du Sceau</h2>
                         <table class="info-table">
@@ -380,13 +380,6 @@
                     </div>
                 </div>
                 
-        <div class="title-screen-section">
-            <h3>Écran titre</h3>
-            <div class="title-screen-container">
-                <img src="title_screens/Hyrule Warriors  Les Chroniques du Sceau.png" alt="Écran titre - Hyrule Warriors : Les Chroniques du Sceau" class="title-screen-image" onclick="openPopup(this)">
-            </div>
-        </div>
-        
             </div>
             
             </div>
@@ -400,7 +393,7 @@
             <script>
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(231, 0, 17)'
+                    'tab0': '#f5f5f5'
                 };
 
                 function openTab(evt, tabName) {
