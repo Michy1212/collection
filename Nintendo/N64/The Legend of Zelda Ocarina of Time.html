@@ -310,6 +310,12 @@
                     The Legend of Zelda: Ocarina of Time (PAL)
                 </button>
                 
+                <button class="tab-button " 
+                        onclick="openTab(event, 'tab1')" 
+                        style="background-color: rgb(162, 172, 185); color: black;">
+                    The Legend of Zelda: Ocarina of Time (NTSC-J)
+                </button>
+                
                 </div>
 
                 
@@ -389,6 +395,82 @@
         
             </div>
             
+            <div id="tab1" class="tab-content" style="display:none">
+                <div class="game-header">
+                    <img src="game_images/The Legend of Zelda Ocarina of Time (Jap).png" alt="The Legend of Zelda: Ocarina of Time (J)" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <div class="game-info">
+                        <h2>The Legend of Zelda: Ocarina of Time</h2>
+                        <table class="info-table">
+                            <tr>
+                                <th>Développeur</th>
+                                <td>Nintendo EAD</td>
+                            </tr>
+                            <tr>
+                                <th>Éditeur</th>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <th>Dates de sortie</th>
+                                <td>
+                                    <!-- Version PC - Tableau -->
+                                    <table class="dates-table">
+                                        <tr>
+                                            <th>Europe</th>
+                                            <th>Amérique du Nord</th>
+                                            <th>Japon</th>
+                                        </tr>
+                                        <tr>
+                                            <td>12/11/1998</td>
+                                            <td>23/11/1998</td>
+                                            <td>21/11/1998</td>
+                                        </tr>
+                                    </table>
+                                    <!-- Version Mobile - Conteneur flex -->
+                                    <div class="dates-container">
+                                        <div class="date-item">
+                                            <span class="date-label">Europe</span>
+                                            <span class="date-value">12/11/1998</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Amérique</span>
+                                            <span class="date-value">23/11/1998</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Japon</span>
+                                            <span class="date-value">21/11/1998</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Genre(s)</th>
+                                <td>Action-aventure</td>
+                            </tr>
+                            <tr>
+                                <th>Mode(s) de jeu</th>
+                                <td>1 joueur</td>
+                            </tr>
+                            <tr>
+                                <th>État</th>
+                                <td>Complet</td>
+                            </tr>
+                            <tr>
+                                <th>Région</th>
+                                <td>NTSC-J</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+        <div class="title-screen-section">
+            <h3>Écran titre</h3>
+            <div class="title-screen-container">
+                <img src="title_screens/The Legend of Zelda Ocarina of Time (Jap).png" alt="Écran titre - The Legend of Zelda: Ocarina of Time (J)" class="title-screen-image" onclick="openPopup(this)">
+            </div>
+        </div>
+        
+            </div>
+            
             </div>
 
             <!-- Popup pour les images -->
@@ -400,7 +482,7 @@
             <script>
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(1, 1, 1)'
+                    'tab0': 'rgb(1, 1, 1)', 'tab1': 'rgb(162, 172, 185)'
                 };
 
                 function openTab(evt, tabName) {
