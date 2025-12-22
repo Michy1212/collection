@@ -1,0 +1,139 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>3DO - Jeux</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(84, 86, 86);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+                .game-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                    gap: 30px;
+                    margin-top: 15px;
+                }
+                .game-card {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                    text-align: center;
+                    transition: transform 0.2s;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                    color: inherit;
+                    height: 100%;
+                    margin-bottom: 10px;  /* Ajouté pour plus d'espace */
+                }
+                .game-card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                }
+                .game-img-container {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100px;
+                    width: 100%;
+                }
+                .game-img {
+                    max-width: 100%;
+                    max-height: 100px;
+                    object-fit: contain;
+                }
+                .game-img-placeholder {
+                    width: 100%;
+                    height: 100px;
+                    background-color: #f5f5f5;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #999;
+                }
+                .game-title {
+                    margin-top: 5px;
+                    font-size: 0.9em;
+                    word-break: break-word;
+                }
+                a {
+                    text-decoration: none;
+                    color: #0066cc;
+                    font-weight: bold;
+                }
+                /* Style pour les séparateurs de lettres */
+                .letter-separator {
+                    grid-column: 1 / -1;
+                    margin: 15px 0 5px 0;
+                    position: relative;
+                }
+                .letter-separator span {
+                    display: inline-block;
+                    padding: 0 10px;
+                    background-color: white;
+                    color: #666;
+                    font-weight: bold;
+                    font-size: 1.2em;
+                    position: relative;
+                    z-index: 1;
+                }
+                .letter-separator::before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #ddd;
+                    z-index: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="../index.html" class="back-link">← Retour à Autres</a>
+                <h1>Jeux pour 3DO</h1>
+
+                <div class="game-grid">
+                    
+                <div class="letter-separator">
+                    <span>D</span>
+                </div>
+                
+        <a href="Dragon's Lair.html" class="game-card">
+            <div class="game-img-container">
+                <img src="game_images/Dragon's Lair.png" alt="Dragon's Lair" class="game-img">
+            </div>
+            <div class="game-title">
+                Dragon's Lair
+            </div>
+        </a>
+        
+                </div>
+            </div>
+        </body>
+        </html>
+        
