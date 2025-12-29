@@ -1,5 +1,5 @@
 {
-  "data_hash": "e0f9e1c536a33569a4f565647cd728f4",
+  "data_hash": "0215cb1b8f21fa06879ac39ad09150fa",
   "generated_pages": {
     "brands": {
       "Atari": {
@@ -44,19 +44,6 @@
           "Wii U"
         ]
       },
-      "Sega": {
-        "timestamp": "2025-12-22T17:17:34.034439",
-        "brand": "Sega",
-        "num_consoles": 6,
-        "consoles": [
-          "32X",
-          "Dreamcast",
-          "Game Gear",
-          "Master System",
-          "Megadrive",
-          "Saturn"
-        ]
-      },
       "SNK": {
         "timestamp": "2025-12-22T17:17:34.036805",
         "brand": "SNK",
@@ -89,6 +76,20 @@
           "Autre",
           "ColecoVision",
           "PC"
+        ]
+      },
+      "Sega": {
+        "timestamp": "2025-12-29T21:16:44.916193",
+        "brand": "Sega",
+        "num_consoles": 7,
+        "consoles": [
+          "32X",
+          "Dreamcast",
+          "Game Gear",
+          "Master System",
+          "Mega-CD",
+          "Megadrive",
+          "Saturn"
         ]
       }
     },
@@ -280,58 +281,64 @@
         "num_games": 1
       },
       "Nintendo/3DS": {
-        "timestamp": "2025-12-22T18:02:40.297864",
+        "timestamp": "2025-12-29T21:16:44.981251",
         "brand": "Nintendo",
         "console": "3DS",
         "num_games": 58
       },
       "Nintendo/DS": {
-        "timestamp": "2025-12-22T18:02:40.341218",
+        "timestamp": "2025-12-29T21:16:45.037180",
         "brand": "Nintendo",
         "console": "DS",
         "num_games": 57
       },
       "Nintendo/Game Boy": {
-        "timestamp": "2025-12-22T18:02:40.369578",
+        "timestamp": "2025-12-29T21:16:45.069993",
         "brand": "Nintendo",
         "console": "Game Boy",
         "num_games": 23
       },
       "Nintendo/Game Boy Advance": {
-        "timestamp": "2025-12-22T18:02:40.419173",
+        "timestamp": "2025-12-29T21:16:45.155095",
         "brand": "Nintendo",
         "console": "Game Boy Advance",
         "num_games": 68
       },
       "Nintendo/Game Boy Color": {
-        "timestamp": "2025-12-22T18:02:40.443464",
+        "timestamp": "2025-12-29T21:16:45.190554",
         "brand": "Nintendo",
         "console": "Game Boy Color",
         "num_games": 31
       },
       "Nintendo/GameCube": {
-        "timestamp": "2025-12-22T18:02:40.480613",
+        "timestamp": "2025-12-29T21:16:45.239947",
         "brand": "Nintendo",
         "console": "GameCube",
         "num_games": 48
       },
       "Nintendo/N64": {
-        "timestamp": "2025-12-22T18:02:40.493303",
+        "timestamp": "2025-12-29T21:16:45.254232",
         "brand": "Nintendo",
         "console": "N64",
         "num_games": 12
       },
       "Nintendo/NES": {
-        "timestamp": "2025-12-22T18:02:40.536548",
+        "timestamp": "2025-12-29T21:16:45.312765",
         "brand": "Nintendo",
         "console": "NES",
         "num_games": 57
       },
       "Nintendo/Super Nintendo": {
-        "timestamp": "2025-12-22T18:02:40.591617",
+        "timestamp": "2025-12-29T21:16:45.406920",
         "brand": "Nintendo",
         "console": "Super Nintendo",
         "num_games": 70
+      },
+      "Sega/Mega-CD": {
+        "timestamp": "2025-12-29T21:16:45.602777",
+        "brand": "Sega",
+        "console": "Mega-CD",
+        "num_games": 1
       }
     },
     "games": {
@@ -11762,8 +11769,18 @@
         "versions": [
           "Dragon's Lair"
         ]
+      },
+      "Sega/Mega-CD/Sonic CD": {
+        "timestamp": "2025-12-29T21:16:46.532817",
+        "brand": "Sega",
+        "console": "Mega-CD",
+        "game_title": "Sonic CD",
+        "num_versions": 1,
+        "versions": [
+          "Sonic CD"
+        ]
       }
     }
   },
-  "timestamp": "2025-12-22T18:02:41.663055"
+  "timestamp": "2025-12-29T21:16:46.537467"
 }
