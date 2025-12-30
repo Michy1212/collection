@@ -1,5 +1,5 @@
 {
-  "data_hash": "0215cb1b8f21fa06879ac39ad09150fa",
+  "data_hash": "6a183d856460b5b4365ba7685626b6a2",
   "generated_pages": {
     "brands": {
       "Atari": {
@@ -226,12 +226,6 @@
         "console": "Megadrive",
         "num_games": 25
       },
-      "Sega/Saturn": {
-        "timestamp": "2025-12-22T17:20:43.940626",
-        "brand": "Sega",
-        "console": "Saturn",
-        "num_games": 4
-      },
       "Sony/PS Vita": {
         "timestamp": "2025-12-22T17:20:45.143542",
         "brand": "Sony",
@@ -280,65 +274,71 @@
         "console": "3DO",
         "num_games": 1
       },
-      "Nintendo/3DS": {
-        "timestamp": "2025-12-29T21:16:44.981251",
-        "brand": "Nintendo",
-        "console": "3DS",
-        "num_games": 58
-      },
-      "Nintendo/DS": {
-        "timestamp": "2025-12-29T21:16:45.037180",
-        "brand": "Nintendo",
-        "console": "DS",
-        "num_games": 57
-      },
-      "Nintendo/Game Boy": {
-        "timestamp": "2025-12-29T21:16:45.069993",
-        "brand": "Nintendo",
-        "console": "Game Boy",
-        "num_games": 23
-      },
-      "Nintendo/Game Boy Advance": {
-        "timestamp": "2025-12-29T21:16:45.155095",
-        "brand": "Nintendo",
-        "console": "Game Boy Advance",
-        "num_games": 68
-      },
-      "Nintendo/Game Boy Color": {
-        "timestamp": "2025-12-29T21:16:45.190554",
-        "brand": "Nintendo",
-        "console": "Game Boy Color",
-        "num_games": 31
-      },
-      "Nintendo/GameCube": {
-        "timestamp": "2025-12-29T21:16:45.239947",
-        "brand": "Nintendo",
-        "console": "GameCube",
-        "num_games": 48
-      },
-      "Nintendo/N64": {
-        "timestamp": "2025-12-29T21:16:45.254232",
-        "brand": "Nintendo",
-        "console": "N64",
-        "num_games": 12
-      },
-      "Nintendo/NES": {
-        "timestamp": "2025-12-29T21:16:45.312765",
-        "brand": "Nintendo",
-        "console": "NES",
-        "num_games": 57
-      },
-      "Nintendo/Super Nintendo": {
-        "timestamp": "2025-12-29T21:16:45.406920",
-        "brand": "Nintendo",
-        "console": "Super Nintendo",
-        "num_games": 70
-      },
       "Sega/Mega-CD": {
         "timestamp": "2025-12-29T21:16:45.602777",
         "brand": "Sega",
         "console": "Mega-CD",
         "num_games": 1
+      },
+      "Nintendo/3DS": {
+        "timestamp": "2025-12-30T14:24:46.299357",
+        "brand": "Nintendo",
+        "console": "3DS",
+        "num_games": 58
+      },
+      "Nintendo/DS": {
+        "timestamp": "2025-12-30T14:24:46.503974",
+        "brand": "Nintendo",
+        "console": "DS",
+        "num_games": 57
+      },
+      "Nintendo/Game Boy": {
+        "timestamp": "2025-12-30T14:24:46.642227",
+        "brand": "Nintendo",
+        "console": "Game Boy",
+        "num_games": 23
+      },
+      "Nintendo/Game Boy Advance": {
+        "timestamp": "2025-12-30T14:24:46.955400",
+        "brand": "Nintendo",
+        "console": "Game Boy Advance",
+        "num_games": 68
+      },
+      "Nintendo/Game Boy Color": {
+        "timestamp": "2025-12-30T14:24:47.089131",
+        "brand": "Nintendo",
+        "console": "Game Boy Color",
+        "num_games": 31
+      },
+      "Nintendo/GameCube": {
+        "timestamp": "2025-12-30T14:24:47.288421",
+        "brand": "Nintendo",
+        "console": "GameCube",
+        "num_games": 48
+      },
+      "Nintendo/N64": {
+        "timestamp": "2025-12-30T14:24:47.363566",
+        "brand": "Nintendo",
+        "console": "N64",
+        "num_games": 12
+      },
+      "Nintendo/NES": {
+        "timestamp": "2025-12-30T14:24:47.578966",
+        "brand": "Nintendo",
+        "console": "NES",
+        "num_games": 57
+      },
+      "Nintendo/Super Nintendo": {
+        "timestamp": "2025-12-30T14:24:47.943220",
+        "brand": "Nintendo",
+        "console": "Super Nintendo",
+        "num_games": 70
+      },
+      "Sega/Saturn": {
+        "timestamp": "2025-12-30T14:24:48.302076",
+        "brand": "Sega",
+        "console": "Saturn",
+        "num_games": 5
       }
     },
     "games": {
@@ -11779,8 +11779,18 @@
         "versions": [
           "Sonic CD"
         ]
+      },
+      "Sega/Saturn/Christmas Nights into Dreams": {
+        "timestamp": "2025-12-30T14:24:50.497229",
+        "brand": "Sega",
+        "console": "Saturn",
+        "game_title": "Christmas Nights into Dreams",
+        "num_versions": 1,
+        "versions": [
+          "Christmas Nights into Dreams"
+        ]
       }
     }
   },
-  "timestamp": "2025-12-29T21:16:46.537467"
+  "timestamp": "2025-12-30T14:24:50.504559"
 }
