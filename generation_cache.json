@@ -1,5 +1,5 @@
 {
-  "data_hash": "6a183d856460b5b4365ba7685626b6a2",
+  "data_hash": "4ffe457f7b023250c4ed744458bdc008",
   "generated_pages": {
     "brands": {
       "Atari": {
@@ -280,65 +280,65 @@
         "console": "Mega-CD",
         "num_games": 1
       },
-      "Nintendo/3DS": {
-        "timestamp": "2025-12-30T14:24:46.299357",
-        "brand": "Nintendo",
-        "console": "3DS",
-        "num_games": 58
-      },
-      "Nintendo/DS": {
-        "timestamp": "2025-12-30T14:24:46.503974",
-        "brand": "Nintendo",
-        "console": "DS",
-        "num_games": 57
-      },
-      "Nintendo/Game Boy": {
-        "timestamp": "2025-12-30T14:24:46.642227",
-        "brand": "Nintendo",
-        "console": "Game Boy",
-        "num_games": 23
-      },
-      "Nintendo/Game Boy Advance": {
-        "timestamp": "2025-12-30T14:24:46.955400",
-        "brand": "Nintendo",
-        "console": "Game Boy Advance",
-        "num_games": 68
-      },
-      "Nintendo/Game Boy Color": {
-        "timestamp": "2025-12-30T14:24:47.089131",
-        "brand": "Nintendo",
-        "console": "Game Boy Color",
-        "num_games": 31
-      },
-      "Nintendo/GameCube": {
-        "timestamp": "2025-12-30T14:24:47.288421",
-        "brand": "Nintendo",
-        "console": "GameCube",
-        "num_games": 48
-      },
-      "Nintendo/N64": {
-        "timestamp": "2025-12-30T14:24:47.363566",
-        "brand": "Nintendo",
-        "console": "N64",
-        "num_games": 12
-      },
-      "Nintendo/NES": {
-        "timestamp": "2025-12-30T14:24:47.578966",
-        "brand": "Nintendo",
-        "console": "NES",
-        "num_games": 57
-      },
-      "Nintendo/Super Nintendo": {
-        "timestamp": "2025-12-30T14:24:47.943220",
-        "brand": "Nintendo",
-        "console": "Super Nintendo",
-        "num_games": 70
-      },
       "Sega/Saturn": {
         "timestamp": "2025-12-30T14:24:48.302076",
         "brand": "Sega",
         "console": "Saturn",
         "num_games": 5
+      },
+      "Nintendo/3DS": {
+        "timestamp": "2025-12-31T13:13:45.794219",
+        "brand": "Nintendo",
+        "console": "3DS",
+        "num_games": 58
+      },
+      "Nintendo/DS": {
+        "timestamp": "2025-12-31T13:13:45.922047",
+        "brand": "Nintendo",
+        "console": "DS",
+        "num_games": 57
+      },
+      "Nintendo/Game Boy": {
+        "timestamp": "2025-12-31T13:13:46.051238",
+        "brand": "Nintendo",
+        "console": "Game Boy",
+        "num_games": 23
+      },
+      "Nintendo/Game Boy Advance": {
+        "timestamp": "2025-12-31T13:13:46.326247",
+        "brand": "Nintendo",
+        "console": "Game Boy Advance",
+        "num_games": 68
+      },
+      "Nintendo/Game Boy Color": {
+        "timestamp": "2025-12-31T13:13:46.376637",
+        "brand": "Nintendo",
+        "console": "Game Boy Color",
+        "num_games": 31
+      },
+      "Nintendo/GameCube": {
+        "timestamp": "2025-12-31T13:13:46.472024",
+        "brand": "Nintendo",
+        "console": "GameCube",
+        "num_games": 48
+      },
+      "Nintendo/N64": {
+        "timestamp": "2025-12-31T13:13:46.506316",
+        "brand": "Nintendo",
+        "console": "N64",
+        "num_games": 12
+      },
+      "Nintendo/NES": {
+        "timestamp": "2025-12-31T13:13:46.605263",
+        "brand": "Nintendo",
+        "console": "NES",
+        "num_games": 57
+      },
+      "Nintendo/Super Nintendo": {
+        "timestamp": "2025-12-31T13:13:46.750487",
+        "brand": "Nintendo",
+        "console": "Super Nintendo",
+        "num_games": 70
       }
     },
     "games": {
@@ -5553,13 +5553,14 @@
         ]
       },
       "Nintendo/N64/The Legend of Zelda Majora's Mask": {
-        "timestamp": "2025-12-22T17:30:06.025137",
+        "timestamp": "2025-12-31T13:13:48.759178",
         "brand": "Nintendo",
         "console": "N64",
         "game_title": "The Legend of Zelda: Majora's Mask",
-        "num_versions": 1,
+        "num_versions": 2,
         "versions": [
-          "The Legend of Zelda: Majora's Mask"
+          "The Legend of Zelda: Majora's Mask",
+          "The Legend of Zelda: Majora's Mask (J)"
         ]
       },
       "Nintendo/N64/The Legend of Zelda Ocarina of Time": {
@@ -11792,5 +11793,5 @@
       }
     }
   },
-  "timestamp": "2025-12-30T14:24:50.504559"
+  "timestamp": "2025-12-31T13:13:48.769523"
 }
