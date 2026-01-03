@@ -1,5 +1,5 @@
 {
-  "data_hash": "4ffe457f7b023250c4ed744458bdc008",
+  "data_hash": "62dd41c92f65749363ee163b795944f8",
   "generated_pages": {
     "brands": {
       "Atari": {
@@ -287,55 +287,55 @@
         "num_games": 5
       },
       "Nintendo/3DS": {
-        "timestamp": "2025-12-31T13:13:45.794219",
+        "timestamp": "2026-01-03T13:36:00.351242",
         "brand": "Nintendo",
         "console": "3DS",
         "num_games": 58
       },
       "Nintendo/DS": {
-        "timestamp": "2025-12-31T13:13:45.922047",
+        "timestamp": "2026-01-03T13:36:00.475125",
         "brand": "Nintendo",
         "console": "DS",
         "num_games": 57
       },
       "Nintendo/Game Boy": {
-        "timestamp": "2025-12-31T13:13:46.051238",
+        "timestamp": "2026-01-03T13:36:00.540863",
         "brand": "Nintendo",
         "console": "Game Boy",
         "num_games": 23
       },
       "Nintendo/Game Boy Advance": {
-        "timestamp": "2025-12-31T13:13:46.326247",
+        "timestamp": "2026-01-03T13:36:00.750873",
         "brand": "Nintendo",
         "console": "Game Boy Advance",
         "num_games": 68
       },
       "Nintendo/Game Boy Color": {
-        "timestamp": "2025-12-31T13:13:46.376637",
+        "timestamp": "2026-01-03T13:36:00.801860",
         "brand": "Nintendo",
         "console": "Game Boy Color",
         "num_games": 31
       },
       "Nintendo/GameCube": {
-        "timestamp": "2025-12-31T13:13:46.472024",
+        "timestamp": "2026-01-03T13:36:00.920356",
         "brand": "Nintendo",
         "console": "GameCube",
         "num_games": 48
       },
       "Nintendo/N64": {
-        "timestamp": "2025-12-31T13:13:46.506316",
+        "timestamp": "2026-01-03T13:36:00.966296",
         "brand": "Nintendo",
         "console": "N64",
         "num_games": 12
       },
       "Nintendo/NES": {
-        "timestamp": "2025-12-31T13:13:46.605263",
+        "timestamp": "2026-01-03T13:36:01.074197",
         "brand": "Nintendo",
         "console": "NES",
         "num_games": 57
       },
       "Nintendo/Super Nintendo": {
-        "timestamp": "2025-12-31T13:13:46.750487",
+        "timestamp": "2026-01-03T13:36:01.214960",
         "brand": "Nintendo",
         "console": "Super Nintendo",
         "num_games": 70
@@ -3833,37 +3833,6 @@
         "num_versions": 1,
         "versions": [
           "Metroid II: Return of Samus"
-        ]
-      },
-      "Nintendo/Game Boy/Pokémon Version Bleue": {
-        "timestamp": "2025-12-22T17:26:44.485707",
-        "brand": "Nintendo",
-        "console": "Game Boy",
-        "game_title": "Pokémon Version Bleue",
-        "num_versions": 1,
-        "versions": [
-          "Pokémon Version Bleue"
-        ]
-      },
-      "Nintendo/Game Boy/Pokémon Version Rouge": {
-        "timestamp": "2025-12-22T17:26:46.430690",
-        "brand": "Nintendo",
-        "console": "Game Boy",
-        "game_title": "Pokémon Version Rouge",
-        "num_versions": 2,
-        "versions": [
-          "Pokémon Version Rouge",
-          "Pokémon Version Rouge (U)"
-        ]
-      },
-      "Nintendo/Game Boy/Pokémon Version Verte": {
-        "timestamp": "2025-12-22T17:26:47.528363",
-        "brand": "Nintendo",
-        "console": "Game Boy",
-        "game_title": "Pokémon Version Verte",
-        "num_versions": 1,
-        "versions": [
-          "Pokémon Version Verte (J)"
         ]
       },
       "Nintendo/Game Boy/SaGa 2 Hihou Densetsu": {
@@ -11790,8 +11759,40 @@
         "versions": [
           "Christmas Nights into Dreams"
         ]
+      },
+      "Nintendo/Game Boy/Pokémon Version Bleue": {
+        "timestamp": "2026-01-03T13:36:02.922554",
+        "brand": "Nintendo",
+        "console": "Game Boy",
+        "game_title": "Pokémon Version Bleue",
+        "num_versions": 2,
+        "versions": [
+          "Pokémon Version Bleue",
+          "Pokémon Version Bleue (UK)"
+        ]
+      },
+      "Nintendo/Game Boy/Pokémon Version Rouge": {
+        "timestamp": "2026-01-03T13:36:04.292611",
+        "brand": "Nintendo",
+        "console": "Game Boy",
+        "game_title": "Pokémon Version Rouge",
+        "num_versions": 2,
+        "versions": [
+          "Pokémon Version Rouge",
+          "Pokémon Version Rouge (U)"
+        ]
+      },
+      "Nintendo/Game Boy/Pokémon Version Verte": {
+        "timestamp": "2026-01-03T13:36:05.194891",
+        "brand": "Nintendo",
+        "console": "Game Boy",
+        "game_title": "Pokémon Version Verte",
+        "num_versions": 1,
+        "versions": [
+          "Pokémon Version Verte (J)"
+        ]
       }
     }
   },
-  "timestamp": "2025-12-31T13:13:48.769523"
+  "timestamp": "2026-01-03T13:36:05.207898"
 }

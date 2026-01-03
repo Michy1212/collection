@@ -310,6 +310,12 @@
                     Pokémon Version Bleue (PAL)
                 </button>
                 
+                <button class="tab-button " 
+                        onclick="openTab(event, 'tab1')" 
+                        style="background-color: rgb(228, 226, 227); color: black;">
+                    Pokémon Version Bleue (UK) (PAL)
+                </button>
+                
                 </div>
 
                 
@@ -338,16 +344,16 @@
                                             <th>Japon</th>
                                         </tr>
                                         <tr>
-                                            <td>10/05/1999</td>
+                                            <td>08/10/1999</td>
                                             <td>30/09/1998</td>
-                                            <td>27/02/1996</td>
+                                            <td>-</td>
                                         </tr>
                                     </table>
                                     <!-- Version Mobile - Conteneur flex -->
                                     <div class="dates-container">
                                         <div class="date-item">
                                             <span class="date-label">Europe</span>
-                                            <span class="date-value">10/05/1999</span>
+                                            <span class="date-value">08/10/1999</span>
                                         </div>
                                         <div class="date-item">
                                             <span class="date-label">Amérique</span>
@@ -355,7 +361,7 @@
                                         </div>
                                         <div class="date-item">
                                             <span class="date-label">Japon</span>
-                                            <span class="date-value">27/02/1996</span>
+                                            <span class="date-value">-</span>
                                         </div>
                                     </div>
                                 </td>
@@ -389,6 +395,82 @@
         
             </div>
             
+            <div id="tab1" class="tab-content" style="display:none">
+                <div class="game-header">
+                    <img src="game_images/Pokémon Version Bleue (UK).png" alt="Pokémon Version Bleue (UK)" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <div class="game-info">
+                        <h2>Pokémon Version Bleue</h2>
+                        <table class="info-table">
+                            <tr>
+                                <th>Développeur</th>
+                                <td>Game Freak</td>
+                            </tr>
+                            <tr>
+                                <th>Éditeur</th>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <th>Dates de sortie</th>
+                                <td>
+                                    <!-- Version PC - Tableau -->
+                                    <table class="dates-table">
+                                        <tr>
+                                            <th>Europe</th>
+                                            <th>Amérique du Nord</th>
+                                            <th>Japon</th>
+                                        </tr>
+                                        <tr>
+                                            <td>05/10/1999</td>
+                                            <td>30/09/1998</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </table>
+                                    <!-- Version Mobile - Conteneur flex -->
+                                    <div class="dates-container">
+                                        <div class="date-item">
+                                            <span class="date-label">Europe</span>
+                                            <span class="date-value">05/10/1999</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Amérique</span>
+                                            <span class="date-value">30/09/1998</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Japon</span>
+                                            <span class="date-value">-</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Genre(s)</th>
+                                <td>Jeu de rôle, J-RPG</td>
+                            </tr>
+                            <tr>
+                                <th>Mode(s) de jeu</th>
+                                <td>1 joueur</td>
+                            </tr>
+                            <tr>
+                                <th>État</th>
+                                <td>Jeu seul</td>
+                            </tr>
+                            <tr>
+                                <th>Région</th>
+                                <td>PAL</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+        <div class="title-screen-section">
+            <h3>Écran titre</h3>
+            <div class="title-screen-container">
+                <img src="title_screens/Pokémon Version Bleue (UK).png" alt="Écran titre - Pokémon Version Bleue (UK)" class="title-screen-image" onclick="openPopup(this)">
+            </div>
+        </div>
+        
+            </div>
+            
             </div>
 
             <!-- Popup pour les images -->
@@ -400,7 +482,7 @@
             <script>
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(0, 0, 0)'
+                    'tab0': 'rgb(0, 0, 0)', 'tab1': 'rgb(228, 226, 227)'
                 };
 
                 function openTab(evt, tabName) {
