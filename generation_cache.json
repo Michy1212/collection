@@ -1,5 +1,5 @@
 {
-  "data_hash": "62dd41c92f65749363ee163b795944f8",
+  "data_hash": "0e9914aa7ce7c344acf957a6128da9ab",
   "generated_pages": {
     "brands": {
       "Atari": {
@@ -287,55 +287,55 @@
         "num_games": 5
       },
       "Nintendo/3DS": {
-        "timestamp": "2026-01-03T13:36:00.351242",
+        "timestamp": "2026-01-05T16:32:29.843919",
         "brand": "Nintendo",
         "console": "3DS",
         "num_games": 58
       },
       "Nintendo/DS": {
-        "timestamp": "2026-01-03T13:36:00.475125",
+        "timestamp": "2026-01-05T16:32:29.882686",
         "brand": "Nintendo",
         "console": "DS",
         "num_games": 57
       },
       "Nintendo/Game Boy": {
-        "timestamp": "2026-01-03T13:36:00.540863",
+        "timestamp": "2026-01-05T16:32:29.901950",
         "brand": "Nintendo",
         "console": "Game Boy",
         "num_games": 23
       },
       "Nintendo/Game Boy Advance": {
-        "timestamp": "2026-01-03T13:36:00.750873",
+        "timestamp": "2026-01-05T16:32:29.943165",
         "brand": "Nintendo",
         "console": "Game Boy Advance",
-        "num_games": 68
+        "num_games": 71
       },
       "Nintendo/Game Boy Color": {
-        "timestamp": "2026-01-03T13:36:00.801860",
+        "timestamp": "2026-01-05T16:32:29.965502",
         "brand": "Nintendo",
         "console": "Game Boy Color",
         "num_games": 31
       },
       "Nintendo/GameCube": {
-        "timestamp": "2026-01-03T13:36:00.920356",
+        "timestamp": "2026-01-05T16:32:29.999051",
         "brand": "Nintendo",
         "console": "GameCube",
         "num_games": 48
       },
       "Nintendo/N64": {
-        "timestamp": "2026-01-03T13:36:00.966296",
+        "timestamp": "2026-01-05T16:32:30.010757",
         "brand": "Nintendo",
         "console": "N64",
         "num_games": 12
       },
       "Nintendo/NES": {
-        "timestamp": "2026-01-03T13:36:01.074197",
+        "timestamp": "2026-01-05T16:32:30.046601",
         "brand": "Nintendo",
         "console": "NES",
-        "num_games": 57
+        "num_games": 58
       },
       "Nintendo/Super Nintendo": {
-        "timestamp": "2026-01-03T13:36:01.214960",
+        "timestamp": "2026-01-05T16:32:30.098569",
         "brand": "Nintendo",
         "console": "Super Nintendo",
         "num_games": 70
@@ -11791,8 +11791,48 @@
         "versions": [
           "Pokémon Version Verte (J)"
         ]
+      },
+      "Nintendo/NES/Chip'n Dale Rescue Rangers": {
+        "timestamp": "2026-01-05T16:13:48.245964",
+        "brand": "Nintendo",
+        "console": "NES",
+        "game_title": "Chip'n Dale Rescue Rangers",
+        "num_versions": 1,
+        "versions": [
+          "Chip'n Dale Rescue Rangers"
+        ]
+      },
+      "Nintendo/Game Boy Advance/Phoenix Wright Ace Attorney": {
+        "timestamp": "2026-01-05T16:32:30.582971",
+        "brand": "Nintendo",
+        "console": "Game Boy Advance",
+        "game_title": "Phoenix Wright: Ace Attorney",
+        "num_versions": 1,
+        "versions": [
+          "Phoenix Wright: Ace Attorney (J)"
+        ]
+      },
+      "Nintendo/Game Boy Advance/Phoenix Wright Ace Attorney Justice for All": {
+        "timestamp": "2026-01-05T16:32:31.028776",
+        "brand": "Nintendo",
+        "console": "Game Boy Advance",
+        "game_title": "Phoenix Wright: Ace Attorney Justice for All",
+        "num_versions": 1,
+        "versions": [
+          "Phoenix Wright: Ace Attorney Justice for All (J)"
+        ]
+      },
+      "Nintendo/Game Boy Advance/Phoenix Wright Ace Attorney Trials and Tribulations": {
+        "timestamp": "2026-01-05T16:32:31.464459",
+        "brand": "Nintendo",
+        "console": "Game Boy Advance",
+        "game_title": "Phoenix Wright: Ace Attorney Trials and Tribulations",
+        "num_versions": 1,
+        "versions": [
+          "Phoenix Wright: Ace Attorney Trials and Tribulations (J)"
+        ]
       }
     }
   },
-  "timestamp": "2026-01-03T13:36:05.207898"
+  "timestamp": "2026-01-05T16:32:31.476043"
 }
