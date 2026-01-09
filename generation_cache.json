@@ -1,5 +1,5 @@
 {
-  "data_hash": "0e9914aa7ce7c344acf957a6128da9ab",
+  "data_hash": "3a27c7d45305dbb50ac583079a6bd2fa",
   "generated_pages": {
     "brands": {
       "Atari": {
@@ -287,55 +287,55 @@
         "num_games": 5
       },
       "Nintendo/3DS": {
-        "timestamp": "2026-01-05T16:32:29.843919",
+        "timestamp": "2026-01-09T20:59:38.914504",
         "brand": "Nintendo",
         "console": "3DS",
         "num_games": 58
       },
       "Nintendo/DS": {
-        "timestamp": "2026-01-05T16:32:29.882686",
+        "timestamp": "2026-01-09T20:59:39.003744",
         "brand": "Nintendo",
         "console": "DS",
         "num_games": 57
       },
       "Nintendo/Game Boy": {
-        "timestamp": "2026-01-05T16:32:29.901950",
+        "timestamp": "2026-01-09T20:59:39.067660",
         "brand": "Nintendo",
         "console": "Game Boy",
         "num_games": 23
       },
       "Nintendo/Game Boy Advance": {
-        "timestamp": "2026-01-05T16:32:29.943165",
+        "timestamp": "2026-01-09T20:59:39.228515",
         "brand": "Nintendo",
         "console": "Game Boy Advance",
         "num_games": 71
       },
       "Nintendo/Game Boy Color": {
-        "timestamp": "2026-01-05T16:32:29.965502",
+        "timestamp": "2026-01-09T20:59:39.268378",
         "brand": "Nintendo",
         "console": "Game Boy Color",
         "num_games": 31
       },
       "Nintendo/GameCube": {
-        "timestamp": "2026-01-05T16:32:29.999051",
+        "timestamp": "2026-01-09T20:59:39.390237",
         "brand": "Nintendo",
         "console": "GameCube",
         "num_games": 48
       },
       "Nintendo/N64": {
-        "timestamp": "2026-01-05T16:32:30.010757",
+        "timestamp": "2026-01-09T20:59:39.444144",
         "brand": "Nintendo",
         "console": "N64",
         "num_games": 12
       },
       "Nintendo/NES": {
-        "timestamp": "2026-01-05T16:32:30.046601",
+        "timestamp": "2026-01-09T20:59:39.964212",
         "brand": "Nintendo",
         "console": "NES",
-        "num_games": 58
+        "num_games": 59
       },
       "Nintendo/Super Nintendo": {
-        "timestamp": "2026-01-05T16:32:30.098569",
+        "timestamp": "2026-01-09T20:59:40.145522",
         "brand": "Nintendo",
         "console": "Super Nintendo",
         "num_games": 70
@@ -11831,8 +11831,18 @@
         "versions": [
           "Phoenix Wright: Ace Attorney Trials and Tribulations (J)"
         ]
+      },
+      "Nintendo/NES/Castlevania II Simon's Quest": {
+        "timestamp": "2026-01-09T20:59:41.234609",
+        "brand": "Nintendo",
+        "console": "NES",
+        "game_title": "Castlevania II: Simon's Quest",
+        "num_versions": 1,
+        "versions": [
+          "Castlevania II: Simon's Quest"
+        ]
       }
     }
   },
-  "timestamp": "2026-01-05T16:32:31.476043"
+  "timestamp": "2026-01-09T20:59:41.244366"
 }
