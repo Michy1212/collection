@@ -1,5 +1,5 @@
 {
-  "data_hash": "3a27c7d45305dbb50ac583079a6bd2fa",
+  "data_hash": "d1b76f06aa84983f75e2794ce9d6578e",
   "generated_pages": {
     "brands": {
       "Atari": {
@@ -287,55 +287,55 @@
         "num_games": 5
       },
       "Nintendo/3DS": {
-        "timestamp": "2026-01-09T20:59:38.914504",
+        "timestamp": "2026-01-16T14:41:11.573107",
         "brand": "Nintendo",
         "console": "3DS",
         "num_games": 58
       },
       "Nintendo/DS": {
-        "timestamp": "2026-01-09T20:59:39.003744",
+        "timestamp": "2026-01-16T14:41:11.711767",
         "brand": "Nintendo",
         "console": "DS",
         "num_games": 57
       },
       "Nintendo/Game Boy": {
-        "timestamp": "2026-01-09T20:59:39.067660",
+        "timestamp": "2026-01-16T14:41:11.748621",
         "brand": "Nintendo",
         "console": "Game Boy",
         "num_games": 23
       },
       "Nintendo/Game Boy Advance": {
-        "timestamp": "2026-01-09T20:59:39.228515",
+        "timestamp": "2026-01-16T14:41:11.862898",
         "brand": "Nintendo",
         "console": "Game Boy Advance",
         "num_games": 71
       },
       "Nintendo/Game Boy Color": {
-        "timestamp": "2026-01-09T20:59:39.268378",
+        "timestamp": "2026-01-16T14:41:12.085298",
         "brand": "Nintendo",
         "console": "Game Boy Color",
-        "num_games": 31
+        "num_games": 32
       },
       "Nintendo/GameCube": {
-        "timestamp": "2026-01-09T20:59:39.390237",
+        "timestamp": "2026-01-16T14:41:12.241135",
         "brand": "Nintendo",
         "console": "GameCube",
         "num_games": 48
       },
       "Nintendo/N64": {
-        "timestamp": "2026-01-09T20:59:39.444144",
+        "timestamp": "2026-01-16T14:41:12.281852",
         "brand": "Nintendo",
         "console": "N64",
         "num_games": 12
       },
       "Nintendo/NES": {
-        "timestamp": "2026-01-09T20:59:39.964212",
+        "timestamp": "2026-01-16T14:41:12.400491",
         "brand": "Nintendo",
         "console": "NES",
         "num_games": 59
       },
       "Nintendo/Super Nintendo": {
-        "timestamp": "2026-01-09T20:59:40.145522",
+        "timestamp": "2026-01-16T14:41:12.593508",
         "brand": "Nintendo",
         "console": "Super Nintendo",
         "num_games": 70
@@ -11841,8 +11841,18 @@
         "versions": [
           "Castlevania II: Simon's Quest"
         ]
+      },
+      "Nintendo/Game Boy Color/Déjà Vu I & II - The Casebooks of Ace Harding": {
+        "timestamp": "2026-01-16T14:41:13.462142",
+        "brand": "Nintendo",
+        "console": "Game Boy Color",
+        "game_title": "Déjà Vu I & II - The Casebooks of Ace Harding",
+        "num_versions": 1,
+        "versions": [
+          "Déjà Vu I & II - The Casebooks of Ace Harding"
+        ]
       }
     }
   },
-  "timestamp": "2026-01-09T20:59:41.244366"
+  "timestamp": "2026-01-16T14:41:13.472852"
 }
