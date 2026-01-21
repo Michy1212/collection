@@ -166,6 +166,199 @@
                 .title-screen-image:hover {
                     transform: scale(1.02);
                 }
+                .title-screens-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .title-screen-item {
+                    margin-bottom: 20px;
+                }
+
+                .title-screen-item h4 {
+                    margin: 0 0 10px 0;
+                    color: #666;
+                    font-size: 0.9em;
+                }
+
+                .spoiler-container {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .spoiler-container .blurred {
+                    filter: blur(20px);
+                    transition: filter 0.3s;
+                }
+
+                .spoiler-container .revealed {
+                    filter: none;
+                }
+
+                .spoiler-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 10px 20px;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    z-index: 2;
+                }
+
+                .spoiler-button:hover {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+                
+                /* Styles pour le carrousel des écrans titres */
+                .carousel-container {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    max-width: 100%;
+                    margin: 15px 0;
+                }
+
+                .carousel-wrapper {
+                    flex: 1;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .carousel-track {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    gap: 20px;
+                    padding: 10px 0;
+                }
+
+                .carousel-item {
+                    flex: 0 0 auto;
+                    width: 200px;
+                    text-align: center;
+                    position: relative;
+                }
+
+                .carousel-arrow {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    transition: background-color 0.3s;
+                }
+
+                .carousel-arrow:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                .carousel-arrow.left-arrow {
+                    margin-right: 10px;
+                }
+
+                .carousel-arrow.right-arrow {
+                    margin-left: 10px;
+                }
+
+                .title-screen-label {
+                    margin-bottom: 8px;
+                    font-size: 0.9em;
+                    color: #666;
+                    font-weight: bold;
+                }
+
+                /* Styles pour les spoilers dans le carrousel */
+                .spoiler-item .title-screen-label {
+                    color: #ff6b6b;
+                }
+
+                .spoiler-container {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                .spoiler-container .blurred {
+                    filter: blur(20px);
+                    transition: filter 0.3s;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                }
+
+                .spoiler-container .revealed {
+                    filter: none;
+                }
+
+                .spoiler-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 8px 16px;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    z-index: 2;
+                    font-size: 0.9em;
+                }
+
+                .spoiler-button:hover {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+
+                /* Images normales dans le carrousel */
+                .carousel-item img.title-screen-image {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                    border: 1px solid #ddd;
+                    background-color: #f5f5f5;
+                }
+
+                .carousel-item img.title-screen-image:hover {
+                    transform: scale(1.05);
+                }
+
+                /* Points indicateurs */
+                .carousel-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-top: 15px;
+                }
+
+                .dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .dot.active {
+                    background-color: #666;
+                }
+                
                 /* Styles pour le popup */
                 .popup {
                     display: none;
@@ -295,13 +488,94 @@
                         display: table;
                     }
                 }
+                /* Styles pour la section écrans de fin */
+                .ending-screen-section {
+                    margin-top: 30px;
+                    padding-top: 20px;
+                    border-top: 1px solid #eee;
+                }
+
+                .ending-screen-label {
+                    margin-bottom: 8px;
+                    font-size: 0.9em;
+                    color: #ff6b6b; /* Rouge pour indiquer un spoiler */
+                    font-weight: bold;
+                }
+
+                .ending-screen-image {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                    border: 1px solid #ddd;
+                    background-color: #f5f5f5;
+                }
+
+                .ending-screen-image:hover {
+                    transform: scale(1.05);
+                }
+
+                /* Points indicateurs spécifiques aux écrans de fin */
+                .ending-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ff6b6b; /* Rouge pour les spoilers */
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .ending-dot.active {
+                    background-color: #ff3b3b; /* Rouge plus foncé */
+                }
+                
+                .spoiler-item .title-screen-label,
+                .spoiler-item .ending-screen-label {
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    margin: 0;
+                    padding: 0;
+                    transition: opacity 0.3s, height 0.3s;
+                }
+
+                .spoiler-item.revealed .title-screen-label,
+                .spoiler-item.revealed .ending-screen-label {
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                    margin-bottom: 8px;
+                }
+
+                /* Ajustement pour le bouton spoiler */
+                .spoiler-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 12px 24px;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    z-index: 2;
+                    font-size: 1em;
+                    white-space: nowrap;
+                }
+
+                .spoiler-button:hover {
+                    background-color: rgba(0, 0, 0, 0.95);
+                }
+                
             </style>
         </head>
         <body>
             <div class="content-container">
-                <a href="index.html" class="back-link">← Retour à PS2</a>
+                <a href="index.html" class="back-link">← Retour à {console}</a>
                 <h1>Grand Theft Auto: San Andreas (Platinium)</h1>
-
                 <div class="tab-buttons">
                     
                 <button class="tab-button active" 
@@ -311,7 +585,6 @@
                 </button>
                 
                 </div>
-
                 
             <div id="tab0" class="tab-content" >
                 <div class="game-header">
@@ -381,12 +654,30 @@
                 </div>
                 
         <div class="title-screen-section">
-            <h3>Écran titre</h3>
-            <div class="title-screen-container">
-                <img src="title_screens/Grand Theft Auto San Andreas (Platinium).png" alt="Écran titre - Grand Theft Auto: San Andreas (Platinium)" class="title-screen-image" onclick="openPopup(this)">
+            <h3>Écrans titres</h3>
+            <div class="carousel-container">
+                <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()"></button>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        
+                <div class="carousel-item" data-index="0">
+                    <div class="title-screen-label">Classique</div>
+                    <img src="title_screens/Grand Theft Auto San Andreas (Platinium).png" 
+                         alt="Écran titre - Classique" 
+                         class="title-screen-image" 
+                         onclick="openPopup(this)">
+                </div>
+                
+                    </div>
+                </div>
+                <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()"></button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot" onclick="goToTitleScreen(0)"></span>
             </div>
         </div>
         
+                
             </div>
             
             </div>
@@ -398,6 +689,10 @@
             </div>
 
             <script>
+                let currentTitleScreenIndex = 0;
+                let currentEndingScreenIndex = 0;
+                let titleScreenItems = [];
+                let endingScreenItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
                     'tab0': 'rgb(10, 9, 10)'
@@ -422,6 +717,15 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
+                    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
+                    
+                    // Réinitialiser les carrousels
+                    setTimeout(function() {
+                        initTitleScreenCarousel();
+                        initEndingScreenCarousel();
+                    }, 100);
                 }
 
                 // Fonction pour ouvrir le popup d'image
@@ -442,6 +746,186 @@
                     if (e.target === this) {
                         closePopup();
                     }
+                });
+                    
+                // Fonction pour initialiser le carrousel
+                function initTitleScreenCarousel() {
+                    titleScreenItems = document.querySelectorAll('.carousel-item');
+                    updateTitleScreenCarousel();
+                }
+
+                // Fonction pour mettre à jour le carrousel
+                function updateTitleScreenCarousel() {
+                    if (titleScreenItems.length === 0) return;
+                    
+                    const track = document.querySelector('.carousel-track');
+                    const itemWidth = titleScreenItems[0].offsetWidth + 20; // Largeur + gap
+                    const translateX = -currentTitleScreenIndex * itemWidth;
+                    track.style.transform = 'translateX(' + translateX + 'px)';
+                    
+                    // Mettre à jour les points indicateurs
+                    const dots = document.querySelectorAll('.dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentTitleScreenIndex);
+                    });
+                    
+                    // Masquer/afficher les flèches
+                    const leftArrow = document.querySelector('.left-arrow');
+                    const rightArrow = document.querySelector('.right-arrow');
+                    
+                    if (leftArrow) leftArrow.style.visibility = currentTitleScreenIndex === 0 ? 'hidden' : 'visible';
+                    if (rightArrow) rightArrow.style.visibility = currentTitleScreenIndex === titleScreenItems.length - 1 ? 'hidden' : 'visible';
+                }
+
+                // Fonction pour passer à l'écran titre précédent
+                function prevTitleScreen() {
+                    if (currentTitleScreenIndex > 0) {
+                        currentTitleScreenIndex--;
+                        updateTitleScreenCarousel();
+                    }
+                }
+
+                // Fonction pour passer à l'écran titre suivant
+                function nextTitleScreen() {
+                    if (currentTitleScreenIndex < titleScreenItems.length - 1) {
+                        currentTitleScreenIndex++;
+                        updateTitleScreenCarousel();
+                    }
+                }
+
+                // Fonction pour aller à un écran titre spécifique
+                function goToTitleScreen(index) {
+                    if (index >= 0 && index < titleScreenItems.length) {
+                        currentTitleScreenIndex = index;
+                        updateTitleScreenCarousel();
+                    }
+                }
+
+                // Fonction pour révéler un spoiler
+                function revealSpoiler(button) {
+                    var container = button.parentElement;
+                    var img = container.querySelector('img');
+                    var carouselItem = container.closest('.carousel-item');
+                    
+                    // Retirer le flou de l'image
+                    img.classList.remove('blurred');
+                    img.classList.add('revealed');
+                    
+                    // Révéler le titre (s'il y a un label)
+                    if (carouselItem) {
+                        carouselItem.classList.add('revealed');
+                        
+                        // Trouver tous les labels possibles
+                        var titleLabel = carouselItem.querySelector('.title-screen-label');
+                        var endingLabel = carouselItem.querySelector('.ending-screen-label');
+                        var label = titleLabel || endingLabel;
+                        
+                        if (label) {
+                            // Afficher le label
+                            label.style.opacity = '1';
+                            label.style.display = 'block';
+                            
+                            // Retirer le texte "(Spoiler)" du label
+                            var labelText = label.textContent || label.innerText;
+                            if (labelText.includes('(Spoiler)')) {
+                                label.textContent = labelText.replace(' (Spoiler)', '');
+                                label.innerText = labelText.replace(' (Spoiler)', '');
+                            }
+                        }
+                    }
+                    
+                    // Cacher le bouton
+                    button.style.display = 'none';
+                    
+                    // Mettre à jour l'alt pour indiquer que le spoiler est révélé
+                    img.alt = img.alt.replace('(Spoiler)', '(Spoiler révélé)');
+                }
+
+                // Initialiser le carrousel au chargement de la page
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Attendre que le DOM soit complètement chargé
+                    setTimeout(initTitleScreenCarousel, 100);
+                    
+                    // Réinitialiser aussi quand on change d'onglet
+                    document.addEventListener('click', function(e) {
+                        if (e.target.classList.contains('tab-button')) {
+                            setTimeout(initTitleScreenCarousel, 100);
+                        }
+                    });
+                });
+
+                // Fonction pour initialiser le carrousel des écrans de fin
+                function initEndingScreenCarousel() {
+                    endingScreenItems = document.querySelectorAll('.ending-screen-section .carousel-item');
+                    updateEndingScreenCarousel();
+                }
+
+                // Fonction pour mettre à jour le carrousel des écrans de fin
+                function updateEndingScreenCarousel() {
+                    if (endingScreenItems.length === 0) return;
+                    
+                    const track = document.querySelector('.ending-screen-section .carousel-track');
+                    if (!track) return;
+                    
+                    const itemWidth = endingScreenItems[0].offsetWidth + 20;
+                    const translateX = -currentEndingScreenIndex * itemWidth;
+                    track.style.transform = 'translateX(' + translateX + 'px)';
+                    
+                    // Mettre à jour les points indicateurs
+                    const dots = document.querySelectorAll('.ending-dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentEndingScreenIndex);
+                    });
+                    
+                    // Masquer/afficher les flèches
+                    const leftArrow = document.querySelector('.ending-screen-section .left-arrow');
+                    const rightArrow = document.querySelector('.ending-screen-section .right-arrow');
+                    
+                    if (leftArrow) leftArrow.style.visibility = currentEndingScreenIndex === 0 ? 'hidden' : 'visible';
+                    if (rightArrow) rightArrow.style.visibility = currentEndingScreenIndex === endingScreenItems.length - 1 ? 'hidden' : 'visible';
+                }
+
+                // Fonction pour passer à l'écran de fin précédent
+                function prevEndingScreen() {
+                    if (currentEndingScreenIndex > 0) {
+                        currentEndingScreenIndex--;
+                        updateEndingScreenCarousel();
+                    }
+                }
+
+                // Fonction pour passer à l'écran de fin suivant
+                function nextEndingScreen() {
+                    if (currentEndingScreenIndex < endingScreenItems.length - 1) {
+                        currentEndingScreenIndex++;
+                        updateEndingScreenCarousel();
+                    }
+                }
+
+                // Fonction pour aller à un écran de fin spécifique
+                function goToEndingScreen(index) {
+                    if (index >= 0 && index < endingScreenItems.length) {
+                        currentEndingScreenIndex = index;
+                        updateEndingScreenCarousel();
+                    }
+                }
+
+                // Initialiser tous les carrousels
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Initialiser les carrousels avec un léger délai
+                    setTimeout(function() {
+                        initTitleScreenCarousel();
+                        initEndingScreenCarousel();
+                    }, 100);
+                    
+                    // Réinitialiser quand on change d'onglet
+                    document.addEventListener('click', function(e) {
+                        if (e.target.classList.contains('tab-button')) {
+                            setTimeout(function() {
+                                initTitleScreenCarousel();
+                                initEndingScreenCarousel();
+                            }, 100);
+                        }
+                    });
                 });
 
                 // Activer le premier onglet au chargement
