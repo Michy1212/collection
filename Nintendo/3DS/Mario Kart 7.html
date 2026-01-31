@@ -653,56 +653,49 @@
                     </div>
                 </div>
                 
-        <div class="title-screen-section">
-            <h3>Écrans titres</h3>
-            <div class="carousel-container">
-                <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        
-                <div class="carousel-item" data-index="0">
-                    <div class="title-screen-label">Classique</div>
-                    <img src="title_screens/Mario Kart 7.png" 
-                         alt="Écran titre - Classique" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
-                <div class="carousel-item" data-index="1">
-                    <div class="title-screen-label">Alternatif 1</div>
-                    <img src="title_screens/Mario Kart 7 (Alternatif 1).png" 
-                         alt="Écran titre - Alternatif 1" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
-                <div class="carousel-item" data-index="2">
-                    <div class="title-screen-label">Alternatif 2</div>
-                    <img src="title_screens/Mario Kart 7 (Alternatif 2).png" 
-                         alt="Écran titre - Alternatif 2" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
+            <div class="title-screen-section">
+                <h3>Écrans titres</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                    <div class="carousel-item" data-index="0">
+                        <div class="title-screen-label">Classique</div>
+                        <img src="title_screens/Mario Kart 7.png" 
+                             alt="Écran titre - Classique" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
                     </div>
+                    
+                    <div class="carousel-item" data-index="1">
+                        <div class="title-screen-label">Alternatif 1</div>
+                        <img src="title_screens/Mario Kart 7 (Alternatif 1).png" 
+                             alt="Écran titre - Alternatif 1" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item" data-index="2">
+                        <div class="title-screen-label">Alternatif 2</div>
+                        <img src="title_screens/Mario Kart 7 (Alternatif 2).png" 
+                             alt="Écran titre - Alternatif 2" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
                 </div>
-                <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span><span class="dot" onclick="goToTitleScreen(2)"></span>
+                </div>
             </div>
-            <div class="carousel-dots">
-                <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span><span class="dot" onclick="goToTitleScreen(2)"></span>
-            </div>
-        </div>
-        
+            
                 
-        <div class="ending-screen-section">
-            <h3>Écrans de fin</h3>
-            <div class="carousel-container">
-                <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()"></button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        
-            <div class="carousel-item spoiler-item" data-index="0">
-                <div class="ending-screen-label">Fin (Spoiler)</div>
+            <div class="ending-screen-section">
+                <h3>Écran de fin (Spoiler)</h3>
                 <div class="spoiler-container">
                     <img src="ending_screens/Mario Kart 7.png" 
                          alt="Écran de fin - Fin (Spoiler)" 
@@ -712,15 +705,6 @@
                 </div>
             </div>
             
-                    </div>
-                </div>
-                <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()"></button>
-            </div>
-            <div class="carousel-dots">
-                <span class="ending-dot" onclick="goToEndingScreen(0)"></span>
-            </div>
-        </div>
-        
             </div>
             
             </div>
@@ -741,6 +725,12 @@
                     'tab0': 'rgb(4, 3, 6)'
                 };
 
+                // Fonction pour réinitialiser les indices des carrousels
+                function resetCarouselIndices() {
+                    currentTitleScreenIndex = 0;
+                    currentEndingScreenIndex = 0;
+                }
+                
                 function openTab(evt, tabName) {
                     // Masquer tous les contenus d'onglet
                     var tabContents = document.getElementsByClassName("tab-content");
@@ -760,6 +750,9 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
+                    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
                     
                     // Réinitialiser les indices des carrousels
                     resetCarouselIndices();

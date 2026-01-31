@@ -4,7 +4,7 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Professeur Layton et le Masque des miracles - Détails</title>
+            <title>Professeur Layton et le Masque des Miracles - Détails</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -575,22 +575,22 @@
         <body>
             <div class="content-container">
                 <a href="index.html" class="back-link">← Retour à 3DS</a>
-                <h1>Professeur Layton et le Masque des miracles</h1>
+                <h1>Professeur Layton et le Masque des Miracles</h1>
                 <div class="tab-buttons">
                     
                 <button class="tab-button active" 
                         onclick="openTab(event, 'tab0')" 
                         style="background-color: rgb(45, 8, 51); color: white;">
-                    Professeur Layton et le Masque des miracles (PAL)
+                    Professeur Layton et le Masque des Miracles (PAL)
                 </button>
                 
                 </div>
                 
             <div id="tab0" class="tab-content" >
                 <div class="game-header">
-                    <img src="game_images/Professeur Layton et le Masque des miracles.png" alt="Professeur Layton et le Masque des miracles" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <img src="game_images/Professeur Layton et le Masque des Miracles.png" alt="Professeur Layton et le Masque des Miracles" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
                     <div class="game-info">
-                        <h2>Professeur Layton et le Masque des miracles</h2>
+                        <h2>Professeur Layton et le Masque des Miracles</h2>
                         <table class="info-table">
                             <tr>
                                 <th>Développeur</th>
@@ -653,7 +653,26 @@
                     </div>
                 </div>
                 
+                <div class="title-screen-section">
+                    <h3>Écran titre</h3>
+                    <img src="title_screens/Professeur Layton et le Masque des Miracles.png" 
+                         alt="Écran titre - Classique" 
+                         class="title-screen-image" 
+                         onclick="openPopup(this)">
+                </div>
                 
+                
+            <div class="ending-screen-section">
+                <h3>Écran de fin (Spoiler)</h3>
+                <div class="spoiler-container">
+                    <img src="ending_screens/Professeur Layton et le Masque des Miracles.png" 
+                         alt="Écran de fin - Fin (Spoiler)" 
+                         class="ending-screen-image blurred" 
+                         onclick="openPopup(this)">
+                    <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                </div>
+            </div>
+            
             </div>
             
             </div>
@@ -674,6 +693,12 @@
                     'tab0': 'rgb(45, 8, 51)'
                 };
 
+                // Fonction pour réinitialiser les indices des carrousels
+                function resetCarouselIndices() {
+                    currentTitleScreenIndex = 0;
+                    currentEndingScreenIndex = 0;
+                }
+                
                 function openTab(evt, tabName) {
                     // Masquer tous les contenus d'onglet
                     var tabContents = document.getElementsByClassName("tab-content");
@@ -693,6 +718,9 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
+                    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
                     
                     // Réinitialiser les indices des carrousels
                     resetCarouselIndices();

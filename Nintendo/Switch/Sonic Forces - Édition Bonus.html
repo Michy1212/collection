@@ -653,30 +653,14 @@
                     </div>
                 </div>
                 
-        <div class="title-screen-section">
-            <h3>Écrans titres</h3>
-            <div class="carousel-container">
-                <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()"></button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        
-                <div class="carousel-item" data-index="0">
-                    <div class="title-screen-label">Classique</div>
+                <div class="title-screen-section">
+                    <h3>Écran titre</h3>
                     <img src="title_screens/Sonic Forces - Édition Bonus.png" 
                          alt="Écran titre - Classique" 
                          class="title-screen-image" 
                          onclick="openPopup(this)">
                 </div>
                 
-                    </div>
-                </div>
-                <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()"></button>
-            </div>
-            <div class="carousel-dots">
-                <span class="dot" onclick="goToTitleScreen(0)"></span>
-            </div>
-        </div>
-        
                 
             </div>
             
@@ -698,6 +682,12 @@
                     'tab0': 'rgb(109, 68, 45)'
                 };
 
+                // Fonction pour réinitialiser les indices des carrousels
+                function resetCarouselIndices() {
+                    currentTitleScreenIndex = 0;
+                    currentEndingScreenIndex = 0;
+                }
+                
                 function openTab(evt, tabName) {
                     // Masquer tous les contenus d'onglet
                     var tabContents = document.getElementsByClassName("tab-content");
@@ -717,6 +707,9 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
+                    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
                     
                     // Réinitialiser les indices des carrousels
                     resetCarouselIndices();

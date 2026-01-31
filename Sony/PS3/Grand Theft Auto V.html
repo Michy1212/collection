@@ -653,62 +653,62 @@
                     </div>
                 </div>
                 
-        <div class="title-screen-section">
-            <h3>Écrans titres</h3>
-            <div class="carousel-container">
-                <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        
-                <div class="carousel-item" data-index="0">
-                    <div class="title-screen-label">Classique</div>
-                    <img src="title_screens/Grand Theft Auto V.png" 
-                         alt="Écran titre - Classique" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
-                <div class="carousel-item" data-index="1">
-                    <div class="title-screen-label">alt 1</div>
-                    <img src="title_screens/Grand Theft Auto V (alt 1).png" 
-                         alt="Écran titre - alt 1" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
-                <div class="carousel-item" data-index="2">
-                    <div class="title-screen-label">alt 2</div>
-                    <img src="title_screens/Grand Theft Auto V (alt 2).png" 
-                         alt="Écran titre - alt 2" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
-                <div class="carousel-item" data-index="3">
-                    <div class="title-screen-label">alt 3</div>
-                    <img src="title_screens/Grand Theft Auto V (alt 3).png" 
-                         alt="Écran titre - alt 3" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
-                <div class="carousel-item" data-index="4">
-                    <div class="title-screen-label">alt 4</div>
-                    <img src="title_screens/Grand Theft Auto V (alt 4).png" 
-                         alt="Écran titre - alt 4" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
-                </div>
-                
+            <div class="title-screen-section">
+                <h3>Écrans titres</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                    <div class="carousel-item" data-index="0">
+                        <div class="title-screen-label">Classique</div>
+                        <img src="title_screens/Grand Theft Auto V.png" 
+                             alt="Écran titre - Classique" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
                     </div>
+                    
+                    <div class="carousel-item" data-index="1">
+                        <div class="title-screen-label">alt 1</div>
+                        <img src="title_screens/Grand Theft Auto V (alt 1).png" 
+                             alt="Écran titre - alt 1" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item" data-index="2">
+                        <div class="title-screen-label">alt 2</div>
+                        <img src="title_screens/Grand Theft Auto V (alt 2).png" 
+                             alt="Écran titre - alt 2" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item" data-index="3">
+                        <div class="title-screen-label">alt 3</div>
+                        <img src="title_screens/Grand Theft Auto V (alt 3).png" 
+                             alt="Écran titre - alt 3" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item" data-index="4">
+                        <div class="title-screen-label">alt 4</div>
+                        <img src="title_screens/Grand Theft Auto V (alt 4).png" 
+                             alt="Écran titre - alt 4" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
                 </div>
-                <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span><span class="dot" onclick="goToTitleScreen(2)"></span><span class="dot" onclick="goToTitleScreen(3)"></span><span class="dot" onclick="goToTitleScreen(4)"></span>
+                </div>
             </div>
-            <div class="carousel-dots">
-                <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span><span class="dot" onclick="goToTitleScreen(2)"></span><span class="dot" onclick="goToTitleScreen(3)"></span><span class="dot" onclick="goToTitleScreen(4)"></span>
-            </div>
-        </div>
-        
+            
                 
             </div>
             
@@ -730,6 +730,12 @@
                     'tab0': 'rgb(7, 5, 3)'
                 };
 
+                // Fonction pour réinitialiser les indices des carrousels
+                function resetCarouselIndices() {
+                    currentTitleScreenIndex = 0;
+                    currentEndingScreenIndex = 0;
+                }
+                
                 function openTab(evt, tabName) {
                     // Masquer tous les contenus d'onglet
                     var tabContents = document.getElementsByClassName("tab-content");
@@ -749,6 +755,9 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
+                    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
                     
                     // Réinitialiser les indices des carrousels
                     resetCarouselIndices();

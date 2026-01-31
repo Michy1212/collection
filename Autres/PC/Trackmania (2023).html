@@ -674,6 +674,12 @@
                     'tab0': 'rgb(8, 147, 224)'
                 };
 
+                // Fonction pour réinitialiser les indices des carrousels
+                function resetCarouselIndices() {
+                    currentTitleScreenIndex = 0;
+                    currentEndingScreenIndex = 0;
+                }
+                
                 function openTab(evt, tabName) {
                     // Masquer tous les contenus d'onglet
                     var tabContents = document.getElementsByClassName("tab-content");
@@ -693,6 +699,9 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
+                    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
                     
                     // Réinitialiser les indices des carrousels
                     resetCarouselIndices();

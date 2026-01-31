@@ -653,80 +653,80 @@
                     </div>
                 </div>
                 
-        <div class="title-screen-section">
-            <h3>Écrans titres</h3>
-            <div class="carousel-container">
-                <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        
-                <div class="carousel-item" data-index="0">
-                    <div class="title-screen-label">Classique</div>
-                    <img src="title_screens/Mario Kart Super Circuit.png" 
-                         alt="Écran titre - Classique" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
+            <div class="title-screen-section">
+                <h3>Écrans titres</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                    <div class="carousel-item" data-index="0">
+                        <div class="title-screen-label">Classique</div>
+                        <img src="title_screens/Mario Kart Super Circuit.png" 
+                             alt="Écran titre - Classique" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item spoiler-item" data-index="1">
+                        <div class="title-screen-label">Victoire en Coupe Spéciale Retro (Spoiler)</div>
+                        <div class="spoiler-container">
+                            <img src="title_screens/Mario Kart Super Circuit (Victoire en Coupe Spéciale Retro - spoil).png" 
+                                 alt="Écran titre - Victoire en Coupe Spéciale Retro (Spoiler)" 
+                                 class="title-screen-image blurred" 
+                                 onclick="openPopup(this)">
+                            <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                        </div>
+                    </div>
+                    
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
                 </div>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span>
+                </div>
+            </div>
+            
                 
-                <div class="carousel-item spoiler-item" data-index="1">
-                    <div class="title-screen-label">Victoire en Coupe Spéciale Retro (Spoiler)</div>
+            <div class="ending-screen-section">
+                <h3>Écrans de fin (Spoilers)</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                <div class="carousel-item spoiler-item" data-index="0">
+                    <div class="ending-screen-label">Luigi (Spoiler)</div>
                     <div class="spoiler-container">
-                        <img src="title_screens/Mario Kart Super Circuit (Victoire en Coupe Spéciale Retro - spoil).png" 
-                             alt="Écran titre - Victoire en Coupe Spéciale Retro (Spoiler)" 
-                             class="title-screen-image blurred" 
+                        <img src="ending_screens/Mario Kart Super Circuit (Luigi).png" 
+                             alt="Écran de fin - Luigi (Spoiler)" 
+                             class="ending-screen-image blurred" 
                              onclick="openPopup(this)">
                         <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
                     </div>
                 </div>
                 
+                <div class="carousel-item spoiler-item" data-index="1">
+                    <div class="ending-screen-label">Mario (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Mario Kart Super Circuit (Mario).png" 
+                             alt="Écran de fin - Mario (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
                     </div>
                 </div>
-                <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
-            </div>
-            <div class="carousel-dots">
-                <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span>
-            </div>
-        </div>
-        
                 
-        <div class="ending-screen-section">
-            <h3>Écrans de fin</h3>
-            <div class="carousel-container">
-                <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()">←</button>
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        
-            <div class="carousel-item spoiler-item" data-index="0">
-                <div class="ending-screen-label">Luigi (Spoiler)</div>
-                <div class="spoiler-container">
-                    <img src="ending_screens/Mario Kart Super Circuit (Luigi).png" 
-                         alt="Écran de fin - Luigi (Spoiler)" 
-                         class="ending-screen-image blurred" 
-                         onclick="openPopup(this)">
-                    <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
-                </div>
-            </div>
-            
-            <div class="carousel-item spoiler-item" data-index="1">
-                <div class="ending-screen-label">Mario (Spoiler)</div>
-                <div class="spoiler-container">
-                    <img src="ending_screens/Mario Kart Super Circuit (Mario).png" 
-                         alt="Écran de fin - Mario (Spoiler)" 
-                         class="ending-screen-image blurred" 
-                         onclick="openPopup(this)">
-                    <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
-                </div>
-            </div>
-            
+                        </div>
                     </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
                 </div>
-                <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
+                <div class="carousel-dots">
+                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
+                </div>
             </div>
-            <div class="carousel-dots">
-                <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
-            </div>
-        </div>
-        
+            
             </div>
             
             </div>
@@ -747,6 +747,12 @@
                     'tab0': 'rgb(3, 87, 169)'
                 };
 
+                // Fonction pour réinitialiser les indices des carrousels
+                function resetCarouselIndices() {
+                    currentTitleScreenIndex = 0;
+                    currentEndingScreenIndex = 0;
+                }
+                
                 function openTab(evt, tabName) {
                     // Masquer tous les contenus d'onglet
                     var tabContents = document.getElementsByClassName("tab-content");
@@ -766,6 +772,9 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
+                    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
                     
                     // Réinitialiser les indices des carrousels
                     resetCarouselIndices();
