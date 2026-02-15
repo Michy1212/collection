@@ -653,15 +653,53 @@
                     </div>
                 </div>
                 
-                <div class="title-screen-section">
-                    <h3>Écran titre</h3>
-                    <img src="title_screens/Mario Kart Double Dash!!.png" 
-                         alt="Écran titre - Classique" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
+            <div class="title-screen-section">
+                <h3>Écrans titres</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                    <div class="carousel-item" data-index="0">
+                        <div class="title-screen-label">Classique</div>
+                        <img src="title_screens/Mario Kart Double Dash!!.png" 
+                             alt="Écran titre - Classique" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item spoiler-item" data-index="1">
+                        <div class="title-screen-label">Toutes les coupes en or (Spoiler)</div>
+                        <div class="spoiler-container">
+                            <img src="title_screens/Mario Kart Double Dash!! (Toutes les coupes en or - spoil).png" 
+                                 alt="Écran titre - Toutes les coupes en or (Spoiler)" 
+                                 class="title-screen-image blurred" 
+                                 onclick="openPopup(this)">
+                            <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                        </div>
+                    </div>
+                    
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
                 </div>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span>
+                </div>
+            </div>
+            
                 
-                
+            <div class="ending-screen-section">
+                <h3>Écran de fin (Spoiler)</h3>
+                <div class="spoiler-container">
+                    <img src="ending_screens/Mario Kart Double Dash!!.png" 
+                         alt="Écran de fin - Fin (Spoiler)" 
+                         class="ending-screen-image blurred" 
+                         onclick="openPopup(this)">
+                    <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                </div>
+            </div>
+            
             </div>
             
             </div>
