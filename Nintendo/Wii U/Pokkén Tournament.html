@@ -11,7 +11,7 @@
                     max-width: 800px;
                     margin: 0 auto;
                     padding: 20px;
-                    background-color: rgb(1, 154, 197);
+                    background-color: rgb(5, 154, 194);
                     transition: background-color 0.5s;
                 }
                 .content-container {
@@ -580,7 +580,7 @@
                     
                 <button class="tab-button active" 
                         onclick="openTab(event, 'tab0')" 
-                        style="background-color: rgb(1, 154, 197); color: white;">
+                        style="background-color: rgb(5, 154, 194); color: white;">
                     Pokkén Tournament (PAL)
                 </button>
                 
@@ -662,6 +662,17 @@
                 </div>
                 
                 
+            <div class="ending-screen-section">
+                <h3>Écran de fin (Spoiler)</h3>
+                <div class="spoiler-container">
+                    <img src="ending_screens/Pokkén Tournament.png" 
+                         alt="Écran de fin - Fin (Spoiler)" 
+                         class="ending-screen-image blurred" 
+                         onclick="openPopup(this)">
+                    <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                </div>
+            </div>
+            
             </div>
             
             </div>
@@ -679,7 +690,7 @@
                 let endingScreenItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(1, 154, 197)'
+                    'tab0': 'rgb(5, 154, 194)'
                 };
 
                 // Fonction pour réinitialiser les indices des carrousels
