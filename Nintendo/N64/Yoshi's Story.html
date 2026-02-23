@@ -592,6 +592,7 @@
                     <div class="game-info">
                         <h2>Yoshi's Story</h2>
                         <table class="info-table">
+            
                             <tr>
                                 <th>Développeur</th>
                                 <td>Nintendo EAD</td>
@@ -649,7 +650,6 @@
                                 <th>Région</th>
                                 <td>PAL</td>
                             </tr>
-            
                             <tr>
                                 <th>Prix d'achat</th>
                                 <td>23,11 €</td>
@@ -690,10 +690,21 @@
                 </div>
                 
                 <div class="carousel-item spoiler-item" data-index="1">
-                    <div class="ending-screen-label">Joie entre 10000 et 19999 (Spoiler)</div>
+                    <div class="ending-screen-label">6 Yoshis (Spoiler)</div>
                     <div class="spoiler-container">
-                        <img src="ending_screens/Yoshi's Story (Joie entre 10000 et 19999).png" 
-                             alt="Écran de fin - Joie entre 10000 et 19999 (Spoiler)" 
+                        <img src="ending_screens/Yoshi's Story (6 Yoshis).png" 
+                             alt="Écran de fin - 6 Yoshis (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                <div class="carousel-item spoiler-item" data-index="2">
+                    <div class="ending-screen-label">8 Yoshis (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Yoshi's Story (8 Yoshis).png" 
+                             alt="Écran de fin - 8 Yoshis (Spoiler)" 
                              class="ending-screen-image blurred" 
                              onclick="openPopup(this)">
                         <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
@@ -705,7 +716,7 @@
                     <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
                 </div>
                 <div class="carousel-dots">
-                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
+                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span><span class="ending-dot" onclick="goToEndingScreen(2)"></span>
                 </div>
             </div>
             
