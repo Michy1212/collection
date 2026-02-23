@@ -584,6 +584,12 @@
                     The Legend of Zelda: A Link to the Past and Four Swords (PAL)
                 </button>
                 
+                <button class="tab-button " 
+                        onclick="openTab(event, 'tab1')" 
+                        style="background-color: rgb(0, 5, 4); color: white;">
+                    The Legend of Zelda: A Link to the Past and Four Swords (NTSC-J)
+                </button>
+                
                 </div>
                 
             <div id="tab0" class="tab-content" >
@@ -646,10 +652,10 @@
                                 <th>État</th>
                                 <td>Jeu seul</td>
                             </tr>
-                            <tr>
-                                <th>Région</th>
-                                <td>PAL</td>
-                            </tr>
+                                <tr>
+                                    <th>Région</th>
+                                    <td>PAL</td>
+                                </tr>
                         </table>
                     </div>
                 </div>
@@ -662,6 +668,128 @@
                          onclick="openPopup(this)">
                 </div>
                 
+                
+            <div class="ending-screen-section">
+                <h3>Écran de fin (Spoiler)</h3>
+                <div class="spoiler-container">
+                    <img src="ending_screens/The Legend of Zelda A Link to the Past and Four Swords (Jap) (Four Swords).png" 
+                         alt="Écran de fin - Four Swords (Spoiler)" 
+                         class="ending-screen-image blurred" 
+                         onclick="openPopup(this)">
+                    <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                </div>
+            </div>
+            
+            </div>
+            
+            <div id="tab1" class="tab-content" style="display:none">
+                <div class="game-header">
+                    <img src="game_images/The Legend of Zelda A Link to the Past and Four Swords (Jap).png" alt="The Legend of Zelda: A Link to the Past and Four Swords (J)" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <div class="game-info">
+                        <h2>The Legend of Zelda: A Link to the Past and Four Swords</h2>
+                        <table class="info-table">
+            
+                            <tr>
+                                <th>Développeur</th>
+                                <td>Flagship</td>
+                            </tr>
+                            <tr>
+                                <th>Éditeur</th>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <th>Dates de sortie</th>
+                                <td>
+                                    <!-- Version PC - Tableau -->
+                                    <table class="dates-table">
+                                        <tr>
+                                            <th>Europe</th>
+                                            <th>Amérique du Nord</th>
+                                            <th>Japon</th>
+                                        </tr>
+                                        <tr>
+                                            <td>28/03/2003</td>
+                                            <td>14/03/2003</td>
+                                            <td>02/12/2002</td>
+                                        </tr>
+                                    </table>
+                                    <!-- Version Mobile - Conteneur flex -->
+                                    <div class="dates-container">
+                                        <div class="date-item">
+                                            <span class="date-label">Europe</span>
+                                            <span class="date-value">28/03/2003</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Amérique</span>
+                                            <span class="date-value">14/03/2003</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Japon</span>
+                                            <span class="date-value">02/12/2002</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Genre(s)</th>
+                                <td>Action-aventure</td>
+                            </tr>
+                            <tr>
+                                <th>Mode(s) de jeu</th>
+                                <td>1 joueur</td>
+                            </tr>
+                            <tr>
+                                <th>État</th>
+                                <td>Jeu seul</td>
+                            </tr>
+                                <tr>
+                                    <th>Région</th>
+                                    <td>NTSC-J</td>
+                                </tr>
+                            <tr>
+                                <th>Prix d'achat</th>
+                                <td>36,70 €</td>
+                            </tr>
+                            <tr>
+                                <th>Date d'achat</th>
+                                <td>31/01/2026</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+            <div class="title-screen-section">
+                <h3>Écrans titres</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                    <div class="carousel-item" data-index="0">
+                        <div class="title-screen-label">Classique</div>
+                        <img src="title_screens/The Legend of Zelda A Link to the Past and Four Swords (Jap).png" 
+                             alt="Écran titre - Classique" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item" data-index="1">
+                        <div class="title-screen-label">Four Swords</div>
+                        <img src="title_screens/The Legend of Zelda A Link to the Past and Four Swords (Jap) (Four Swords).png" 
+                             alt="Écran titre - Four Swords" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span>
+                </div>
+            </div>
+            
                 
             <div class="ending-screen-section">
                 <h3>Écran de fin (Spoiler)</h3>
@@ -691,7 +819,7 @@
                 let endingScreenItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(230, 187, 91)'
+                    'tab0': 'rgb(230, 187, 91)', 'tab1': 'rgb(0, 5, 4)'
                 };
 
                 // Fonction pour réinitialiser les indices des carrousels
