@@ -11,7 +11,7 @@
                     max-width: 800px;
                     margin: 0 auto;
                     padding: 20px;
-                    background-color: #f5f5f5;
+                    background-color: rgb(255, 61, 45);
                     transition: background-color 0.5s;
                 }
                 .content-container {
@@ -580,7 +580,7 @@
                     
                 <button class="tab-button active" 
                         onclick="openTab(event, 'tab0')" 
-                        style="">
+                        style="background-color: rgb(255, 61, 45); color: white;">
                     Mother (NTSC-J)
                 </button>
                 
@@ -588,7 +588,7 @@
                 
             <div id="tab0" class="tab-content" >
                 <div class="game-header">
-                    <div class="game-cover" onclick="openPopup(this)"></div>
+                    <img src="game_images/Mother (Jap).png" alt="Mother (J)" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
                     <div class="game-info">
                         <h2>Mother</h2>
                         <table class="info-table">
@@ -660,7 +660,7 @@
                             </tr>
                             <tr>
                                 <th>Date d'achat</th>
-                                <td>12/02/2026</td>
+                                <td>02/12/2026</td>
                             </tr>
                         </table>
                     </div>
@@ -669,7 +669,7 @@
                 <div class="title-screen-section">
                     <h3>Écran titre</h3>
                     <img src="title_screens/Mother (Jap).png" 
-                         alt="Écran titre - Jap" 
+                         alt="Écran titre - Classique" 
                          class="title-screen-image" 
                          onclick="openPopup(this)">
                 </div>
@@ -692,7 +692,7 @@
                 let endingScreenItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': '#f5f5f5'
+                    'tab0': 'rgb(255, 61, 45)'
                 };
 
                 // Fonction pour réinitialiser les indices des carrousels
