@@ -570,6 +570,126 @@
                     background-color: rgba(0, 0, 0, 0.95);
                 }
                 
+                /* Styles pour le carrousel des vidéos */
+                .video-carousel-container {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    max-width: 100%;
+                    margin: 15px 0;
+                }
+
+                .video-carousel-wrapper {
+                    flex: 1;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .video-carousel-track {
+                    display: flex !important;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 20px;
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                .carousel-video-item {
+                    flex: 0 0 auto;
+                    width: 400px;
+                    max-width: 100%;
+                    text-align: center;
+                    position: relative;
+                }
+
+                .video-label {
+                    margin-bottom: 8px;
+                    font-size: 0.9em;
+                    color: #666;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .video-container {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    height: 0;
+                    overflow: hidden;
+                    max-width: 100%;
+                    background: #000;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                }
+
+                .video-container iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+
+                .video-carousel-container .carousel-arrow {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    transition: background-color 0.3s;
+                    flex-shrink: 0;
+                }
+
+                .video-carousel-container .carousel-arrow:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                .video-carousel-container .video-left-arrow {
+                    margin-right: 10px;
+                }
+
+                .video-carousel-container .video-right-arrow {
+                    margin-left: 10px;
+                }
+
+                .video-carousel-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-top: 15px;
+                }
+
+                .video-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .video-dot.active {
+                    background-color: #666;
+                }
+
+                @media (max-width: 768px) {
+                    .carousel-video-item {
+                        width: 300px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .carousel-video-item {
+                        width: 250px;
+                    }
+                }
+                
             </style>
         </head>
         <body>
@@ -684,9 +804,9 @@
             <div class="video-title">Let's Play</div>
             
             <div class="video-container">
-                <iframe src="https://www.youtube-nocookie.com/embed/YK1pppoDIKg?enablejsapi=1&origin=http://localhost&widget_referrer=http://localhost" 
+                <iframe src="https://www.youtube-nocookie.com/embed/YK1pppoDIKg?enablejsapi=1" 
                         frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
                 </iframe>
             </div>
@@ -719,6 +839,7 @@
                 function resetCarouselIndices() {
                     currentTitleScreenIndex = 0;
                     currentEndingScreenIndex = 0;
+                    currentVideoIndex = 0;
                 }
                 
                 function openTab(evt, tabName) {
@@ -740,18 +861,12 @@
 
                     // Changer la couleur de fond du body
                     document.body.style.backgroundColor = tabColors[tabName];
-                    
+    
                     // Réinitialiser les indices des carrousels
                     resetCarouselIndices();
                     
-                    // Réinitialiser les indices des carrousels
-                    resetCarouselIndices();
-                    
-                    // Réinitialiser les carrousels
-                    setTimeout(function() {
-                        initTitleScreenCarousel();
-                        initEndingScreenCarousel();
-                    }, 100);
+                    // Réinitialiser les carrousels après un court délai
+                    setTimeout(initAllCarousels, 50);
                 }
 
                 // Fonction pour ouvrir le popup d'image
@@ -867,19 +982,6 @@
                     img.alt = img.alt.replace('(Spoiler)', '(Spoiler révélé)');
                 }
 
-                // Initialiser le carrousel au chargement de la page
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Attendre que le DOM soit complètement chargé
-                    setTimeout(initTitleScreenCarousel, 100);
-                    
-                    // Réinitialiser aussi quand on change d'onglet
-                    document.addEventListener('click', function(e) {
-                        if (e.target.classList.contains('tab-button')) {
-                            setTimeout(initTitleScreenCarousel, 100);
-                        }
-                    });
-                });
-
                 // Fonction pour initialiser le carrousel des écrans de fin
                 function initEndingScreenCarousel() {
                     endingScreenItems = document.querySelectorAll('.ending-screen-section .carousel-item');
@@ -934,30 +1036,21 @@
                         updateEndingScreenCarousel();
                     }
                 }
-
-                // Initialiser tous les carrousels
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Initialiser les carrousels avec un léger délai
-                    setTimeout(function() {
-                        initTitleScreenCarousel();
-                        initEndingScreenCarousel();
-                    }, 100);
-                    
-                    // Réinitialiser quand on change d'onglet
-                    document.addEventListener('click', function(e) {
-                        if (e.target.classList.contains('tab-button')) {
-                            setTimeout(function() {
-                                initTitleScreenCarousel();
-                                initEndingScreenCarousel();
-                            }, 100);
-                        }
-                    });
-                });
                 
                 // Fonction pour initialiser le carrousel des vidéos
                 function initVideoCarousel() {
                     videoItems = document.querySelectorAll('.carousel-video-item');
-                    updateVideoCarousel();
+                    console.log('Vidéos trouvées:', videoItems.length); // Pour debug
+                    if (videoItems.length > 0) {
+                        // S'assurer que le track a la bonne largeur
+                        const track = document.querySelector('.video-carousel-track');
+                        if (track) {
+                            // Calculer la largeur totale du track
+                            const totalWidth = videoItems.length * (videoItems[0].offsetWidth + 20);
+                            track.style.width = totalWidth + 'px';
+                        }
+                        updateVideoCarousel();
+                    }
                 }
 
                 // Fonction pour mettre à jour le carrousel des vidéos
@@ -968,21 +1061,39 @@
                     if (!track) return;
                     
                     const itemWidth = videoItems[0].offsetWidth + 20; // Largeur + gap
+                    const maxIndex = videoItems.length - 1;
+                    
+                    // S'assurer que l'index est dans les limites
+                    if (currentVideoIndex > maxIndex) currentVideoIndex = maxIndex;
+                    if (currentVideoIndex < 0) currentVideoIndex = 0;
+                    
                     const translateX = -currentVideoIndex * itemWidth;
                     track.style.transform = 'translateX(' + translateX + 'px)';
                     
                     // Mettre à jour les points indicateurs
                     const dots = document.querySelectorAll('.video-dot');
                     dots.forEach((dot, index) => {
-                        dot.classList.toggle('active', index === currentVideoIndex);
+                        if (index === currentVideoIndex) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
                     });
                     
                     // Masquer/afficher les flèches
                     const leftArrow = document.querySelector('.video-left-arrow');
                     const rightArrow = document.querySelector('.video-right-arrow');
                     
-                    if (leftArrow) leftArrow.style.visibility = currentVideoIndex === 0 ? 'hidden' : 'visible';
-                    if (rightArrow) rightArrow.style.visibility = currentVideoIndex === videoItems.length - 1 ? 'hidden' : 'visible';
+                    if (leftArrow) {
+                        leftArrow.style.visibility = currentVideoIndex === 0 ? 'hidden' : 'visible';
+                        leftArrow.style.opacity = currentVideoIndex === 0 ? '0.3' : '1';
+                        leftArrow.disabled = currentVideoIndex === 0;
+                    }
+                    if (rightArrow) {
+                        rightArrow.style.visibility = currentVideoIndex === maxIndex ? 'hidden' : 'visible';
+                        rightArrow.style.opacity = currentVideoIndex === maxIndex ? '0.3' : '1';
+                        rightArrow.disabled = currentVideoIndex === maxIndex;
+                    }
                 }
 
                 // Fonction pour passer à la vidéo précédente
@@ -1008,17 +1119,37 @@
                         updateVideoCarousel();
                     }
                 }
+                
+                function initAllCarousels() {
+                    // Carrousels des écrans titre
+                    titleScreenItems = document.querySelectorAll('.carousel-item');
+                    if (titleScreenItems.length > 0) {
+                        updateTitleScreenCarousel();
+                    }
+                    
+                    // Carrousels des écrans de fin
+                    endingScreenItems = document.querySelectorAll('.ending-screen-section .carousel-item');
+                    if (endingScreenItems.length > 0) {
+                        updateEndingScreenCarousel();
+                    }
+                    
+                    // Carrousels des vidéos
+                    videoItems = document.querySelectorAll('.carousel-video-item');
+                    if (videoItems.length > 0) {
+                        updateVideoCarousel();
+                    }
+                }
 
-                // Initialiser tous les carrousels
+                // Initialisation unique au chargement
                 document.addEventListener('DOMContentLoaded', function() {
-                    setTimeout(function() {
-                        initVideoCarousel();
-                    }, 100);
+                    // Attendre que le DOM soit complètement chargé
+                    setTimeout(initAllCarousels, 200);
                     
                     // Réinitialiser quand on change d'onglet
                     document.addEventListener('click', function(e) {
                         if (e.target.classList.contains('tab-button')) {
-                            setTimeout(initVideoCarousel, 100);
+                            // Attendre que l'onglet soit affiché
+                            setTimeout(initAllCarousels, 200);
                         }
                     });
                 });
@@ -1029,13 +1160,14 @@
                         document.getElementsByClassName('tab-button')[0].click();
                     }
                 });
+
+                // Réinitialiser quand on change d'onglet (via l'écouteur de clic)
+                document.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('tab-button')) {
+                        setTimeout(initAllCarousels, 100);
+                    }
+                });
             </script>
-        
-            <div style="font-size:0.8em; color:#666; text-align:center; margin-top:30px; padding-top:15px; border-top:1px solid #eee;">
-                <sup>1</sup> Prix actualisés selon l'inflation (base 12/2025)<br>
-                <span style="font-size:0.9em;">Ce prix actualisé représente ce que vous devriez payer aujourd'hui pour ce jeu dans le même état à l'achat, en conservant le même pouvoir d'achat qu'à la date d'achat.<br>
-                Source : Insee, Indice des prix à la consommation base 2015 (y compris tabac) - Ensemble des ménages</span>
-            </div>
-            </body>
+        </body>
         </html>
             
