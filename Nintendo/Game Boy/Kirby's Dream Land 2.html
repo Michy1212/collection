@@ -686,6 +686,7 @@
                 </div>
             </div>
             
+                
             </div>
             
             </div>
@@ -701,6 +702,8 @@
                 let currentEndingScreenIndex = 0;
                 let titleScreenItems = [];
                 let endingScreenItems = [];
+                let currentVideoIndex = 0;
+                let videoItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
                     'tab0': 'rgb(188, 187, 191)'
@@ -941,6 +944,75 @@
                                 initTitleScreenCarousel();
                                 initEndingScreenCarousel();
                             }, 100);
+                        }
+                    });
+                });
+                
+                // Fonction pour initialiser le carrousel des vidéos
+                function initVideoCarousel() {
+                    videoItems = document.querySelectorAll('.carousel-video-item');
+                    updateVideoCarousel();
+                }
+
+                // Fonction pour mettre à jour le carrousel des vidéos
+                function updateVideoCarousel() {
+                    if (videoItems.length === 0) return;
+                    
+                    const track = document.querySelector('.video-carousel-track');
+                    if (!track) return;
+                    
+                    const itemWidth = videoItems[0].offsetWidth + 20; // Largeur + gap
+                    const translateX = -currentVideoIndex * itemWidth;
+                    track.style.transform = 'translateX(' + translateX + 'px)';
+                    
+                    // Mettre à jour les points indicateurs
+                    const dots = document.querySelectorAll('.video-dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentVideoIndex);
+                    });
+                    
+                    // Masquer/afficher les flèches
+                    const leftArrow = document.querySelector('.video-left-arrow');
+                    const rightArrow = document.querySelector('.video-right-arrow');
+                    
+                    if (leftArrow) leftArrow.style.visibility = currentVideoIndex === 0 ? 'hidden' : 'visible';
+                    if (rightArrow) rightArrow.style.visibility = currentVideoIndex === videoItems.length - 1 ? 'hidden' : 'visible';
+                }
+
+                // Fonction pour passer à la vidéo précédente
+                function prevVideo() {
+                    if (currentVideoIndex > 0) {
+                        currentVideoIndex--;
+                        updateVideoCarousel();
+                    }
+                }
+
+                // Fonction pour passer à la vidéo suivante
+                function nextVideo() {
+                    if (currentVideoIndex < videoItems.length - 1) {
+                        currentVideoIndex++;
+                        updateVideoCarousel();
+                    }
+                }
+
+                // Fonction pour aller à une vidéo spécifique
+                function goToVideo(index) {
+                    if (index >= 0 && index < videoItems.length) {
+                        currentVideoIndex = index;
+                        updateVideoCarousel();
+                    }
+                }
+
+                // Initialiser tous les carrousels
+                document.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(function() {
+                        initVideoCarousel();
+                    }, 100);
+                    
+                    // Réinitialiser quand on change d'onglet
+                    document.addEventListener('click', function(e) {
+                        if (e.target.classList.contains('tab-button')) {
+                            setTimeout(initVideoCarousel, 100);
                         }
                     });
                 });
