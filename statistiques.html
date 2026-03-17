@@ -103,11 +103,37 @@
                 border: 1px solid #ddd;
                 flex-shrink: 0;
             }
+            /* Style pour les cartes de résumé */
+            .stat-card ul {
+                max-height: 200px;
+                overflow-y: auto;
+            }
         </style>
     </head>
     <body>
         <a href="index.html" class="back-link">← Retour à l'accueil</a>
         <h1>Statistiques de la Collection</h1>
+
+        
+    <div class="summary-stats" style="display: flex; flex-wrap: wrap; gap: 20px; margin: 30px 0; justify-content: center;">
+        <div class="stat-card" style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 200px; text-align: center;">
+            <h3 style="margin: 0 0 10px 0; color: #666;">Total jeux</h3>
+            <p style="font-size: 2.5em; font-weight: bold; margin: 0; color: #2196F3;">1184</p>
+        </div>
+        <div class="stat-card" style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 250px;">
+            <h3 style="margin: 0 0 10px 0; color: #666;">Top 3 consoles</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+    <li style="margin: 5px 0;"><strong>PC</strong> : 165 jeux</li><li style="margin: 5px 0;"><strong>Switch</strong> : 119 jeux</li><li style="margin: 5px 0;"><strong>PS2</strong> : 79 jeux</li>
+            </ul>
+        </div>
+        <div class="stat-card" style="background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 300px;">
+            <h3 style="margin: 0 0 10px 0; color: #666;">Top 10 genres (hors principaux)</h3>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+    <li style="margin: 5px 0;"><strong>Plateformes</strong> : 324 jeux</li><li style="margin: 5px 0;"><strong>Réflexion</strong> : 104 jeux</li><li style="margin: 5px 0;"><strong>J-RPG</strong> : 86 jeux</li><li style="margin: 5px 0;"><strong>Sport</strong> : 85 jeux</li><li style="margin: 5px 0;"><strong>Course</strong> : 80 jeux</li><li style="margin: 5px 0;"><strong>Combat</strong> : 63 jeux</li><li style="margin: 5px 0;"><strong>Puzzle</strong> : 44 jeux</li><li style="margin: 5px 0;"><strong>Party game</strong> : 41 jeux</li><li style="margin: 5px 0;"><strong>Tir</strong> : 38 jeux</li><li style="margin: 5px 0;"><strong>Action-RPG</strong> : 38 jeux</li>
+            </ul>
+        </div>
+    </div>
+    
 
         <div class="stats-grid">
             <div class="chart-container">
