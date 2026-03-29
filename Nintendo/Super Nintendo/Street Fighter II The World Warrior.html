@@ -806,6 +806,17 @@
                 </div>
                 
                 <div class="carousel-item spoiler-item" data-index="1">
+                    <div class="ending-screen-label">Ken (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Street Fighter II The World Warrior (Ken).png" 
+                             alt="Écran de fin - Ken (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                <div class="carousel-item spoiler-item" data-index="2">
                     <div class="ending-screen-label">Ryu (Spoiler)</div>
                     <div class="spoiler-container">
                         <img src="ending_screens/Street Fighter II The World Warrior (Ryu).png" 
@@ -821,7 +832,7 @@
                     <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
                 </div>
                 <div class="carousel-dots">
-                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
+                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span><span class="ending-dot" onclick="goToEndingScreen(2)"></span>
                 </div>
             </div>
             

@@ -780,7 +780,7 @@
                             </tr>
                             <tr>
                                 <th>Date d'achat</th>
-                                <td>01/02/2026</td>
+                                <td>02/01/2026</td>
                             </tr>
                         </table>
                     </div>
@@ -796,17 +796,58 @@
                 
                 
             <div class="ending-screen-section">
-                <h3>Écran de fin (Spoiler)</h3>
-                <div class="spoiler-container">
-                    <img src="ending_screens/Castlevania II Simon's Quest (Mauvaise fin - 8 jours ou plus).png" 
-                         alt="Écran de fin - Mauvaise fin - 8 jours ou plus (Spoiler)" 
-                         class="ending-screen-image blurred" 
-                         onclick="openPopup(this)">
-                    <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                <h3>Écrans de fin (Spoilers)</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                <div class="carousel-item spoiler-item" data-index="0">
+                    <div class="ending-screen-label">Bonne fin - moins de 8 jours (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Castlevania II Simon's Quest (Bonne fin - moins de 8 jours).png" 
+                             alt="Écran de fin - Bonne fin - moins de 8 jours (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                <div class="carousel-item spoiler-item" data-index="1">
+                    <div class="ending-screen-label">Mauvaise fin - 8 jours ou plus (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Castlevania II Simon's Quest (Mauvaise fin - 8 jours ou plus).png" 
+                             alt="Écran de fin - Mauvaise fin - 8 jours ou plus (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
                 </div>
             </div>
             
                 
+        <div class="videos-section">
+            <h3>Vidéo</h3>
+            <div class="video-title">Découverte</div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/KcJkIKfvmIg?enablejsapi=1" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+        </div>
+        
             </div>
             
             </div>
