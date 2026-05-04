@@ -710,6 +710,12 @@
                     The Legend of Zelda: Oracle of Ages (NTSC-J)
                 </button>
                 
+                <button class="tab-button " 
+                        onclick="openTab(event, 'tab2')" 
+                        style="background-color: rgb(47, 66, 92); color: white;">
+                    The Legend of Zelda: Oracle of Ages (NTSC-U)
+                </button>
+                
                 </div>
                 
             <div id="tab0" class="tab-content" >
@@ -1238,6 +1244,273 @@
     
             </div>
             
+            <div id="tab2" class="tab-content" style="display:none">
+                <div class="game-header">
+                    <img src="game_images/The Legend of Zelda Oracle of Ages (US).png" alt="The Legend of Zelda: Oracle of Ages (U)" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <div class="game-info">
+                        <h2>The Legend of Zelda: Oracle of Ages</h2>
+                        <table class="info-table">
+            
+                            <tr>
+                                <th>Développeur</th>
+                                <td>Flagship</td>
+                            </tr>
+                            <tr>
+                                <th>Éditeur</th>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <th>Dates de sortie</th>
+                                <td>
+                                    <!-- Version PC - Tableau -->
+                                    <table class="dates-table">
+                                        <tr>
+                                            <th>Europe</th>
+                                            <th>Amérique du Nord</th>
+                                            <th>Japon</th>
+                                        </tr>
+                                        <tr>
+                                            <td>05/10/2001</td>
+                                            <td>14/05/2001</td>
+                                            <td>27/02/2001</td>
+                                        </tr>
+                                    </table>
+                                    <!-- Version Mobile - Conteneur flex -->
+                                    <div class="dates-container">
+                                        <div class="date-item">
+                                            <span class="date-label">Europe</span>
+                                            <span class="date-value">05/10/2001</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Amérique</span>
+                                            <span class="date-value">14/05/2001</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Japon</span>
+                                            <span class="date-value">27/02/2001</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Genre(s)</th>
+                                <td>Action-aventure</td>
+                            </tr>
+                            <tr>
+                                <th>Mode(s) de jeu</th>
+                                <td>1 joueur</td>
+                            </tr>
+                            <tr>
+                                <th>État</th>
+                                <td>Jeu seul</td>
+                            </tr>
+                                <tr>
+                                    <th>Région</th>
+                                    <td>NTSC-U</td>
+                                </tr>
+                            <tr>
+                                <th>Code jeu</th>
+                                <td>CGB-AZ8E-USA</td>
+                            </tr>
+                            <tr>
+                                <th>Prix d'achat</th>
+                                <td>85,55 €</td>
+                            </tr>
+                            <tr>
+                                <th>Date d'achat</th>
+                                <td>17/04/2026</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="title-screen-section">
+                    <h3>Écran titre</h3>
+                    <img src="title_screens/The Legend of Zelda Oracle of Ages (US).png" 
+                         alt="Écran titre - Classique" 
+                         class="title-screen-image" 
+                         onclick="openPopup(this)">
+                </div>
+                
+                
+            <div class="ending-screen-section">
+                <h3>Écrans de fin (Spoilers)</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                <div class="carousel-item spoiler-item" data-index="0">
+                    <div class="ending-screen-label">Fin (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/The Legend of Zelda Oracle of Ages (US).png" 
+                             alt="Écran de fin - Fin (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                <div class="carousel-item spoiler-item" data-index="1">
+                    <div class="ending-screen-label">Jeux liés (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/The Legend of Zelda Oracle of Ages (US) (Jeux liés).png" 
+                             alt="Écran de fin - Jeux liés (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
+                </div>
+            </div>
+            
+                
+    <div class="videos-section">
+        <h3>Vidéos</h3>
+        <div class="video-carousel-container">
+            <button class="carousel-arrow video-left-arrow" onclick="prevVideo()">←</button>
+            <div class="video-carousel-wrapper">
+                <div class="video-carousel-track">
+                    
+            <div class="carousel-video-item" data-index="0">
+                <div class="video-label">Let's Play 1</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/qPjv1FFS0Vs?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="1">
+                <div class="video-label">Let's Play 2</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/xRK55MBYCro?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="2">
+                <div class="video-label">Let's Play 3</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/L_uKsr4hKX8?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="3">
+                <div class="video-label">Let's Play 4</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/OiXtLfBEq04?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="4">
+                <div class="video-label">Let's Play 5</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/amx5PavTM44?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="5">
+                <div class="video-label">Let's Play 6</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/QgyCiY_2ndU?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="6">
+                <div class="video-label">Let's Play 7</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/OC4zuwI5HFc?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="7">
+                <div class="video-label">Let's Play 8</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/iCLEonDGAHQ?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="8">
+                <div class="video-label">Let's Play 9</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/9tRmwjZVW-U?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="9">
+                <div class="video-label">Let's Play 10</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/F3UA48AnQDY?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="10">
+                <div class="video-label">Let's Play - Fin des jeux liés</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/p4XbP4nkNnQ?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+                </div>
+            </div>
+            <button class="carousel-arrow video-right-arrow" onclick="nextVideo()">→</button>
+        </div>
+        <div class="video-carousel-dots">
+            <span class="video-dot" onclick="goToVideo(0)"></span><span class="video-dot" onclick="goToVideo(1)"></span><span class="video-dot" onclick="goToVideo(2)"></span><span class="video-dot" onclick="goToVideo(3)"></span><span class="video-dot" onclick="goToVideo(4)"></span><span class="video-dot" onclick="goToVideo(5)"></span><span class="video-dot" onclick="goToVideo(6)"></span><span class="video-dot" onclick="goToVideo(7)"></span><span class="video-dot" onclick="goToVideo(8)"></span><span class="video-dot" onclick="goToVideo(9)"></span><span class="video-dot" onclick="goToVideo(10)"></span>
+        </div>
+    </div>
+    
+            </div>
+            
             </div>
 
             <!-- Popup pour les images -->
@@ -1255,7 +1528,7 @@
                 let videoItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(65, 85, 110)', 'tab1': 'rgb(94, 132, 227)'
+                    'tab0': 'rgb(65, 85, 110)', 'tab1': 'rgb(94, 132, 227)', 'tab2': 'rgb(47, 66, 92)'
                 };
 
                 // Fonction pour réinitialiser les indices des carrousels
