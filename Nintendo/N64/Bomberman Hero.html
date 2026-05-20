@@ -4,14 +4,14 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Castlevania - Détails</title>
+            <title>Bomberman Hero - Détails</title>
             <style>
                 body {
                     font-family: Arial, sans-serif;
                     max-width: 800px;
                     margin: 0 auto;
                     padding: 20px;
-                    background-color: rgb(2, 2, 4);
+                    background-color: rgb(0, 0, 0);
                     transition: background-color 0.5s;
                 }
                 .content-container {
@@ -695,31 +695,31 @@
         <body>
             <div class="content-container">
                 <a href="index.html" class="back-link">← Retour à N64</a>
-                <h1>Castlevania</h1>
+                <h1>Bomberman Hero</h1>
                 <div class="tab-buttons">
                     
                 <button class="tab-button active" 
                         onclick="openTab(event, 'tab0')" 
-                        style="background-color: rgb(2, 2, 4); color: white;">
-                    Castlevania (PAL)
+                        style="background-color: rgb(0, 0, 0); color: white;">
+                    Bomberman Hero (PAL)
                 </button>
                 
                 </div>
                 
             <div id="tab0" class="tab-content" >
                 <div class="game-header">
-                    <img src="game_images/Castlevania.png" alt="Castlevania" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <img src="game_images/Bomberman Hero.png" alt="Bomberman Hero" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
                     <div class="game-info">
-                        <h2>Castlevania</h2>
+                        <h2>Bomberman Hero</h2>
                         <table class="info-table">
             
                             <tr>
                                 <th>Développeur</th>
-                                <td>Konami CEK</td>
+                                <td>Hudson Soft, AI</td>
                             </tr>
                             <tr>
                                 <th>Éditeur</th>
-                                <td>Konami</td>
+                                <td>Nintendo</td>
                             </tr>
                             <tr>
                                 <th>Dates de sortie</th>
@@ -732,24 +732,24 @@
                                             <th>Japon</th>
                                         </tr>
                                         <tr>
-                                            <td>14/05/1999</td>
-                                            <td>26/01/1999</td>
-                                            <td>11/03/1999</td>
+                                            <td>23/10/1998</td>
+                                            <td>31/08/1998</td>
+                                            <td>30/08/1998</td>
                                         </tr>
                                     </table>
                                     <!-- Version Mobile - Conteneur flex -->
                                     <div class="dates-container">
                                         <div class="date-item">
                                             <span class="date-label">Europe</span>
-                                            <span class="date-value">14/05/1999</span>
+                                            <span class="date-value">23/10/1998</span>
                                         </div>
                                         <div class="date-item">
                                             <span class="date-label">Amérique</span>
-                                            <span class="date-value">26/01/1999</span>
+                                            <span class="date-value">31/08/1998</span>
                                         </div>
                                         <div class="date-item">
                                             <span class="date-label">Japon</span>
-                                            <span class="date-value">11/03/1999</span>
+                                            <span class="date-value">30/08/1998</span>
                                         </div>
                                     </div>
                                 </td>
@@ -772,15 +772,15 @@
                                 </tr>
                             <tr>
                                 <th>Code jeu</th>
-                                <td>NUS-ND3P-EUR</td>
+                                <td>NUS-NBDP-EUR</td>
                             </tr>
                             <tr>
                                 <th>Prix d'achat</th>
-                                <td>39,00 €</td>
+                                <td>24,99 €</td>
                             </tr>
                             <tr>
                                 <th>Date d'achat</th>
-                                <td>28/04/2026</td>
+                                <td>15/05/2026</td>
                             </tr>
                         </table>
                     </div>
@@ -788,51 +788,13 @@
                 
                 <div class="title-screen-section">
                     <h3>Écran titre</h3>
-                    <img src="title_screens/Castlevania.png" 
+                    <img src="title_screens/Bomberman Hero.png" 
                          alt="Écran titre - Classique" 
                          class="title-screen-image" 
                          onclick="openPopup(this)">
                 </div>
                 
                 
-            <div class="ending-screen-section">
-                <h3>Écrans de fin (Spoilers)</h3>
-                <div class="carousel-container">
-                    <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()">←</button>
-                    <div class="carousel-wrapper">
-                        <div class="carousel-track">
-                            
-                <div class="carousel-item spoiler-item" data-index="0">
-                    <div class="ending-screen-label">Fin (Spoiler)</div>
-                    <div class="spoiler-container">
-                        <img src="ending_screens/Castlevania.png" 
-                             alt="Écran de fin - Fin (Spoiler)" 
-                             class="ending-screen-image blurred" 
-                             onclick="openPopup(this)">
-                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
-                    </div>
-                </div>
-                
-                <div class="carousel-item spoiler-item" data-index="1">
-                    <div class="ending-screen-label">Reinhardt - moins de 10 jours (Spoiler)</div>
-                    <div class="spoiler-container">
-                        <img src="ending_screens/Castlevania (Reinhardt - moins de 10 jours).png" 
-                             alt="Écran de fin - Reinhardt - moins de 10 jours (Spoiler)" 
-                             class="ending-screen-image blurred" 
-                             onclick="openPopup(this)">
-                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
-                    </div>
-                </div>
-                
-                        </div>
-                    </div>
-                    <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
-                </div>
-                <div class="carousel-dots">
-                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
-                </div>
-            </div>
-            
                 
             </div>
             
@@ -853,7 +815,7 @@
                 let videoItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(2, 2, 4)'
+                    'tab0': 'rgb(0, 0, 0)'
                 };
 
                 // Fonction pour réinitialiser les indices des carrousels
