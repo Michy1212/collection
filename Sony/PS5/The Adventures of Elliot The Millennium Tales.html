@@ -756,7 +756,7 @@
                             </tr>
                             <tr>
                                 <th>Genre(s)</th>
-                                <td>Jeu de rôle, Action-RPG</td>
+                                <td>Action, Jeu de rôle, Action-RPG</td>
                             </tr>
                             <tr>
                                 <th>Mode(s) de jeu</th>
@@ -795,7 +795,105 @@
                 </div>
                 
                 
+            <div class="ending-screen-section">
+                <h3>Écrans de fin (Spoilers)</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                <div class="carousel-item spoiler-item" data-index="0">
+                    <div class="ending-screen-label">Bad Ending (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/The Adventures of Elliot The Millennium Tales (Bad Ending).png" 
+                             alt="Écran de fin - Bad Ending (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
                 
+                <div class="carousel-item spoiler-item" data-index="1">
+                    <div class="ending-screen-label">Good Ending (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/The Adventures of Elliot The Millennium Tales (Good Ending).png" 
+                             alt="Écran de fin - Good Ending (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span>
+                </div>
+            </div>
+            
+                
+    <div class="videos-section">
+        <h3>Vidéos</h3>
+        <div class="video-carousel-container">
+            <button class="carousel-arrow video-left-arrow" onclick="prevVideo()">←</button>
+            <div class="video-carousel-wrapper">
+                <div class="video-carousel-track">
+                    
+            <div class="carousel-video-item" data-index="0">
+                <div class="video-label">Découverte - 1</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/DvsHbTf1GIc?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="1">
+                <div class="video-label">Découverte - 2</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/eBu8k0mYwDY?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="2">
+                <div class="video-label">Découverte - 3</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/NZzwB_aibVc?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="carousel-video-item" data-index="3">
+                <div class="video-label">Découverte - 4</div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube-nocookie.com/embed/EsV4zYuNw9g?enablejsapi=1" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+                </div>
+            </div>
+            <button class="carousel-arrow video-right-arrow" onclick="nextVideo()">→</button>
+        </div>
+        <div class="video-carousel-dots">
+            <span class="video-dot" onclick="goToVideo(0)"></span><span class="video-dot" onclick="goToVideo(1)"></span><span class="video-dot" onclick="goToVideo(2)"></span><span class="video-dot" onclick="goToVideo(3)"></span>
+        </div>
+    </div>
+    
             </div>
             
             </div>
