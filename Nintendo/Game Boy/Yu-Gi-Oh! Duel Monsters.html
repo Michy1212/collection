@@ -1,0 +1,1162 @@
+
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Yu-Gi-Oh! Duel Monsters - Détails</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: rgb(3, 4, 4);
+                    transition: background-color 0.5s;
+                }
+                .content-container {
+                    background-color: white;
+                    border-radius: 8px;
+                    padding: 20px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                }
+                h1 {
+                    color: #333;
+                }
+                h2 {
+                    color: #444;
+                    margin-top: 0;
+                }
+                h3 {
+                    color: #555;
+                    margin: 20px 0 10px 0;
+                    border-bottom: 1px solid #eee;
+                    padding-bottom: 5px;
+                }
+                .back-link {
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    color: #0066cc;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+                .tab-buttons {
+                    display: flex;
+                    margin-bottom: 15px;
+                    border-bottom: 1px solid #ddd;
+                    flex-wrap: wrap;
+                    gap: 5px;
+                }
+                .tab-button {
+                    border: none;
+                    padding: 10px 15px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    border-radius: 5px 5px 0 0;
+                    background-color: #f1f1f1;
+                    color: #333;
+                    flex: 1;
+                    min-width: 120px;
+                }
+                .tab-button:hover {
+                    opacity: 0.8;
+                }
+                .tab-button.active {
+                    color: white;
+                    position: relative;
+                }
+                .tab-button.active::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    width: 100%;
+                    height: 6px;
+                    background-color: inherit;
+                }
+                .info-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 20px;
+                }
+                .info-table th, .info-table td {
+                    padding: 8px 12px;
+                    text-align: left;
+                    border-bottom: 1px solid #ddd;
+                }
+                .info-table th {
+                    background-color: #f2f2f2;
+                    width: 30%;
+                }
+                /* Style pour le tableau des dates (PC) */
+                .dates-table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 10px;
+                }
+                .dates-table th, .dates-table td {
+                    padding: 8px 12px;
+                    text-align: center;
+                    border: 1px solid #ddd;
+                }
+                .dates-table th {
+                    background-color: #f2f2f2;
+                }
+                /* Style pour le conteneur des dates (mobile) */
+                .dates-container {
+                    display: none;
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 10px;
+                }
+                .date-item {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 8px;
+                    background-color: #f9f9f9;
+                    border-radius: 4px;
+                }
+                .date-label {
+                    font-weight: bold;
+                    color: #666;
+                }
+                .date-value {
+                    color: #333;
+                }
+                .game-header {
+                    display: flex;
+                    gap: 20px;
+                    margin-bottom: 20px;
+                }
+                .game-cover {
+                    width: 200px;
+                    height: 280px;
+                    object-fit: contain;
+                    border: 1px solid #ddd;
+                    background-color: #f5f5f5;
+                    flex-shrink: 0;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                }
+                .game-cover:hover {
+                    transform: scale(1.05);
+                }
+                .game-info {
+                    flex: 1;
+                    min-width: 0;
+                }
+                /* Styles pour la section écran titre */
+                .title-screen-section {
+                    margin-top: 30px;
+                    padding-top: 20px;
+                    border-top: 1px solid #eee;
+                }
+                .title-screen-container {
+                    text-align: center;
+                }
+                .title-screen-image {
+                    max-width: 100%;
+                    max-height: 400px;
+                    object-fit: contain;
+                    border: 1px solid #ddd;
+                    background-color: #f5f5f5;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                }
+                .title-screen-image:hover {
+                    transform: scale(1.02);
+                }
+                .title-screens-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                .title-screen-item {
+                    margin-bottom: 20px;
+                }
+
+                .title-screen-item h4 {
+                    margin: 0 0 10px 0;
+                    color: #666;
+                    font-size: 0.9em;
+                }
+
+                .spoiler-container {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                .spoiler-container .blurred {
+                    filter: blur(20px);
+                    transition: filter 0.3s;
+                }
+
+                .spoiler-container .revealed {
+                    filter: none;
+                }
+
+                .spoiler-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 10px 20px;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    z-index: 2;
+                }
+
+                .spoiler-button:hover {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+                
+                /* Styles pour le carrousel des écrans titres */
+                .carousel-container {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    max-width: 100%;
+                    margin: 15px 0;
+                }
+
+                .carousel-wrapper {
+                    flex: 1;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .carousel-track {
+                    display: flex;
+                    transition: transform 0.5s ease-in-out;
+                    gap: 20px;
+                    padding: 10px 0;
+                }
+
+                .carousel-item {
+                    flex: 0 0 auto;
+                    width: 200px;
+                    text-align: center;
+                    position: relative;
+                }
+
+                .carousel-arrow {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    transition: background-color 0.3s;
+                }
+
+                .carousel-arrow:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                .carousel-arrow.left-arrow {
+                    margin-right: 10px;
+                }
+
+                .carousel-arrow.right-arrow {
+                    margin-left: 10px;
+                }
+
+                .title-screen-label {
+                    margin-bottom: 8px;
+                    font-size: 0.9em;
+                    color: #666;
+                    font-weight: bold;
+                }
+
+                /* Styles pour les spoilers dans le carrousel */
+                .spoiler-item .title-screen-label {
+                    color: #ff6b6b;
+                }
+
+                .spoiler-container {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                }
+
+                .spoiler-container .blurred {
+                    filter: blur(20px);
+                    transition: filter 0.3s;
+                    cursor: pointer;
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                }
+
+                .spoiler-container .revealed {
+                    filter: none;
+                }
+
+                .spoiler-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 8px 16px;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    z-index: 2;
+                    font-size: 0.9em;
+                }
+
+                .spoiler-button:hover {
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+
+                /* Images normales dans le carrousel */
+                .carousel-item img.title-screen-image {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                    border: 1px solid #ddd;
+                    background-color: #f5f5f5;
+                }
+
+                .carousel-item img.title-screen-image:hover {
+                    transform: scale(1.05);
+                }
+
+                /* Points indicateurs */
+                .carousel-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-top: 15px;
+                }
+
+                .dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .dot.active {
+                    background-color: #666;
+                }
+                
+                /* Styles pour le popup */
+                .popup {
+                    display: none;
+                    position: fixed;
+                    z-index: 1000;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,0.9);
+                    animation: fadeIn 0.3s;
+                }
+                .popup-content {
+                    margin: auto;
+                    display: block;
+                    max-width: 90%;
+                    max-height: 90%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: contain;
+                }
+                .close {
+                    position: absolute;
+                    top: 20px;
+                    right: 35px;
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    z-index: 1001;
+                }
+                .close:hover {
+                    color: #ccc;
+                }
+                @keyframes fadeIn {
+                    from { opacity: 0; }
+                    to { opacity: 1; }
+                }
+                
+                /* Media Queries pour le responsive */
+                @media (max-width: 768px) {
+                    body {
+                        padding: 10px;
+                    }
+                    .content-container {
+                        padding: 15px;
+                    }
+                    .game-header {
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+                    .game-cover {
+                        width: 100%;
+                        height: auto;
+                        max-height: 300px;
+                        margin: 0 auto;
+                    }
+                    .game-info {
+                        width: 100%;
+                    }
+                    .tab-buttons {
+                        flex-direction: column;
+                    }
+                    .tab-button {
+                        border-radius: 5px;
+                        margin-bottom: 5px;
+                        min-width: auto;
+                    }
+                    .tab-button.active::after {
+                        display: none;
+                    }
+                    /* Sur mobile: cacher le tableau, afficher le conteneur flex */
+                    .dates-table {
+                        display: none;
+                    }
+                    .dates-container {
+                        display: flex;
+                    }
+                    /* Ajustement du tableau principal */
+                    .info-table th, .info-table td {
+                        padding: 6px 8px;
+                        font-size: 0.9em;
+                    }
+                    .info-table th {
+                        width: 35%;
+                    }
+                    .title-screen-image {
+                        max-height: 300px;
+                    }
+                }
+                
+                /* Pour les très petits écrans */
+                @media (max-width: 480px) {
+                    .info-table th, .info-table td {
+                        display: block;
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                    .info-table th {
+                        background-color: #e9e9e9;
+                        border-bottom: none;
+                    }
+                    .info-table tr {
+                        display: block;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid #ddd;
+                        padding-bottom: 10px;
+                    }
+                    .info-table tr:last-child {
+                        border-bottom: none;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                    }
+                    .title-screen-image {
+                        max-height: 250px;
+                    }
+                }
+                
+                /* Pour PC - on affiche le tableau et on cache le conteneur flex */
+                @media (min-width: 769px) {
+                    .dates-container {
+                        display: none;
+                    }
+                    .dates-table {
+                        display: table;
+                    }
+                }
+                /* Styles pour la section écrans de fin */
+                .ending-screen-section {
+                    margin-top: 30px;
+                    padding-top: 20px;
+                    border-top: 1px solid #eee;
+                }
+
+                .ending-screen-label {
+                    margin-bottom: 8px;
+                    font-size: 0.9em;
+                    color: #ff6b6b; /* Rouge pour indiquer un spoiler */
+                    font-weight: bold;
+                }
+
+                .ending-screen-image {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                    cursor: pointer;
+                    transition: transform 0.2s;
+                    border: 1px solid #ddd;
+                    background-color: #f5f5f5;
+                }
+
+                .ending-screen-image:hover {
+                    transform: scale(1.05);
+                }
+
+                /* Points indicateurs spécifiques aux écrans de fin */
+                .ending-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ff6b6b; /* Rouge pour les spoilers */
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .ending-dot.active {
+                    background-color: #ff3b3b; /* Rouge plus foncé */
+                }
+                
+                .spoiler-item .title-screen-label,
+                .spoiler-item .ending-screen-label {
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    margin: 0;
+                    padding: 0;
+                    transition: opacity 0.3s, height 0.3s;
+                }
+
+                .spoiler-item.revealed .title-screen-label,
+                .spoiler-item.revealed .ending-screen-label {
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                    margin-bottom: 8px;
+                }
+
+                /* Ajustement pour le bouton spoiler */
+                .spoiler-button {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 12px 24px;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    font-weight: bold;
+                    z-index: 2;
+                    font-size: 1em;
+                    white-space: nowrap;
+                }
+
+                .spoiler-button:hover {
+                    background-color: rgba(0, 0, 0, 0.95);
+                }
+                
+                /* Styles pour le carrousel des vidéos */
+                .video-carousel-container {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    max-width: 100%;
+                    margin: 15px 0;
+                }
+
+                .video-carousel-wrapper {
+                    flex: 1;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .video-carousel-track {
+                    display: flex !important;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 20px;
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                .carousel-video-item {
+                    flex: 0 0 auto;
+                    width: 400px;
+                    max-width: 100%;
+                    text-align: center;
+                    position: relative;
+                }
+
+                .video-label {
+                    margin-bottom: 8px;
+                    font-size: 0.9em;
+                    color: #666;
+                    font-weight: bold;
+                    text-align: center;
+                }
+
+                .video-container {
+                    position: relative;
+                    padding-bottom: 56.25%;
+                    height: 0;
+                    overflow: hidden;
+                    max-width: 100%;
+                    background: #000;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                }
+
+                .video-container iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+
+                .video-carousel-container .carousel-arrow {
+                    background-color: rgba(0, 0, 0, 0.5);
+                    color: white;
+                    border: none;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    transition: background-color 0.3s;
+                    flex-shrink: 0;
+                }
+
+                .video-carousel-container .carousel-arrow:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                .video-carousel-container .video-left-arrow {
+                    margin-right: 10px;
+                }
+
+                .video-carousel-container .video-right-arrow {
+                    margin-left: 10px;
+                }
+
+                .video-carousel-dots {
+                    display: flex;
+                    justify-content: center;
+                    gap: 8px;
+                    margin-top: 15px;
+                }
+
+                .video-dot {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #ccc;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+
+                .video-dot.active {
+                    background-color: #666;
+                }
+
+                @media (max-width: 768px) {
+                    .carousel-video-item {
+                        width: 300px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .carousel-video-item {
+                        width: 250px;
+                    }
+                }
+                
+            </style>
+        </head>
+        <body>
+            <div class="content-container">
+                <a href="index.html" class="back-link">← Retour à Game Boy</a>
+                <h1>Yu-Gi-Oh! Duel Monsters</h1>
+                <div class="tab-buttons">
+                    
+                <button class="tab-button active" 
+                        onclick="openTab(event, 'tab0')" 
+                        style="background-color: rgb(3, 4, 4); color: white;">
+                    Yu-Gi-Oh! Duel Monsters (NTSC-J)
+                </button>
+                
+                </div>
+                
+            <div id="tab0" class="tab-content" >
+                <div class="game-header">
+                    <img src="game_images/Yu-Gi-Oh%21%20Duel%20Monsters%20%28Jap%29.png" alt="Yu-Gi-Oh! Duel Monsters (J)" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <div class="game-info">
+                        <h2>Yu-Gi-Oh! Duel Monsters</h2>
+                        <table class="info-table">
+            
+                            <tr>
+                                <th>Développeur</th>
+                                <td>Konami</td>
+                            </tr>
+                            <tr>
+                                <th>Éditeur</th>
+                                <td>Konami</td>
+                            </tr>
+                            <tr>
+                                <th>Dates de sortie</th>
+                                <td>
+                                    <!-- Version PC - Tableau -->
+                                    <table class="dates-table">
+                                        <tr>
+                                            <th>Europe</th>
+                                            <th>Amérique du Nord</th>
+                                            <th>Japon</th>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>16/12/1998</td>
+                                        </tr>
+                                    </table>
+                                    <!-- Version Mobile - Conteneur flex -->
+                                    <div class="dates-container">
+                                        <div class="date-item">
+                                            <span class="date-label">Europe</span>
+                                            <span class="date-value">-</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Amérique</span>
+                                            <span class="date-value">-</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Japon</span>
+                                            <span class="date-value">16/12/1998</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Genre(s)</th>
+                                <td>Stratégie, Stratégie au tour par tour</td>
+                            </tr>
+                            <tr>
+                                <th>Mode(s) de jeu</th>
+                                <td>1 joueur, Multijoueur (hors ligne)</td>
+                            </tr>
+                            <tr>
+                                <th>État</th>
+                                <td>Complet</td>
+                            </tr>
+                                <tr>
+                                    <th>Région</th>
+                                    <td>NTSC-J</td>
+                                </tr>
+                            <tr>
+                                <th>Code jeu</th>
+                                <td>DMG-AYUJ-JPN</td>
+                            </tr>
+                            <tr>
+                                <th>Prix d'achat</th>
+                                <td>26,99 €</td>
+                            </tr>
+                            <tr>
+                                <th>Date d'achat</th>
+                                <td>03/08/2026</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="title-screen-section">
+                    <h3>Écran titre</h3>
+                    <img src="title_screens/Yu-Gi-Oh%21%20Duel%20Monsters%20%28Jap%29.png" 
+                         alt="Écran titre - Classique" 
+                         class="title-screen-image" 
+                         onclick="openPopup(this)">
+                </div>
+                
+                
+                
+            </div>
+            
+            </div>
+
+            <!-- Popup pour les images -->
+            <div id="imagePopup" class="popup">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <img class="popup-content" id="popupImage">
+            </div>
+
+            <script>
+                let currentTitleScreenIndex = 0;
+                let currentEndingScreenIndex = 0;
+                let titleScreenItems = [];
+                let endingScreenItems = [];
+                let currentVideoIndex = 0;
+                let videoItems = [];
+                // Stocker les couleurs de chaque onglet
+                const tabColors = {
+                    'tab0': 'rgb(3, 4, 4)'
+                };
+
+                // Fonction pour réinitialiser les indices des carrousels
+                function resetCarouselIndices() {
+                    currentTitleScreenIndex = 0;
+                    currentEndingScreenIndex = 0;
+                    currentVideoIndex = 0;
+                }
+                
+                function openTab(evt, tabName) {
+                    // Masquer tous les contenus d'onglet
+                    var tabContents = document.getElementsByClassName("tab-content");
+                    for (var i = 0; i < tabContents.length; i++) {
+                        tabContents[i].style.display = "none";
+                    }
+
+                    // Désactiver tous les boutons d'onglet
+                    var tabButtons = document.getElementsByClassName("tab-button");
+                    for (var i = 0; i < tabButtons.length; i++) {
+                        tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+                    }
+
+                    // Afficher l'onglet actuel et activer le bouton
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.className += " active";
+
+                    // Changer la couleur de fond du body
+                    document.body.style.backgroundColor = tabColors[tabName];
+    
+                    // Réinitialiser les indices des carrousels
+                    resetCarouselIndices();
+                    
+                    // Réinitialiser les carrousels après un court délai
+                    setTimeout(initAllCarousels, 50);
+                }
+
+                // Fonction pour ouvrir le popup d'image
+                function openPopup(imgElement) {
+                    var popup = document.getElementById("imagePopup");
+                    var popupImg = document.getElementById("popupImage");
+                    popup.style.display = "block";
+                    popupImg.src = imgElement.src;
+                }
+
+                // Fonction pour fermer le popup
+                function closePopup() {
+                    document.getElementById("imagePopup").style.display = "none";
+                }
+
+                // Fermer le popup en cliquant en dehors de l'image
+                document.getElementById("imagePopup").addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closePopup();
+                    }
+                });
+                    
+                // Fonction pour initialiser le carrousel
+                function initTitleScreenCarousel() {
+                    titleScreenItems = document.querySelectorAll('.carousel-item');
+                    updateTitleScreenCarousel();
+                }
+
+                // Fonction pour mettre à jour le carrousel
+                function updateTitleScreenCarousel() {
+                    if (titleScreenItems.length === 0) return;
+                    
+                    const track = document.querySelector('.carousel-track');
+                    const itemWidth = titleScreenItems[0].offsetWidth + 20; // Largeur + gap
+                    const translateX = -currentTitleScreenIndex * itemWidth;
+                    track.style.transform = 'translateX(' + translateX + 'px)';
+                    
+                    // Mettre à jour les points indicateurs
+                    const dots = document.querySelectorAll('.dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentTitleScreenIndex);
+                    });
+                    
+                    // Masquer/afficher les flèches
+                    const leftArrow = document.querySelector('.left-arrow');
+                    const rightArrow = document.querySelector('.right-arrow');
+                    
+                    if (leftArrow) leftArrow.style.visibility = currentTitleScreenIndex === 0 ? 'hidden' : 'visible';
+                    if (rightArrow) rightArrow.style.visibility = currentTitleScreenIndex === titleScreenItems.length - 1 ? 'hidden' : 'visible';
+                }
+
+                // Fonction pour passer à l'écran titre précédent
+                function prevTitleScreen() {
+                    if (currentTitleScreenIndex > 0) {
+                        currentTitleScreenIndex--;
+                        updateTitleScreenCarousel();
+                    }
+                }
+
+                // Fonction pour passer à l'écran titre suivant
+                function nextTitleScreen() {
+                    if (currentTitleScreenIndex < titleScreenItems.length - 1) {
+                        currentTitleScreenIndex++;
+                        updateTitleScreenCarousel();
+                    }
+                }
+
+                // Fonction pour aller à un écran titre spécifique
+                function goToTitleScreen(index) {
+                    if (index >= 0 && index < titleScreenItems.length) {
+                        currentTitleScreenIndex = index;
+                        updateTitleScreenCarousel();
+                    }
+                }
+
+                // Fonction pour révéler un spoiler
+                function revealSpoiler(button) {
+                    var container = button.parentElement;
+                    var img = container.querySelector('img');
+                    var carouselItem = container.closest('.carousel-item');
+                    
+                    // Retirer le flou de l'image
+                    img.classList.remove('blurred');
+                    img.classList.add('revealed');
+                    
+                    // Révéler le titre (s'il y a un label)
+                    if (carouselItem) {
+                        carouselItem.classList.add('revealed');
+                        
+                        // Trouver tous les labels possibles
+                        var titleLabel = carouselItem.querySelector('.title-screen-label');
+                        var endingLabel = carouselItem.querySelector('.ending-screen-label');
+                        var label = titleLabel || endingLabel;
+                        
+                        if (label) {
+                            // Afficher le label
+                            label.style.opacity = '1';
+                            label.style.display = 'block';
+                            
+                            // Retirer le texte "(Spoiler)" du label
+                            var labelText = label.textContent || label.innerText;
+                            if (labelText.includes('(Spoiler)')) {
+                                label.textContent = labelText.replace(' (Spoiler)', '');
+                                label.innerText = labelText.replace(' (Spoiler)', '');
+                            }
+                        }
+                    }
+                    
+                    // Cacher le bouton
+                    button.style.display = 'none';
+                    
+                    // Mettre à jour l'alt pour indiquer que le spoiler est révélé
+                    img.alt = img.alt.replace('(Spoiler)', '(Spoiler révélé)');
+                }
+
+                // Fonction pour initialiser le carrousel des écrans de fin
+                function initEndingScreenCarousel() {
+                    endingScreenItems = document.querySelectorAll('.ending-screen-section .carousel-item');
+                    updateEndingScreenCarousel();
+                }
+
+                // Fonction pour mettre à jour le carrousel des écrans de fin
+                function updateEndingScreenCarousel() {
+                    if (endingScreenItems.length === 0) return;
+                    
+                    const track = document.querySelector('.ending-screen-section .carousel-track');
+                    if (!track) return;
+                    
+                    const itemWidth = endingScreenItems[0].offsetWidth + 20;
+                    const translateX = -currentEndingScreenIndex * itemWidth;
+                    track.style.transform = 'translateX(' + translateX + 'px)';
+                    
+                    // Mettre à jour les points indicateurs
+                    const dots = document.querySelectorAll('.ending-dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentEndingScreenIndex);
+                    });
+                    
+                    // Masquer/afficher les flèches
+                    const leftArrow = document.querySelector('.ending-screen-section .left-arrow');
+                    const rightArrow = document.querySelector('.ending-screen-section .right-arrow');
+                    
+                    if (leftArrow) leftArrow.style.visibility = currentEndingScreenIndex === 0 ? 'hidden' : 'visible';
+                    if (rightArrow) rightArrow.style.visibility = currentEndingScreenIndex === endingScreenItems.length - 1 ? 'hidden' : 'visible';
+                }
+
+                // Fonction pour passer à l'écran de fin précédent
+                function prevEndingScreen() {
+                    if (currentEndingScreenIndex > 0) {
+                        currentEndingScreenIndex--;
+                        updateEndingScreenCarousel();
+                    }
+                }
+
+                // Fonction pour passer à l'écran de fin suivant
+                function nextEndingScreen() {
+                    if (currentEndingScreenIndex < endingScreenItems.length - 1) {
+                        currentEndingScreenIndex++;
+                        updateEndingScreenCarousel();
+                    }
+                }
+
+                // Fonction pour aller à un écran de fin spécifique
+                function goToEndingScreen(index) {
+                    if (index >= 0 && index < endingScreenItems.length) {
+                        currentEndingScreenIndex = index;
+                        updateEndingScreenCarousel();
+                    }
+                }
+                
+                // Fonction pour initialiser le carrousel des vidéos
+                function initVideoCarousel() {
+                    videoItems = document.querySelectorAll('.carousel-video-item');
+                    console.log('Vidéos trouvées:', videoItems.length); // Pour debug
+                    if (videoItems.length > 0) {
+                        // S'assurer que le track a la bonne largeur
+                        const track = document.querySelector('.video-carousel-track');
+                        if (track) {
+                            // Calculer la largeur totale du track
+                            const totalWidth = videoItems.length * (videoItems[0].offsetWidth + 20);
+                            track.style.width = totalWidth + 'px';
+                        }
+                        updateVideoCarousel();
+                    }
+                }
+
+                // Fonction pour mettre à jour le carrousel des vidéos
+                function updateVideoCarousel() {
+                    if (videoItems.length === 0) return;
+                    
+                    const track = document.querySelector('.video-carousel-track');
+                    if (!track) return;
+                    
+                    const itemWidth = videoItems[0].offsetWidth + 20; // Largeur + gap
+                    const maxIndex = videoItems.length - 1;
+                    
+                    // S'assurer que l'index est dans les limites
+                    if (currentVideoIndex > maxIndex) currentVideoIndex = maxIndex;
+                    if (currentVideoIndex < 0) currentVideoIndex = 0;
+                    
+                    const translateX = -currentVideoIndex * itemWidth;
+                    track.style.transform = 'translateX(' + translateX + 'px)';
+                    
+                    // Mettre à jour les points indicateurs
+                    const dots = document.querySelectorAll('.video-dot');
+                    dots.forEach((dot, index) => {
+                        if (index === currentVideoIndex) {
+                            dot.classList.add('active');
+                        } else {
+                            dot.classList.remove('active');
+                        }
+                    });
+                    
+                    // Masquer/afficher les flèches
+                    const leftArrow = document.querySelector('.video-left-arrow');
+                    const rightArrow = document.querySelector('.video-right-arrow');
+                    
+                    if (leftArrow) {
+                        leftArrow.style.visibility = currentVideoIndex === 0 ? 'hidden' : 'visible';
+                        leftArrow.style.opacity = currentVideoIndex === 0 ? '0.3' : '1';
+                        leftArrow.disabled = currentVideoIndex === 0;
+                    }
+                    if (rightArrow) {
+                        rightArrow.style.visibility = currentVideoIndex === maxIndex ? 'hidden' : 'visible';
+                        rightArrow.style.opacity = currentVideoIndex === maxIndex ? '0.3' : '1';
+                        rightArrow.disabled = currentVideoIndex === maxIndex;
+                    }
+                }
+
+                // Fonction pour passer à la vidéo précédente
+                function prevVideo() {
+                    if (currentVideoIndex > 0) {
+                        currentVideoIndex--;
+                        updateVideoCarousel();
+                    }
+                }
+
+                // Fonction pour passer à la vidéo suivante
+                function nextVideo() {
+                    if (currentVideoIndex < videoItems.length - 1) {
+                        currentVideoIndex++;
+                        updateVideoCarousel();
+                    }
+                }
+
+                // Fonction pour aller à une vidéo spécifique
+                function goToVideo(index) {
+                    if (index >= 0 && index < videoItems.length) {
+                        currentVideoIndex = index;
+                        updateVideoCarousel();
+                    }
+                }
+                
+                function initAllCarousels() {
+                    // Carrousels des écrans titre
+                    titleScreenItems = document.querySelectorAll('.carousel-item');
+                    if (titleScreenItems.length > 0) {
+                        updateTitleScreenCarousel();
+                    }
+                    
+                    // Carrousels des écrans de fin
+                    endingScreenItems = document.querySelectorAll('.ending-screen-section .carousel-item');
+                    if (endingScreenItems.length > 0) {
+                        updateEndingScreenCarousel();
+                    }
+                    
+                    // Carrousels des vidéos
+                    videoItems = document.querySelectorAll('.carousel-video-item');
+                    if (videoItems.length > 0) {
+                        updateVideoCarousel();
+                    }
+                }
+
+                // Initialisation unique au chargement
+                document.addEventListener('DOMContentLoaded', function() {
+                    // Attendre que le DOM soit complètement chargé
+                    setTimeout(initAllCarousels, 200);
+                    
+                    // Réinitialiser quand on change d'onglet
+                    document.addEventListener('click', function(e) {
+                        if (e.target.classList.contains('tab-button')) {
+                            // Attendre que l'onglet soit affiché
+                            setTimeout(initAllCarousels, 200);
+                        }
+                    });
+                });
+
+                // Activer le premier onglet au chargement
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (document.getElementsByClassName('tab-button').length > 0) {
+                        document.getElementsByClassName('tab-button')[0].click();
+                    }
+                });
+
+                // Réinitialiser quand on change d'onglet (via l'écouteur de clic)
+                document.addEventListener('click', function(e) {
+                    if (e.target.classList.contains('tab-button')) {
+                        setTimeout(initAllCarousels, 100);
+                    }
+                });
+            </script>
+        
+                <div style="font-size:0.8em; color:#666; text-align:center; margin-top:30px; padding-top:15px; border-top:1px solid #eee;">
+                    <sup>1</sup> Prix actualisés selon l'inflation (base 12/2025)<br>
+                    <span style="font-size:0.9em;">Ce prix actualisé représente ce que vous devriez payer aujourd'hui pour ce jeu dans le même état à l'achat, en conservant le même pouvoir d'achat qu'à la date d'achat.<br>
+                    Source : Insee, Indice des prix à la consommation base 2015 (y compris tabac) - Ensemble des ménages</span>
+                </div>
+                </body>
+        </html>
+            
