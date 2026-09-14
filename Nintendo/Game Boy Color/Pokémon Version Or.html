@@ -704,6 +704,12 @@
                     Pokémon Version Or (PAL)
                 </button>
                 
+                <button class="tab-button " 
+                        onclick="openTab(event, 'tab1')" 
+                        style="background-color: rgb(88, 85, 48); color: white;">
+                    Pokémon Version Or (UK) (PAL)
+                </button>
+                
                 </div>
                 
             <div id="tab0" class="tab-content" >
@@ -732,7 +738,7 @@
                                             <th>Japon</th>
                                         </tr>
                                         <tr>
-                                            <td>04/06/2001</td>
+                                            <td>06/04/2001</td>
                                             <td>15/10/2000</td>
                                             <td>21/11/1999</td>
                                         </tr>
@@ -741,7 +747,7 @@
                                     <div class="dates-container">
                                         <div class="date-item">
                                             <span class="date-label">Europe</span>
-                                            <span class="date-value">04/06/2001</span>
+                                            <span class="date-value">06/04/2001</span>
                                         </div>
                                         <div class="date-item">
                                             <span class="date-label">Amérique</span>
@@ -790,6 +796,98 @@
                 
             </div>
             
+            <div id="tab1" class="tab-content" style="display:none">
+                <div class="game-header">
+                    <img src="game_images/Pok%C3%A9mon%20Version%20Or%20%28UK%29.png" alt="Pokémon Version Or (UK)" class="game-cover" onclick="openPopup(this)" onclick="openPopup(this)">
+                    <div class="game-info">
+                        <h2>Pokémon Version Or</h2>
+                        <table class="info-table">
+            
+                            <tr>
+                                <th>Développeur</th>
+                                <td>Game Freak</td>
+                            </tr>
+                            <tr>
+                                <th>Éditeur</th>
+                                <td>Nintendo</td>
+                            </tr>
+                            <tr>
+                                <th>Dates de sortie</th>
+                                <td>
+                                    <!-- Version PC - Tableau -->
+                                    <table class="dates-table">
+                                        <tr>
+                                            <th>Europe</th>
+                                            <th>Amérique du Nord</th>
+                                            <th>Japon</th>
+                                        </tr>
+                                        <tr>
+                                            <td>06/04/2001</td>
+                                            <td>15/10/2000</td>
+                                            <td>21/11/1999</td>
+                                        </tr>
+                                    </table>
+                                    <!-- Version Mobile - Conteneur flex -->
+                                    <div class="dates-container">
+                                        <div class="date-item">
+                                            <span class="date-label">Europe</span>
+                                            <span class="date-value">06/04/2001</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Amérique</span>
+                                            <span class="date-value">15/10/2000</span>
+                                        </div>
+                                        <div class="date-item">
+                                            <span class="date-label">Japon</span>
+                                            <span class="date-value">21/11/1999</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Genre(s)</th>
+                                <td>Jeu de rôle, J-RPG</td>
+                            </tr>
+                            <tr>
+                                <th>Mode(s) de jeu</th>
+                                <td>1 joueur</td>
+                            </tr>
+                            <tr>
+                                <th>État</th>
+                                <td>Jeu seul</td>
+                            </tr>
+                                <tr>
+                                    <th>Région</th>
+                                    <td>PAL</td>
+                                </tr>
+                            <tr>
+                                <th>Code jeu</th>
+                                <td>DMG-AAUP-EUR</td>
+                            </tr>
+                            <tr>
+                                <th>Prix d'achat</th>
+                                <td>85,65 €</td>
+                            </tr>
+                            <tr>
+                                <th>Date d'achat</th>
+                                <td>29/08/2026</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="title-screen-section">
+                    <h3>Écran titre</h3>
+                    <img src="title_screens/Pok%C3%A9mon%20Version%20Or%20%28UK%29.png" 
+                         alt="Écran titre - Classique" 
+                         class="title-screen-image" 
+                         onclick="openPopup(this)">
+                </div>
+                
+                
+                
+            </div>
+            
             </div>
 
             <!-- Popup pour les images -->
@@ -807,7 +905,7 @@
                 let videoItems = [];
                 // Stocker les couleurs de chaque onglet
                 const tabColors = {
-                    'tab0': 'rgb(27, 31, 25)'
+                    'tab0': 'rgb(27, 31, 25)', 'tab1': 'rgb(88, 85, 48)'
                 };
 
                 // Fonction pour réinitialiser les indices des carrousels
@@ -1143,6 +1241,12 @@
                     }
                 });
             </script>
-        </body>
+        
+                <div style="font-size:0.8em; color:#666; text-align:center; margin-top:30px; padding-top:15px; border-top:1px solid #eee;">
+                    <sup>1</sup> Prix actualisés selon l'inflation (base 12/2025)<br>
+                    <span style="font-size:0.9em;">Ce prix actualisé représente ce que vous devriez payer aujourd'hui pour ce jeu dans le même état à l'achat, en conservant le même pouvoir d'achat qu'à la date d'achat.<br>
+                    Source : Insee, Indice des prix à la consommation base 2015 (y compris tabac) - Ensemble des ménages</span>
+                </div>
+                </body>
         </html>
             
