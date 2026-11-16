@@ -786,15 +786,113 @@
                     </div>
                 </div>
                 
-                <div class="title-screen-section">
-                    <h3>Écran titre</h3>
-                    <img src="title_screens/Castlevania%20Harmony%20of%20Dissonance.png" 
-                         alt="Écran titre - Classique" 
-                         class="title-screen-image" 
-                         onclick="openPopup(this)">
+            <div class="title-screen-section">
+                <h3>Écrans titres</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevTitleScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                    <div class="carousel-item" data-index="0">
+                        <div class="title-screen-label">Classique</div>
+                        <img src="title_screens/Castlevania%20Harmony%20of%20Dissonance.png"  
+                             alt="Écran titre - Classique" 
+                             class="title-screen-image" 
+                             onclick="openPopup(this)">
+                    </div>
+                    
+                    <div class="carousel-item spoiler-item" data-index="1">
+                        <div class="title-screen-label">Avec le Boss Rush Mode débloqué (Spoiler)</div>
+                        <div class="spoiler-container">
+                            <img src="title_screens/Castlevania%20Harmony%20of%20Dissonance%20%28Avec%20le%20Boss%20Rush%20Mode%20d%C3%A9bloqu%C3%A9%20-%20spoil%29.png"  
+                                 alt="Écran titre - Avec le Boss Rush Mode débloqué (Spoiler)" 
+                                 class="title-screen-image blurred" 
+                                 onclick="openPopup(this)">
+                            <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item spoiler-item" data-index="2">
+                        <div class="title-screen-label">Avec le Boss Rush et Sound Modes débloqués (Spoiler)</div>
+                        <div class="spoiler-container">
+                            <img src="title_screens/Castlevania%20Harmony%20of%20Dissonance%20%28Avec%20le%20Boss%20Rush%20et%20Sound%20Modes%20d%C3%A9bloqu%C3%A9s%20-%20spoil%29.png"  
+                                 alt="Écran titre - Avec le Boss Rush et Sound Modes débloqués (Spoiler)" 
+                                 class="title-screen-image blurred" 
+                                 onclick="openPopup(this)">
+                            <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                        </div>
+                    </div>
+                    
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextTitleScreen()">→</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot" onclick="goToTitleScreen(0)"></span><span class="dot" onclick="goToTitleScreen(1)"></span><span class="dot" onclick="goToTitleScreen(2)"></span>
+                </div>
+            </div>
+            
+                
+            <div class="ending-screen-section">
+                <h3>Écrans de fin (Spoilers)</h3>
+                <div class="carousel-container">
+                    <button class="carousel-arrow left-arrow" onclick="prevEndingScreen()">←</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            
+                <div class="carousel-item spoiler-item" data-index="0">
+                    <div class="ending-screen-label">Fin (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Castlevania%20Harmony%20of%20Dissonance.png"
+                             alt="Écran de fin - Fin (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
                 </div>
                 
+                <div class="carousel-item spoiler-item" data-index="1">
+                    <div class="ending-screen-label">Bonne fin - Vaincre Dracula (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Castlevania%20Harmony%20of%20Dissonance%20%28Bonne%20fin%20-%20Vaincre%20Dracula%29.png"
+                             alt="Écran de fin - Bonne fin - Vaincre Dracula (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
                 
+                <div class="carousel-item spoiler-item" data-index="2">
+                    <div class="ending-screen-label">Fin neutre - Vaincre Maxim dans le Château A (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Castlevania%20Harmony%20of%20Dissonance%20%28Fin%20neutre%20-%20Vaincre%20Maxim%20dans%20le%20Ch%C3%A2teau%20A%29.png"
+                             alt="Écran de fin - Fin neutre - Vaincre Maxim dans le Château A (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                <div class="carousel-item spoiler-item" data-index="3">
+                    <div class="ending-screen-label">Mauvaise fin - Vaincre Maxim dans le Château B (Spoiler)</div>
+                    <div class="spoiler-container">
+                        <img src="ending_screens/Castlevania%20Harmony%20of%20Dissonance%20%28Mauvaise%20fin%20-%20Vaincre%20Maxim%20dans%20le%20Ch%C3%A2teau%20B%29.png"
+                             alt="Écran de fin - Mauvaise fin - Vaincre Maxim dans le Château B (Spoiler)" 
+                             class="ending-screen-image blurred" 
+                             onclick="openPopup(this)">
+                        <button class="spoiler-button" onclick="revealSpoiler(this)">Afficher le spoiler</button>
+                    </div>
+                </div>
+                
+                        </div>
+                    </div>
+                    <button class="carousel-arrow right-arrow" onclick="nextEndingScreen()">→</button>
+                </div>
+                <div class="carousel-dots">
+                    <span class="ending-dot" onclick="goToEndingScreen(0)"></span><span class="ending-dot" onclick="goToEndingScreen(1)"></span><span class="ending-dot" onclick="goToEndingScreen(2)"></span><span class="ending-dot" onclick="goToEndingScreen(3)"></span>
+                </div>
+            </div>
+            
                 
             </div>
             
